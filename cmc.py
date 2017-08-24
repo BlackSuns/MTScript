@@ -115,6 +115,7 @@ def get_exist_currencies(conn):
         select  id,
                 name,
                 symbol,
+                enabled,
                 cmc_url,
                 website,
                 explorer,
@@ -127,9 +128,20 @@ def get_exist_currencies(conn):
         cursor.execute(mysql)
         currencies = cursor.fetchall()
 
-    rd = {}
+    rd = []
     for c in currencies:
-        rd['{} ({})'.format(c[1].strip(), c[2].strip())] = c
+        rd.append({
+            'id': c[0],
+            'name': c[1].strip(),
+            'symbol': c[2].strip(),
+            'currency': '{} ({})'.format(c[1].strip(), c[2].strip()),
+            'enabled': c[3],
+            'cmc_url': c[4],
+            'website': c[5],
+            'explorer': c[6],
+            'announcement': c[7],
+            'message_board': c[8]
+        })
 
     return rd
 
@@ -166,6 +178,7 @@ def update_currency_basic_info(currency_data, conn_data, exist_currencies):
                       `announcement`,
                       `message_board`,
                       `enabled`,
+                      `review_status`,
                       `created_at`,
                       `updated_at`
                       )
@@ -177,7 +190,8 @@ def update_currency_basic_info(currency_data, conn_data, exist_currencies):
                         "{explorer}",
                         "{announcement}",
                         "{message_board}",
-                        "0",
+                        "{enabled}",
+                        "{review_status}",
                         unix_timestamp(now()),
                         unix_timestamp(now())
                       )
@@ -216,9 +230,27 @@ def update_currency_basic_info(currency_data, conn_data, exist_currencies):
                     print_log(
                         'new currency link? found {} / {}'.format(l[0], l[1]))
 
-            # symbol not exists
+            # insert if symbol not exists : update_type = 0
+            # insert an unenabled
+            # if symbol exist but name not match : update_type = 1
+            # update if currency match : update_type = 2
             # currency is format of 'Bitcoin/BTC'
-            if currency not in exist_currencies.keys():
+            update_type = 0
+            exist_currency_info = {}
+            for ec in exist_currencies:
+                if currency == ec['currency']:
+                    update_type = 2
+                    exist_currency_info['id'] = ec['id']
+                    exist_currency_info['cmc_url'] = ec['cmc_url']
+                    exist_currency_info['website'] = ec['website']
+                    exist_currency_info['explorer'] = ec['explorer']
+                    exist_currency_info['announcement'] = ec['announcement']
+                    exist_currency_info['message_board'] = ec['message_board']
+                    break
+                elif symbol == ec['symbol']:
+                    update_type = 1
+
+            if update_type == 0:
                 exec_sql = inerst_sql_str.format(
                     name=name,
                     symbol=symbol,
@@ -227,38 +259,56 @@ def update_currency_basic_info(currency_data, conn_data, exist_currencies):
                     explorer=extra_data['explorer'],
                     announcement=extra_data['announcement'],
                     message_board=extra_data['message_board'],
-                    )
+                    enabled=1,
+                    review_status=1,
+                )
+                # print_log(exec_sql)
                 cursor.execute(exec_sql)
-            # symbol exists
-            else:
+
+            if update_type == 1:
+                exec_sql = inerst_sql_str.format(
+                    name=name,
+                    symbol=symbol,
+                    cmc_url=extra_data['cmc_url'],
+                    website=extra_data['website'],
+                    explorer=extra_data['explorer'],
+                    announcement=extra_data['announcement'],
+                    message_board=extra_data['message_board'],
+                    enabled=0,
+                    review_status=0,
+                )
+                # print_log(exec_sql)
+                cursor.execute(exec_sql)
+
+            if update_type == 2:  # currency exists
                 cols = ('cmc_url', 'website', 'explorer',
                         'announcement', 'message_board')
                 update_str = ''
-                for i, col in enumerate(cols):
-                    if not exist_currencies[currency][i+3]\
-                            and extra_data[col]:
+                for col in cols:
+                    if not exist_currency_info[col] and extra_data[col]:
                         update_str += "{}='{}', ".format(col, extra_data[col])
 
                 if update_str:
                     exec_sql = 'update currency set {} where id={}'.format(
-                        update_str[:-2], exist_currencies[currency][0])
-
+                        update_str[:-2], exist_currency_info['id'])
+                    # print_log(exec_sql)
                     cursor.execute(exec_sql)
 
             # update max supply
             if ('max_supply' in currency_data[s].keys()):
                 max_supply = currency_data[s]['max_supply']
-                update_max_supply_sql = '''
-                    UPDATE  coin_market_cap
-                       SET  max_supply={max_supply}
-                     WHERE  symbol="{symbol}"
-                       AND  name="{name}"
-                       AND  max_supply is null
-                '''.format(max_supply=max_supply,
-                           symbol=symbol,
-                           name=name)
-                # print(update_max_supply_sql)
-                cursor.execute(update_max_supply_sql)
+                if max_supply and int(max_supply) > 0:
+                    update_max_supply_sql = '''
+                        UPDATE  coin_market_cap
+                           SET  max_supply={max_supply}
+                         WHERE  symbol="{symbol}"
+                           AND  name="{name}"
+                           AND  max_supply is null
+                    '''.format(max_supply=max_supply,
+                               symbol=symbol,
+                               name=name)
+                    # print(update_max_supply_sql)
+                    cursor.execute(update_max_supply_sql)
 
     conn_data.commit()
 
@@ -359,6 +409,8 @@ def update_currency_market_info(currency_data, conn_data,
         UPDATE      `currency_on_market` com
         INNER JOIN  `market` m on m.`id`=com.`market_id`
         SET         com.`volume_24h`={volume_24h},
+                    com.`currency`="{currency}",
+                    com.`anchor`="{anchor}",
                     com.`updated_at`=unix_timestamp(now())
         WHERE       com.`currency_id`={currency_id}
         AND         com.`market_id`={market_id}
@@ -370,6 +422,8 @@ def update_currency_market_info(currency_data, conn_data,
                       `currency_id`,
                       `market_id`,
                       `pair`,
+                      `currency`,
+                      `anchor`,
                       `volume_24h`,
                       `created_at`,
                       `updated_at`
@@ -377,6 +431,8 @@ def update_currency_market_info(currency_data, conn_data,
         SELECT      {currency_id} as `currency_id`,
                     {market_id} as `market_id`,
                     "{pair}" as `pair`,
+                    "{currency}" as `currency`,
+                    "{anchor}" as `anchor`,
                     {volume_24h} as `volume_24h`,
                     unix_timestamp(now()) as `created_at`,
                     unix_timestamp(now()) as `update_at`
@@ -391,36 +447,53 @@ def update_currency_market_info(currency_data, conn_data,
     '''
 
     with conn_data.cursor() as cursor:
-        for s in currency_data.keys():
-            if s in exist_symbols.keys():
-                currency_id = exist_symbols[s][0]
-            else:
-                raise RuntimeError('currency not found: {}', s)
+        for cur in exist_symbols:
+            # 如果是需要更新的
+            if cur['currency'] in currency_data.keys() and\
+               not (cur['enabled'] is not None and cur['enabled'] == 0):
+                currency_id = cur['id']
 
-            for mc in currency_data[s]['markets']:
-                market_id = exist_markets.get(
-                    mc['markets'], None)
+                for mc in currency_data[cur['currency']]['markets']:
+                    market_id = exist_markets.get(mc['markets'], None)
 
-                if market_id is not None:
-                    # print(mc)
-                    pair = mc['pair']
-                    if ('volume' in mc.keys()):
-                        volume_24h = float(mc['volume'])
+                    if market_id is not None:
+                        # print(mc)
+                        pair = mc['pair']
+                        (currency, anchor) = get_currency_anchor(pair)
+                        if currency and anchor:
+                            if ('volume' in mc.keys()):
+                                volume_24h = float(mc['volume'])
+                            else:
+                                volume_24h = 0
+
+                            exec_sql = update_sql_str.format(
+                                currency_id=currency_id,
+                                market_id=market_id,
+                                pair=pair,
+                                currency=currency,
+                                anchor=anchor,
+                                volume_24h=volume_24h)
+                            # print(exec_sql)
+                            cursor.execute(exec_sql)
+                        else:
+                            print_log('illegal pair found: {}'.format(pair))
                     else:
-                        volume_24h = 0
-                    exec_sql = update_sql_str.format(
-                        currency_id=currency_id,
-                        market_id=market_id,
-                        pair=pair,
-                        volume_24h=volume_24h)
-                    # print(exec_sql)
-                    cursor.execute(exec_sql)
-                else:
-                    print_log('market not found when update market/currency')
-                    print_log('currency: {} market: {}'.format(
-                        s, mc['markets']))
+                        print_log(
+                            'market not found when update market/currency')
+                        print_log(
+                            'currency: {} market: {}'.format(
+                                mc['currency'], mc['markets']))
 
     conn_data.commit()
+
+
+def get_currency_anchor(pair):
+    pos = pair.find('/')
+    if pos > -1:
+        return (pair[:pos], pair[pos+1:])
+    else:
+        return False
+    return (None, None)
 
 
 def get_spider_results(conn, project):
@@ -457,7 +530,7 @@ if __name__ == '__main__':
         update_currency_market_info(spider_result['currencies'], conn_data,
                                     exist_currencies, exist_markets)
 
-    except Exception as e:
+    except aException as e:
         print_log('find exception, terminated!', 'ERROR')
         print_log(e, 'ERROR')
     finally:
