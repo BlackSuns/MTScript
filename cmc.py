@@ -408,7 +408,7 @@ def update_currency_market_info(currency_data, conn_data,
         START   TRANSACTION;
         UPDATE      `currency_on_market` com
         INNER JOIN  `market` m on m.`id`=com.`market_id`
-        SET         com.`volume_24h`={volume_24h},
+        SET         com.`volume_24h_usd`={volume_24h_usd},
                     com.`currency`="{currency}",
                     com.`anchor`="{anchor}",
                     com.`updated_at`=unix_timestamp(now())
@@ -424,7 +424,7 @@ def update_currency_market_info(currency_data, conn_data,
                       `pair`,
                       `currency`,
                       `anchor`,
-                      `volume_24h`,
+                      `volume_24h_usd`,
                       `created_at`,
                       `updated_at`
                     )
@@ -433,7 +433,7 @@ def update_currency_market_info(currency_data, conn_data,
                     "{pair}" as `pair`,
                     "{currency}" as `currency`,
                     "{anchor}" as `anchor`,
-                    {volume_24h} as `volume_24h`,
+                    {volume_24h_usd} as `volume_24h_usd`,
                     unix_timestamp(now()) as `created_at`,
                     unix_timestamp(now()) as `update_at`
         FROM        dual
@@ -462,9 +462,9 @@ def update_currency_market_info(currency_data, conn_data,
                         (currency, anchor) = get_currency_anchor(pair)
                         if currency and anchor:
                             if ('volume' in mc.keys()):
-                                volume_24h = float(mc['volume'])
+                                volume_24h_usd = float(mc['volume'])
                             else:
-                                volume_24h = 0
+                                volume_24h_usd = 0
 
                             exec_sql = update_sql_str.format(
                                 currency_id=currency_id,
@@ -472,7 +472,7 @@ def update_currency_market_info(currency_data, conn_data,
                                 pair=pair,
                                 currency=currency,
                                 anchor=anchor,
-                                volume_24h=volume_24h)
+                                volume_24h_usd=volume_24h_usd)
                             # print(exec_sql)
                             cursor.execute(exec_sql)
                         else:
