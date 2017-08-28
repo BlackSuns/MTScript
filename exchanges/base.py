@@ -18,6 +18,8 @@ class BaseExchange(object):
         3. overload your base_url, ticker_url, and alias if needs, in __init__
         4. overload get_remote_data func, remember to return a list include
            elements like {pair: xx, price: xxx, volume: xxx, volume_anchor: xx}
+        5. if a pair use an assigned com_id, override self.assigned_com_id
+           with format {pair1: com_id1, pair2_com_id2}
         5. use self.get_json_request to create connection, pass an url
            this function will return you the response if get correct response
         Done and try
@@ -39,7 +41,7 @@ class BaseExchange(object):
         self.base_url = ''  # base url of api
         self.ticker_url = ''  # api to get ticker info
 
-        self.support_pairs = []
+        self.support_pairs = []  # available pairs of the market
         self.pairs = {}  # pair info, see update_pairs
         self.price_anchor_tmp = {}  # used for restore temp price of anchor
         self.price_history_file = '{}/{}.json'.format(
@@ -47,6 +49,9 @@ class BaseExchange(object):
         self.price_history = self.get_price_history()
 
         self.exchange_rate_USDCNY = self.get_USDCNY_rate()
+        self.assigned_com_id = {}
+        # override this if a pair use assigned com id
+        # format is {pair: com_id}
 
     def get_remote_data(self):
         ''' get data from markets and return value
@@ -116,6 +121,10 @@ class BaseExchange(object):
             volume_anchor = item['volume_anchor']
             (symbol, anchor) = self.part_pair(pair)
 
+            com_id = "{}_{}".format(symbol.lower(), anchor.lower())
+            if pair in self.assigned_com_id.keys():
+                com_id = self.assigned_com_id[pair]
+
             # get price and volume
             (anchor_rate_cny, anchor_rate_usd) = self.get_anchor_price(anchor)
             price_usd = self.format_price(price * anchor_rate_usd)
@@ -126,7 +135,7 @@ class BaseExchange(object):
             self.pairs[pair.upper()] = {
                 "symbol": symbol,
                 "anchor": anchor,
-                "com_id": "{}_{}".format(symbol.lower(), anchor.lower()),
+                "com_id": com_id,
                 "price": price,
                 "price_cny": price_cny,
                 "price_usd": price_usd,
