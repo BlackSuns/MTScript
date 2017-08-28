@@ -237,8 +237,9 @@ def update_currency_basic_info(currency_data, conn_data, exist_currencies):
             # currency is format of 'Bitcoin/BTC'
             update_type = 0
             exist_currency_info = {}
+            # print(exist_currencies)
             for ec in exist_currencies:
-                if currency == ec['currency']:
+                if currency.upper() == ec['currency'].upper():
                     update_type = 2
                     exist_currency_info['id'] = ec['id']
                     exist_currency_info['cmc_url'] = ec['cmc_url']
@@ -247,7 +248,7 @@ def update_currency_basic_info(currency_data, conn_data, exist_currencies):
                     exist_currency_info['announcement'] = ec['announcement']
                     exist_currency_info['message_board'] = ec['message_board']
                     break
-                elif symbol == ec['symbol']:
+                elif symbol.upper() == ec['symbol'].upper():
                     update_type = 1
 
             if update_type == 0:
@@ -396,6 +397,8 @@ def update_market_info(market_data, conn_data):
                     twitter=twitter,
                     twitter_name=twitter_name)
 
+            # if name == '51szzc':
+            #     print(exec_sql)
             cursor.execute(exec_sql)
 
     conn_data.commit()
@@ -447,13 +450,14 @@ def update_currency_market_info(currency_data, conn_data,
     '''
 
     with conn_data.cursor() as cursor:
-        for cur in exist_symbols:
+        for es in exist_symbols:
+            # print(es)
             # 如果是需要更新的
-            if cur['currency'] in currency_data.keys() and\
-               not (cur['enabled'] is not None and cur['enabled'] == 0):
-                currency_id = cur['id']
+            if es['currency'] in currency_data.keys() and\
+               (es['enabled'] is None or es['enabled'] != 0):
+                currency_id = es['id']
 
-                for mc in currency_data[cur['currency']]['markets']:
+                for mc in currency_data[es['currency']]['markets']:
                     market_id = exist_markets.get(mc['markets'], None)
 
                     if market_id is not None:
@@ -461,20 +465,22 @@ def update_currency_market_info(currency_data, conn_data,
                         pair = mc['pair']
                         (currency, anchor) = get_currency_anchor(pair)
                         if currency and anchor:
-                            if ('volume' in mc.keys()):
-                                volume_24h_usd = float(mc['volume'])
-                            else:
-                                volume_24h_usd = 0
+                            if currency == es['symbol']:
+                                if ('volume' in mc.keys()):
+                                    volume_24h_usd = float(mc['volume'])
+                                else:
+                                    volume_24h_usd = 0
 
-                            exec_sql = update_sql_str.format(
-                                currency_id=currency_id,
-                                market_id=market_id,
-                                pair=pair,
-                                currency=currency,
-                                anchor=anchor,
-                                volume_24h_usd=volume_24h_usd)
-                            # print(exec_sql)
-                            cursor.execute(exec_sql)
+                                exec_sql = update_sql_str.format(
+                                    currency_id=currency_id,
+                                    market_id=market_id,
+                                    pair=pair,
+                                    currency=currency,
+                                    anchor=anchor,
+                                    volume_24h_usd=volume_24h_usd)
+                                # if pair == 'TNT/ETH':
+                                #     print(exec_sql)
+                                cursor.execute(exec_sql)
                         else:
                             print_log('illegal pair found: {}'.format(pair))
                     else:
@@ -482,7 +488,7 @@ def update_currency_market_info(currency_data, conn_data,
                             'market not found when update market/currency')
                         print_log(
                             'currency: {} market: {}'.format(
-                                mc['currency'], mc['markets']))
+                                mc['pair'], mc['markets']))
 
     conn_data.commit()
 
