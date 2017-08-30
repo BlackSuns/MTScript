@@ -3,7 +3,7 @@ import os
 import pymysql
 
 from exchanges.liqui import LiquiExchange
-from utils import print_log, get_config
+from utils import get_config
 
 
 CONFIG_PATH = os.path.abspath(os.path.dirname(__file__)) + '/script.conf'

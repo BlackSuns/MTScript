@@ -120,7 +120,8 @@ def get_exist_currencies(conn):
                 website,
                 explorer,
                 announcement,
-                message_board
+                message_board,
+                total_supply
           from  currency
     '''
 
@@ -140,7 +141,8 @@ def get_exist_currencies(conn):
             'website': c[5],
             'explorer': c[6],
             'announcement': c[7],
-            'message_board': c[8]
+            'message_board': c[8],
+            'total_supply': c[9]
         })
 
     return rd
@@ -172,11 +174,13 @@ def update_currency_basic_info(currency_data, conn_data, exist_currencies):
                       (
                       `name`,
                       `symbol`,
+                      `mytoken_id`,
                       `cmc_url`,
                       `website`,
                       `explorer`,
                       `announcement`,
                       `message_board`,
+                      `total_supply`,
                       `enabled`,
                       `review_status`,
                       `created_at`,
@@ -185,23 +189,76 @@ def update_currency_basic_info(currency_data, conn_data, exist_currencies):
               VALUES  (
                         "{name}",
                         "{symbol}",
+                        "{mytoken_id}",
                         "{cmc_url}",
                         "{website}",
                         "{explorer}",
                         "{announcement}",
                         "{message_board}",
-                        "{enabled}",
-                        "{review_status}",
+                        {total_supply},
+                        1,
+                        1,
                         unix_timestamp(now()),
                         unix_timestamp(now())
                       )
     '''
 
+    inerst_review_sql_str = '''
+        INSERT INTO `review_currency`
+                    (
+                      `name`,
+                      `symbol`,
+                      `market_id`,
+                      `market_name`,
+                      `mytoken_id`,
+                      `cmc_url`,
+                      `website`,
+                      `explorer`,
+                      `announcement`,
+                      `message_board`,
+                      `total_supply`,
+                      `enabled`,
+                      `review_status`,
+                      `created_at`,
+                      `updated_at`
+                    )
+        SELECT      "{name}" as `name`,
+                    "{symbol}" as `symbol`,
+                    {market_id} as `market_id`,
+                    "{market_name}" as `market_name`,
+                    "{mytoken_id}" as `mytoken_id`,
+                    "{cmc_url}" as `cmc_url`,
+                    "{website}" as `website`,
+                    "{explorer}" as `explorer`,
+                    "{announcement}" as `announcement`,
+                    "{message_board}" as `message_board`,
+                    {total_supply} as `total_supply`,
+                    0 as `enabled`,
+                    0 as `review_status`,
+                    unix_timestamp(now()) as `created_at`,
+                    unix_timestamp(now()) as `updated_at`
+        FROM        dual
+        WHERE       not exists (
+                    SELECT      `name`
+                    FROM        review_currency
+                    WHERE       `name` = '{name}'
+                    AND         `symbol`= '{symbol}'
+                    AND         `market_name` ='{market_name}'
+                    )
+    '''
+
+    market_name = 'cmc'
+    market_id = 1303
     with conn_data.cursor() as cursor:
         for s in currency_data.keys():
             name = currency_data[s]['currency']
             symbol = currency_data[s]['symbol']
             currency = currency_data[s]['name']
+            max_supply = 0
+            if ('max_supply' in currency_data[s].keys() and
+                    currency_data[s]['max_supply'] and
+                    int(currency_data[s]['max_supply']) > 0):
+                max_supply = int(currency_data[s]['max_supply'])
 
             extra_data = {
                 'cmc_url': currency_data[s]['url'],
@@ -229,6 +286,7 @@ def update_currency_basic_info(currency_data, conn_data, exist_currencies):
                         and 'message board' not in str(l[1]).lower():
                     print_log(
                         'new currency link? found {} / {}'.format(l[0], l[1]))
+            extra_data['total_supply'] = max_supply
 
             # insert if symbol not exists : update_type = 0
             # insert an unenabled
@@ -247,44 +305,51 @@ def update_currency_basic_info(currency_data, conn_data, exist_currencies):
                     exist_currency_info['explorer'] = ec['explorer']
                     exist_currency_info['announcement'] = ec['announcement']
                     exist_currency_info['message_board'] = ec['message_board']
+                    exist_currency_info['total_supply'] = ec['total_supply']
                     break
                 elif symbol.upper() == ec['symbol'].upper():
                     update_type = 1
 
             if update_type == 0:
-                exec_sql = inerst_sql_str.format(
-                    name=name,
-                    symbol=symbol,
-                    cmc_url=extra_data['cmc_url'],
-                    website=extra_data['website'],
-                    explorer=extra_data['explorer'],
-                    announcement=extra_data['announcement'],
-                    message_board=extra_data['message_board'],
-                    enabled=1,
-                    review_status=1,
-                )
-                # print_log(exec_sql)
-                cursor.execute(exec_sql)
+                try:
+                    exec_sql = inerst_sql_str.format(
+                        name=name,
+                        symbol=symbol,
+                        mytoken_id=symbol,
+                        cmc_url=extra_data['cmc_url'],
+                        website=extra_data['website'],
+                        explorer=extra_data['explorer'],
+                        announcement=extra_data['announcement'],
+                        message_board=extra_data['message_board'],
+                        total_supply=max_supply,
+                    )
+                    # print_log(exec_sql)
+                    cursor.execute(exec_sql)
+                except:
+                    update_type = 1
 
             if update_type == 1:
-                exec_sql = inerst_sql_str.format(
+                exec_sql = inerst_review_sql_str.format(
                     name=name,
                     symbol=symbol,
+                    market_id=market_id,
+                    market_name=market_name,
+                    mytoken_id=symbol,
                     cmc_url=extra_data['cmc_url'],
                     website=extra_data['website'],
                     explorer=extra_data['explorer'],
                     announcement=extra_data['announcement'],
                     message_board=extra_data['message_board'],
-                    enabled=0,
-                    review_status=0,
+                    total_supply=max_supply,
                 )
                 # print_log(exec_sql)
                 cursor.execute(exec_sql)
 
             if update_type == 2:  # currency exists
                 cols = ('cmc_url', 'website', 'explorer',
-                        'announcement', 'message_board')
+                        'announcement', 'message_board', 'total_supply')
                 update_str = ''
+
                 for col in cols:
                     if not exist_currency_info[col] and extra_data[col]:
                         update_str += "{}='{}', ".format(col, extra_data[col])
@@ -294,22 +359,6 @@ def update_currency_basic_info(currency_data, conn_data, exist_currencies):
                         update_str[:-2], exist_currency_info['id'])
                     # print_log(exec_sql)
                     cursor.execute(exec_sql)
-
-            # update max supply
-            if ('max_supply' in currency_data[s].keys()):
-                max_supply = currency_data[s]['max_supply']
-                if max_supply and int(max_supply) > 0:
-                    update_max_supply_sql = '''
-                        UPDATE  coin_market_cap
-                           SET  max_supply={max_supply}
-                         WHERE  symbol="{symbol}"
-                           AND  name="{name}"
-                           AND  max_supply is null
-                    '''.format(max_supply=max_supply,
-                               symbol=symbol,
-                               name=name)
-                    # print(update_max_supply_sql)
-                    cursor.execute(update_max_supply_sql)
 
     conn_data.commit()
 
