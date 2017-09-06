@@ -463,6 +463,7 @@ def update_currency_market_info(currency_data, conn_data,
         SET         com.`volume_24h_usd`={volume_24h_usd},
                     com.`currency`="{currency}",
                     com.`anchor`="{anchor}",
+                    com.`price_updated_at`=unix_timestamp(now())
                     com.`updated_at`=unix_timestamp(now())
         WHERE       com.`currency_id`={currency_id}
         AND         com.`market_id`={market_id}
@@ -478,6 +479,7 @@ def update_currency_market_info(currency_data, conn_data,
                       `anchor`,
                       `volume_24h_usd`,
                       `created_at`,
+                      `price_updated_at`,
                       `updated_at`
                     )
         SELECT      {currency_id} as `currency_id`,
@@ -487,6 +489,7 @@ def update_currency_market_info(currency_data, conn_data,
                     "{anchor}" as `anchor`,
                     {volume_24h_usd} as `volume_24h_usd`,
                     unix_timestamp(now()) as `created_at`,
+                    unix_timestamp(now()) as `price_updated_at`,
                     unix_timestamp(now()) as `update_at`
         FROM        dual
         WHERE       not exists (
@@ -507,6 +510,8 @@ def update_currency_market_info(currency_data, conn_data,
                 currency_id = es['id']
 
                 for mc in currency_data[es['currency']]['markets']:
+                    if es['symbol'] == 'NEO':
+                        print(mc)
                     market_id = exist_markets.get(mc['markets'], None)
 
                     if market_id is not None:
