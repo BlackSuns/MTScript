@@ -510,8 +510,8 @@ def update_currency_market_info(currency_data, conn_data,
                 currency_id = es['id']
 
                 for mc in currency_data[es['currency']]['markets']:
-                    if es['symbol'] == 'NEO':
-                        print(mc)
+                    # if es['symbol'] == 'NEO':
+                        # print(mc)
                     market_id = exist_markets.get(mc['markets'], None)
 
                     if market_id is not None:
@@ -533,7 +533,7 @@ def update_currency_market_info(currency_data, conn_data,
                                     anchor=anchor,
                                     volume_24h_usd=volume_24h_usd)
                                 # if pair == 'TNT/ETH':
-                                print(exec_sql)
+                                # print(exec_sql)
                                 cursor.execute(exec_sql)
                         else:
                             print_log('illegal pair found: {}'.format(pair))
@@ -590,7 +590,7 @@ if __name__ == '__main__':
         update_currency_market_info(spider_result['currencies'], conn_data,
                                     exist_currencies, exist_markets)
 
-    except aException as e:
+    except Exception as e:
         print_log('find exception, terminated!', 'ERROR')
         print_log(e, 'ERROR')
     finally:
