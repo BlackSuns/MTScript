@@ -2,8 +2,10 @@ from .base import BaseExchange
 
 
 class LiquiExchange(BaseExchange):
-    def __init__(self, conn):
-        super().__init__(conn, 'Liqui')
+    def __init__(self):
+        super().__init__()
+        self.exchange = 'Liqui'
+        self.exchange_id = 46
         self.base_url = 'https://api.liqui.io/api/3'
 
         self.pair_url = '/info'
@@ -36,8 +38,6 @@ class LiquiExchange(BaseExchange):
         return_data = []
         for i in self.support_pairs:
             pair = str(i).upper().replace('_', '/')
-            if pair.endswith('USDT'):
-                pair = pair[:-1]
 
             if i in result.keys():
                 return_data.append({
