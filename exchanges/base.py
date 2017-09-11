@@ -1,7 +1,6 @@
 import json
 import os
 import hashlib
-from urllib import parse
 from configparser import ConfigParser
 
 import pymysql
@@ -121,37 +120,6 @@ class BaseExchange(object):
         # self.print_log(result)
         print(request_url)
         print(params)
-
-    def get_translate(self, text, target_lang='zh-CHS'):
-        app_key = '5479f92f6b8976fd'
-        app_secret = 'TK4X01ekWwWLZaUhOl0mbhKHT6EMDPqJ'
-        salt = 'mytk'
-        support_lang = ('zh-CHS', 'ja', 'EN', 'ko', 'fr', 'ru', 'pt', 'es')
-        if target_lang not in support_lang:
-            return None
-
-        host = "https://openapi.youdao.com/api"
-        params = {
-            'from': 'auto',
-            'to': target_lang,
-            'q': text,
-            'appKey': app_key,
-            'salt': salt,
-            'sign': hashlib.md5('{}{}{}{}'.format(app_key,
-                                                  text,
-                                                  salt,
-                                                  app_secret)
-                                          .encode(encoding='utf-8'))
-                           .hexdigest()
-        }
-
-        encode_params = parse.urlencode(params)
-
-        request_url = '{host}?{param}'.format(
-                        host=host,
-                        param=encode_params)
-
-        print(request_url)
 
     def print_log(self, message, m_type='INFO'):
         m_types = ('INFO', 'WARNING', 'ERROR')

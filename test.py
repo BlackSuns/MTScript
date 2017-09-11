@@ -3,7 +3,7 @@ from exchanges.liqui import LiquiExchange
 
 if __name__ == '__main__':
     le = LiquiExchange()
-    le.post_result()
+    # le.post_result()
     # print(le.get_translate('COSS token holders are voting to define the future of the unsold COSS tokens on their dashboard. The voting is open for 48 hours from today'))
     # print(le.post_result())
     # le.update_pairs()
