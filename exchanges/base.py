@@ -1,6 +1,4 @@
-import json
 import os
-import hashlib
 from configparser import ConfigParser
 
 import pymysql
@@ -76,50 +74,43 @@ class BaseExchange(object):
     def post_json_request(self, url, params):
         r = requests.post(url, data=params)
 
-        if r.status_code == 200:
-            self.print_log('post success')
+        if r.status_code == 200 and r.json()['code'] == 0\
+           and r.json()['data']['result']:
+            self.print_log(
+                'post success: {symbol}/{anchor} on {market}'.format(
+                    symbol=params['symbol'],
+                    anchor=params['anchor'],
+                    market=self.exchange))
             return r.json()
         else:
             self.print_log('someting wrong and return http code: {}'.format(
-                r.status_code))
+                r.json()))
 
     def post_result(self):
         host = 'http://internal.mytoken.iknowapp.com:12306'
         endpoint = '/currency/upsertcurrencyonmarket'
-        # ts = arrow.now().timestamp
-        # key = 'thalesky_eos_'
-        # secret = hashlib.md5('{}{}'.format(key, ts)
-        #                            .encode(encoding='utf-8')).hexdigest()
+
         request_url = '{host}{endpoint}'.format(
             host=host, endpoint=endpoint)
 
-        remote_data = self.get_remote_data()[0]
-        (symbol, anchor) = self.part_pair(remote_data['pair'])
-        price = remote_data['price']
-        volume_anchor = remote_data['volume_anchor']
-        # get price and volume
-        (anchor_rate_cny, anchor_rate_usd) = self.get_anchor_fiat_price(anchor)
-        price_usd = self.format_price(price * anchor_rate_usd)
-        price_cny = self.format_price(price * anchor_rate_cny)
-        volume_usd = self.format_price(volume_anchor * anchor_rate_usd)
-        volume_cny = self.format_price(volume_anchor * anchor_rate_cny)
+        remote_data = self.get_remote_data()
+        for data in remote_data:
+            (symbol, anchor) = self.part_pair(data['pair'])
+            price = data['price']
+            volume_anchor = data['volume_anchor']
 
-        params = {
-            'symbol': symbol,
-            'market_id': self.exchange_id,
-            'anchor': anchor,
-            'price_cny': price_cny,
-            'price': price,
-            'price_usd': price_usd,
-            'volume_24h': volume_anchor,
-            'volume_24h_cny': volume_cny,
-            'volume_24h_usd': volume_usd,
-        }
+            params = {
+                'symbol': symbol,
+                'market_id': self.exchange_id,
+                'anchor': anchor,
+                'price': price,
+                'volume_24h': volume_anchor,
+            }
 
-        # result = self.post_json_request(request_url, params)
-        # self.print_log(result)
-        print(request_url)
-        print(params)
+            # print(request_url)
+            # print(params)
+            self.post_json_request(request_url, params)
+            # self.print_log(result)
 
     def print_log(self, message, m_type='INFO'):
         m_types = ('INFO', 'WARNING', 'ERROR')
