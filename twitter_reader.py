@@ -1,19 +1,15 @@
 # -*- coding: utf-8 -*-
-import json
 import hashlib
 from urllib import parse
 import os
 import time
 
 import arrow
-import pymysql
-from sqlalchemy import create_engine, Table, Column, String, Integer, ForeignKey
-from sqlalchemy.orm import relationship, sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
-from twitter import Twitter, TwitterStream, OAuth
+from twitter import Twitter, OAuth
 import requests
 
 from utils import get_config, print_log
+from social_models.social import SocialContent, Media, local_session
 
 
 def get_settings():
@@ -22,11 +18,6 @@ def get_settings():
         'consumer_secret': 'string',
         'access_token': 'string',
         'access_token_secret': 'string',
-        'host':       'string',
-        'port':       'int',
-        'user':       'string',
-        'password':   'string',
-        'db':         'string',
     })
 
     return settings
@@ -39,44 +30,6 @@ auth = OAuth(
     token=settings['access_token'],
     token_secret=settings['access_token_secret']
 )
-engine = create_engine(
-    'mysql+pymysql://{user}:{password}@{host}:{port}/{db}?charset=utf8mb4'.format(
-      host=settings['host'],
-      port=settings['port'],
-      user=settings['user'],
-      password=settings['password'],
-      db=settings['db']), pool_recycle=300
-    )
-Session = sessionmaker(bind=engine)
-session = Session()
-Base = declarative_base(bind=engine)
-
-
-class SocialContent(Base):
-    __tablename__ = 'social_content'
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    social_id = Column(Integer, nullable=False, unique=True)
-    source = Column(String(20), nullable=False)
-    created_at = Column(Integer, nullable=False)
-    text = Column(String(500), nullable=False)
-    html_text = Column(String(500))
-    text_chinese = Column(String(500))
-    author = Column(String(255))
-    account = Column(String(255), nullable=False)
-    retweet = Column(Integer)
-    retweet_author = Column(String(255))
-    retweet_account = Column(String(255))
-    medias = relationship("Media", backref="social_content")
-
-
-class Media(Base):
-    __tablename__ = 'media'
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    social_id = Column(Integer, ForeignKey('social_content.social_id'))
-    media_type = Column(String(50))
-    http_url = Column(String(255))
-    https_url = Column(String(255))
-    created_at = Column(Integer, nullable=False)
 
 
 def analyze_twitter(msg):
@@ -249,8 +202,8 @@ if __name__ == '__main__':
             # print_log(json.dumps(msg, indent=4))
             to_insert.append(analyze_twitter(msg))
 
-        to_insert = filter_twitters(session, to_insert)
+        to_insert = filter_twitters(local_session, to_insert)
 
-        save_twitter(session, to_insert)
+        save_twitter(local_session, to_insert)
         print_log('{} twitters saved'.format(len(to_insert)))
-        time.sleep(1 * 60)
+        break

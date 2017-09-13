@@ -1,7 +1,6 @@
 import os
 from configparser import ConfigParser
 
-import pymysql
 import arrow
 import requests
 
@@ -37,10 +36,8 @@ class BaseExchange(object):
         super().__init__()
         self.exchange = ''
         self.exchange_id = 0
-        self.cnx = pymysql.connect(**self.get_config())
 
         self.price_anchor_tmp = {}  # used for restore temp price of anchor
-        self.exchange_rate_USDCNY = self.get_USDCNY_rate()
         self.assigned_com_id = {}
 
     def get_remote_data(self):
@@ -83,8 +80,18 @@ class BaseExchange(object):
                     market=self.exchange))
             return r.json()
         else:
-            self.print_log('someting wrong and return http code: {}'.format(
-                r.json()))
+            error_info = "someting wrong when dealing {}/{}"\
+                         " and return http code: {}".format(
+                            params['symbol'],
+                            params['anchor'],
+                            r.status_code)
+            if r.status_code == 200:
+                try:
+                    error_info += ' and server return error: {}'.format(
+                        r.json())
+                except:
+                    pass
+            self.print_log(error_info)
 
     def post_result(self):
         host = 'http://internal.mytoken.iknowapp.com:12306'
@@ -172,75 +179,3 @@ class BaseExchange(object):
             return round(price, 2)
         else:
             return round(price, 8)
-
-    def get_anchor_fiat_price(self, anchor):
-        ''' get an anchor's fiat price
-            return (RMB_price, USD_price)
-        '''
-        if anchor.upper() == 'RMB':
-            return (1, round(1/self.exchange_rate_USDCNY, 2))
-
-        if anchor.upper() in ('USD', 'USDT'):
-            return (self.exchange_rate_USDCNY, 1)
-
-        if anchor not in self.price_anchor_tmp.keys():
-            self.get_anchor_fiat_price_fromDB(anchor)
-
-        return (self.price_anchor_tmp[anchor]['price_cny'],
-                self.price_anchor_tmp[anchor]['price_usd'])
-
-    def get_anchor_fiat_price_fromDB(self, anchor):
-        ''' get a anchor price in cmc market from database
-        set price_cny, price_usd to self.price_anchor_tmp
-        price will be 0 if not recorded
-        remember ask self.price_anchor_tmp for price first,
-        if no record, try this
-        '''
-        price_cny = 0
-        price_usd = 0
-        mysql = '''
-                select      com.price_cny,
-                            com.price_usd
-                from        currency_on_market com
-                inner join  currency c on com.currency_id=c.id
-                where       com.market_id=1303
-                and         c.symbol='{}'
-        '''.format(anchor)
-
-        with self.cnx.cursor() as cursor:
-            cursor.execute(mysql)
-            result = cursor.fetchone()
-            if result:
-                if result[0]:
-                    price_cny = float(result[0])
-                if result[1]:
-                    price_usd = float(result[1])
-
-        if (price_cny == 0 and price_usd > 0):
-            price_cny = price_usd * self.exchange_rate_USDCNY
-
-        if (price_cny > 0 and price_usd == 0):
-            price_usd = price_cny / self.exchange_rate_USDCNY
-
-        self.price_anchor_tmp[anchor] = {
-            'price_cny': price_cny,
-            'price_usd': price_usd
-        }
-
-    def get_USDCNY_rate(self):
-        ''' return a usd/cny rate from db
-            this value is how much rmb should be exchange of 100 usd
-        '''
-        mysql = '''
-            select  config_value
-            from    system_config
-            where   config='usdcny_rate'
-            and     enabled=1
-        '''
-        with self.cnx.cursor() as cursor:
-            cursor.execute(mysql)
-            result = cursor.fetchone()
-            if result:
-                return float(result[0])
-            else:
-                return 6.65
