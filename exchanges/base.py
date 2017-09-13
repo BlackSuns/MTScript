@@ -3,6 +3,17 @@ from configparser import ConfigParser
 
 import arrow
 import requests
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.poolmanager import PoolManager
+import ssl
+
+
+class MyAdapter(HTTPAdapter):
+    def init_poolmanager(self, connections, maxsize, block=False):
+        self.poolmanager = PoolManager(num_pools=connections,
+                                       maxsize=maxsize,
+                                       block=block,
+                                       ssl_version=ssl.PROTOCOL_TLSv1)
 
 
 class BaseExchange(object):
@@ -60,6 +71,8 @@ class BaseExchange(object):
         raise NotImplementedError("You should implement this")
 
     def get_json_request(self, url):
+        s = requests.Session()
+        s.mount('https://', MyAdapter())
         r = requests.get(url)
 
         if r.status_code == 200:
@@ -73,11 +86,11 @@ class BaseExchange(object):
 
         if r.status_code == 200 and r.json()['code'] == 0\
            and r.json()['data']['result']:
-            self.print_log(
-                'post success: {symbol}/{anchor} on {market}'.format(
-                    symbol=params['symbol'],
-                    anchor=params['anchor'],
-                    market=self.exchange))
+            # self.print_log(
+            #     'post success: {symbol}/{anchor} on {market}'.format(
+            #         symbol=params['symbol'],
+            #         anchor=params['anchor'],
+            #         market=self.exchange))
             return r.json()
         else:
             error_info = "someting wrong when dealing {}/{}"\

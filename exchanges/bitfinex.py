@@ -33,18 +33,25 @@ class BitfinexExchange(BaseExchange):
             if pair[-3:].upper() in ('USD', 'BTC', 'ETH'):
                 url = '{}{}{}'.format(self.base_url, self.ticker_url, pair)
                 ticker = self.ticker_callback(self.get_json_request(url))
-                ticker['pair'] = '{}/{}'.format(pair[:-3].upper(),
-                                                pair[-3:].upper())
-                self.print_log('updating {} ... '.format(ticker['pair']))
-                result.append(ticker)
-        self.print_log(result)
+                if ticker:
+                    ticker['pair'] = '{}/{}'.format(pair[:-3].upper(),
+                                                    pair[-3:].upper())
+                    self.print_log('updating {} ... '.format(ticker['pair']))
+                    result.append(ticker)
+                else:
+                    self.print_log(
+                        'sth wrong, skipped {}'.format(pair[:-3].upper(),
+                                                       pair[-3:].upper()))
         return result
 
     def ticker_callback(self, result):
-        return {
-            'price': result['last_price'],
-            'volume_anchor': round(
-                float(result['volume']) * float(result['last_price']),
-                8),
-            'volume': result['volume'],
-        }
+        try:
+            return {
+                'price': result['last_price'],
+                'volume_anchor': round(
+                    float(result['volume']) * float(result['last_price']),
+                    8),
+                'volume': result['volume'],
+            }
+        except:
+            return False
