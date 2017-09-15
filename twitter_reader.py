@@ -2,7 +2,6 @@
 import hashlib
 from urllib import parse
 import os
-import time
 
 import arrow
 from twitter import Twitter, OAuth

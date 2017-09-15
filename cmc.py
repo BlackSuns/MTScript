@@ -115,6 +115,7 @@ def get_exist_currencies(conn):
         select  id,
                 name,
                 symbol,
+                mytoken_id,
                 enabled,
                 cmc_url,
                 website,
@@ -136,13 +137,14 @@ def get_exist_currencies(conn):
             'name': c[1].strip(),
             'symbol': c[2].strip(),
             'currency': '{} ({})'.format(c[1].strip(), c[2].strip()),
-            'enabled': c[3],
-            'cmc_url': c[4],
-            'website': c[5],
-            'explorer': c[6],
-            'announcement': c[7],
-            'message_board': c[8],
-            'total_supply': c[9]
+            'mytoken_id': c[3].strip(),
+            'enabled': c[4],
+            'cmc_url': c[5],
+            'website': c[6],
+            'explorer': c[7],
+            'announcement': c[8],
+            'message_board': c[9],
+            'total_supply': c[10]
         })
 
     return rd
@@ -455,7 +457,6 @@ def update_market_info(market_data, conn_data):
 
 def update_currency_market_info(currency_data, conn_data,
                                 exist_symbols, exist_markets):
-
     update_sql_str = '''
         START   TRANSACTION;
         UPDATE      `currency_on_market` com
@@ -467,7 +468,7 @@ def update_currency_market_info(currency_data, conn_data,
                     com.`updated_at`=unix_timestamp(now())
         WHERE       com.`currency_id`={currency_id}
         AND         com.`market_id`={market_id}
-        AND         com.`pair`="{pair}"
+        AND         com.`com_id`="{com_id}"
         AND         m.`synchronized`=0;
 
         INSERT INTO `currency_on_market`
@@ -475,6 +476,7 @@ def update_currency_market_info(currency_data, conn_data,
                       `currency_id`,
                       `market_id`,
                       `pair`,
+                      `com_id`,
                       `currency`,
                       `anchor`,
                       `volume_24h_usd`,
@@ -485,6 +487,7 @@ def update_currency_market_info(currency_data, conn_data,
         SELECT      {currency_id} as `currency_id`,
                     {market_id} as `market_id`,
                     "{pair}" as `pair`,
+                    "{com_id}" as `com_id`,
                     "{currency}" as `currency`,
                     "{anchor}" as `anchor`,
                     {volume_24h_usd} as `volume_24h_usd`,
@@ -497,7 +500,7 @@ def update_currency_market_info(currency_data, conn_data,
         FROM        currency_on_market
         WHERE       `currency_id` = {currency_id}
         AND         `market_id` = {market_id}
-        AND         `pair` = "{pair}"
+        AND         `com_id` = "{com_id}"
         )
     '''
 
@@ -518,6 +521,8 @@ def update_currency_market_info(currency_data, conn_data,
                         # print(mc)
                         pair = mc['pair']
                         (currency, anchor) = get_currency_anchor(pair)
+                        com_id = '{}_{}'.format(str(es['mytoken_id']).lower(),
+                                                anchor.lower())
                         if currency and anchor:
                             if currency == es['symbol']:
                                 if ('volume' in mc.keys()):
@@ -529,11 +534,12 @@ def update_currency_market_info(currency_data, conn_data,
                                     currency_id=currency_id,
                                     market_id=market_id,
                                     pair=pair,
+                                    com_id=com_id,
                                     currency=currency,
                                     anchor=anchor,
                                     volume_24h_usd=volume_24h_usd)
                                 # if pair == 'TNT/ETH':
-                                # print(exec_sql)
+                                #     print(exec_sql)
                                 cursor.execute(exec_sql)
                         else:
                             print_log('illegal pair found: {}'.format(pair))

@@ -1,6 +1,7 @@
 import os
 
 import arrow
+import requests
 from google.cloud import translate
 
 from social_models.social import (SocialContent,
@@ -24,13 +25,44 @@ def get_translation(text):
         return ''
 
 
+def post(data):
+    host = 'http://internal.mytoken.iknowapp.com:12306'
+    endpoint = '/social/addtimeline'
+
+    request_url = '{host}{endpoint}'.format(
+        host=host, endpoint=endpoint)
+
+    r = requests.post(request_url, data=data)
+
+    if r.status_code == 200 and r.json()['code'] == 0\
+       and r.json()['data']['result']:
+        # self.print_log(
+        #     'post success: {symbol}/{anchor} on {market}'.format(
+        #         symbol=params['symbol'],
+        #         anchor=params['anchor'],
+        #         market=self.exchange))
+        return r.json()
+    else:
+        error_info = "someting wrong when dealing {}"\
+                     " and return http code: {}".format(
+                        data['social_content_id'],
+                        r.status_code)
+        if r.status_code == 200:
+            try:
+                error_info += ' and server return error: {}'.format(
+                    r.json())
+            except:
+                pass
+        print_log(error_info)
+
+
 if __name__ == '__main__':
     sync_ts = arrow.now().timestamp
     for content, currency in\
         local_session.query(SocialContent, SocialCurrency).\
             filter(SocialContent.account == SocialCurrency.social_account).\
             filter(SocialContent.created_at > sync_ts - POST_TIME_SPAN).\
-            filter(SocialContent.synchronized == 0).\
+            filter(SocialContent.synchronized == 0).limit(1).\
             all():
         print_log('handling id {} by {}'.format(content.social_id,
                                                 content.account))
@@ -38,30 +70,32 @@ if __name__ == '__main__':
             print_log('start tranlate..')
             content.text_chinese = get_translation(content.html_text)
 
-        st = SocialTimeline()
-        st.currency_id = currency.currency_id
-        st.social_nickname = content.author
-        st.social_account = content.account
-        st.social_content_id = content.social_id
-        st.content = content.html_text
-        st.content_translation = content.text_chinese
+        rd = {}
+        rd['currency_id'] = currency.currency_id
+        rd['social_nickname'] = content.author
+        rd['social_account'] = content.account
+        rd['social_content_id'] = content.social_id
+        rd['content'] = content.html_text
+        rd['content_translation'] = content.text_chinese
         if content.retweet:
-            st.content = 'retweet {}:\n {}'.format(content.retweet_author,
-                                                   content.html_text)
-            st.content_translation = '转推 {}:\n {}'.format(
+            rd['content'] = 'retweet {}:\n {}'.format(content.retweet_author,
+                                                      content.html_text)
+            rd['content_translation'] = '转推 {}:\n {}'.format(
                 content.retweet_author,
                 content.html_text)
-        st.source = 'twitter'
-        st.review_status = 1 - int(currency.need_review)
-        st.posted_at = content.created_at
-        st.created_at = arrow.now().timestamp
-        st.updated_at = arrow.now().timestamp
-        remote_session.add(st)
+        rd['source'] = 'twitter'
+        rd['review_status'] = 1 - int(currency.need_review)
+        rd['posted_at'] = content.created_at
+        rd['created_at'] = arrow.now().timestamp
+        rd['updated_at'] = arrow.now().timestamp
 
         content.synchronized = 1
 
+        print('rd: ', rd)
+        result = post(rd)
+        print(result)
+
         try:
             local_session.commit()
-            remote_session.commit()
         except Exception as e:
             print_log(e)
