@@ -513,8 +513,6 @@ def update_currency_market_info(currency_data, conn_data,
                 currency_id = es['id']
 
                 for mc in currency_data[es['currency']]['markets']:
-                    # if es['symbol'] == 'NEO':
-                        # print(mc)
                     market_id = exist_markets.get(mc['markets'], None)
 
                     if market_id is not None:
@@ -539,7 +537,7 @@ def update_currency_market_info(currency_data, conn_data,
                                     anchor=anchor,
                                     volume_24h_usd=volume_24h_usd)
                                 # if pair == 'TNT/ETH':
-                                #     print(exec_sql)
+                                # print(exec_sql)
                                 cursor.execute(exec_sql)
                         else:
                             print_log('illegal pair found: {}'.format(pair))
