@@ -74,6 +74,7 @@ if __name__ == '__main__':
         rd['currency_id'] = currency.currency_id
         rd['social_nickname'] = content.author
         rd['social_account'] = content.account
+        rd['account_remark'] = currency.remark
         rd['social_content_id'] = content.social_id
         rd['content'] = content.html_text
         rd['content_translation'] = content.text_chinese
