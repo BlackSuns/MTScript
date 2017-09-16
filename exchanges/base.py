@@ -93,6 +93,7 @@ class BaseExchange(object):
             #         market=self.exchange))
             return r.json()
         else:
+            # print(params)
             error_info = "someting wrong when dealing {}/{}"\
                          " and return http code: {}".format(
                             params['symbol'],

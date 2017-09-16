@@ -31,13 +31,5 @@ class PoloniexExchange(BaseExchange):
                     'volume': result[i]['quoteVolume'],
                 })
 
-                if symbol == 'BTM':
-                    print({
-                        'pair': pair,
-                        'price': result[i]['last'],
-                        'volume_anchor': result[i]['baseVolume'],
-                        'volume': result[i]['quoteVolume'],
-                    })
-
         # print(return_data)
         return return_data
