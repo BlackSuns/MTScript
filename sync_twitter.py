@@ -35,7 +35,7 @@ def post(data):
     r = requests.post(request_url, data=data)
 
     if r.status_code == 200 and r.json()['code'] == 0\
-       and r.json()['data']['result']:
+       and r.json()['data']:
         # self.print_log(
         #     'post success: {symbol}/{anchor} on {market}'.format(
         #         symbol=params['symbol'],
@@ -62,7 +62,7 @@ if __name__ == '__main__':
         local_session.query(SocialContent, SocialCurrency).\
             filter(SocialContent.account == SocialCurrency.social_account).\
             filter(SocialContent.created_at > sync_ts - POST_TIME_SPAN).\
-            filter(SocialContent.synchronized == 0).limit(1).\
+            filter(SocialContent.synchronized == 0).\
             all():
         print_log('handling id {} by {}'.format(content.social_id,
                                                 content.account))
