@@ -73,7 +73,7 @@ class BaseExchange(object):
     def get_json_request(self, url):
         s = requests.Session()
         s.mount('https://', MyAdapter())
-        r = requests.get(url)
+        r = requests.get(url, timeout=30)
 
         if r.status_code == 200:
             return r.json()
@@ -113,24 +113,25 @@ class BaseExchange(object):
         request_url = '{host}{endpoint}'.format(
             host=host, endpoint=endpoint)
 
-        remote_data = self.get_remote_data()
-        for data in remote_data:
-            (symbol, anchor) = self.part_pair(data['pair'])
-            price = data['price']
-            volume_anchor = data['volume_anchor']
+        try:
+            remote_data = self.get_remote_data()
+            for data in remote_data:
+                (symbol, anchor) = self.part_pair(data['pair'])
+                price = data['price']
+                volume_anchor = data['volume_anchor']
 
-            params = {
-                'symbol': symbol,
-                'market_id': self.exchange_id,
-                'anchor': anchor,
-                'price': price,
-                'volume_24h': volume_anchor,
-            }
+                params = {
+                    'symbol': symbol,
+                    'market_id': self.exchange_id,
+                    'anchor': anchor,
+                    'price': price,
+                    'volume_24h': volume_anchor,
+                }
 
-            # print(request_url)
-            # print(params)
-            self.post_json_request(request_url, params)
-            # self.print_log(result)
+                self.post_json_request(request_url, params)
+                # self.print_log(result)
+        except Exception as e:
+            self.print_log('found error: ', e)
 
     def print_log(self, message, m_type='INFO'):
         m_types = ('INFO', 'WARNING', 'ERROR')
