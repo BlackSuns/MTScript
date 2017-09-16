@@ -131,7 +131,7 @@ class BaseExchange(object):
                 self.post_json_request(request_url, params)
                 # self.print_log(result)
         except Exception as e:
-            self.print_log('found error: ', e)
+            self.print_log('found error: {}'.format(e))
 
     def print_log(self, message, m_type='INFO'):
         m_types = ('INFO', 'WARNING', 'ERROR')
