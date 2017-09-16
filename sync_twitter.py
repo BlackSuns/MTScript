@@ -82,7 +82,7 @@ if __name__ == '__main__':
                                                       content.html_text)
             rd['content_translation'] = '转推 {}:\n {}'.format(
                 content.retweet_author,
-                content.html_text)
+                content.text_chinese)
         rd['source'] = 'twitter'
         rd['review_status'] = 1 - int(currency.need_review)
         rd['posted_at'] = content.created_at
