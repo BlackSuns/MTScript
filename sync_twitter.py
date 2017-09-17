@@ -67,7 +67,7 @@ if __name__ == '__main__':
     time.sleep(60)
 
     trans_path = get_google_trans_path()['path']
-    os.putenv("GOOGLE_APPLICATION_CREDENTIALS", trans_path)
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = trans_path
 
     sync_ts = arrow.now().timestamp
     for content, currency in\
