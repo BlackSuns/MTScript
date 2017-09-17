@@ -37,6 +37,7 @@ class BitfinexExchange(BaseExchange):
                     ticker['pair'] = '{}/{}'.format(pair[:-3].upper(),
                                                     pair[-3:].upper())
                     self.print_log('updating {} ... '.format(ticker['pair']))
+                    # self.print_log(ticker)
                     result.append(ticker)
                 else:
                     self.print_log(

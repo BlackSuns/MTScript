@@ -108,6 +108,7 @@ def save_twitter(session, messages):
         content.retweet = 1 if msg['msg_type'] == 'retweet' else 0
         content.retweet_author = msg['retweet_author']
         content.retweet_account = msg['retweet_account']
+        content.synchronized = 0
         if 'media' in msg.keys():
             for media in msg['media']:
                 m = Media()
