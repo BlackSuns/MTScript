@@ -57,8 +57,18 @@ def post(data):
         print_log(error_info)
 
 
+def get_google_trans_path():
+    return get_config(CONFIG_PATH, 'google_trans_path', {
+        'path': 'string'
+    })
+
+
 if __name__ == '__main__':
     time.sleep(60)
+
+    trans_path = get_google_trans_path()['path']
+    os.putenv("GOOGLE_APPLICATION_CREDENTIALS", trans_path)
+
     sync_ts = arrow.now().timestamp
     for content, currency in\
         local_session.query(SocialContent, SocialCurrency).\
