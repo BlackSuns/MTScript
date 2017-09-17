@@ -1,4 +1,5 @@
 import os
+import time
 
 import arrow
 import requests
@@ -57,6 +58,7 @@ def post(data):
 
 
 if __name__ == '__main__':
+    time.sleep(60)
     sync_ts = arrow.now().timestamp
     for content, currency in\
         local_session.query(SocialContent, SocialCurrency).\
