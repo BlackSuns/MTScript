@@ -368,7 +368,6 @@ def update_currency_basic_info(currency_data, conn_data, exist_currencies):
 def update_market_info(market_data, conn_data):
     # base market info
     update_sql_str = '''
-        START   TRANSACTION;
         UPDATE  market
         SET     cmc_url = "{cmc_url}",
                 updated_at = unix_timestamp(now())
@@ -397,7 +396,6 @@ def update_market_info(market_data, conn_data):
         FROM        market
         WHERE       `name` = '{name}'
         )
-        COMMIT;
     '''
     # update_sql_str = '''
     #      INSERT INTO  `market`
@@ -459,7 +457,6 @@ def update_market_info(market_data, conn_data):
 def update_currency_market_info(currency_data, conn_data,
                                 exist_symbols, exist_markets):
     update_sql_str = '''
-        START   TRANSACTION;
         UPDATE      `currency_on_market` com
         INNER JOIN  `market` m on m.`id`=com.`market_id`
         SET         com.`volume_24h_usd`={volume_24h_usd},
@@ -503,7 +500,6 @@ def update_currency_market_info(currency_data, conn_data,
         AND         `market_id` = {market_id}
         AND         `com_id` = "{com_id}"
         )
-        COMMIT;
     '''
 
     with conn_data.cursor() as cursor:
