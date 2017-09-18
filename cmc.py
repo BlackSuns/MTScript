@@ -397,6 +397,7 @@ def update_market_info(market_data, conn_data):
         FROM        market
         WHERE       `name` = '{name}'
         )
+        COMMIT;
     '''
     # update_sql_str = '''
     #      INSERT INTO  `market`
@@ -502,6 +503,7 @@ def update_currency_market_info(currency_data, conn_data,
         AND         `market_id` = {market_id}
         AND         `com_id` = "{com_id}"
         )
+        COMMIT;
     '''
 
     with conn_data.cursor() as cursor:
