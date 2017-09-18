@@ -538,7 +538,7 @@ def update_currency_market_info(currency_data, conn_data,
                                     anchor=anchor,
                                     volume_24h_usd=volume_24h_usd)
                                 # if pair == 'TNT/ETH':
-                                print(exec_sql)
+                                # print(exec_sql)
                                 cursor.execute(exec_sql)
                         else:
                             print_log('illegal pair found: {}'.format(pair))
