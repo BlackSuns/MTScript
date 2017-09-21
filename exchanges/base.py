@@ -1,4 +1,6 @@
 import os
+from urllib.parse import urlencode
+import json
 from configparser import ConfigParser
 
 import arrow
@@ -83,9 +85,10 @@ class BaseExchange(object):
 
     def post_json_request(self, url, params):
         r = requests.post(url, data=params)
+        print(params)
 
         if r.status_code == 200 and r.json()['code'] == 0\
-           and r.json()['data']['result']:
+           and r.json()['data']:
             # self.print_log(
             #     'post success: {symbol}/{anchor} on {market}'.format(
             #         symbol=params['symbol'],
@@ -94,11 +97,7 @@ class BaseExchange(object):
             return r.json()
         else:
             # print(params)
-            error_info = "someting wrong when dealing {}/{}"\
-                         " and return http code: {}".format(
-                            params['symbol'],
-                            params['anchor'],
-                            r.status_code)
+            error_info = "http code: {}".format(r.status_code)
             if r.status_code == 200:
                 try:
                     error_info += ' and server return error: {}'.format(
@@ -134,6 +133,39 @@ class BaseExchange(object):
         except Exception as e:
             self.print_log('found error: {}'.format(e))
 
+    def post_result_batch(self):
+        host = self.get_base_url()
+        if not host:
+            raise RuntimeError('not define base url in config file')
+
+        endpoint = '/currency/batchupsert'
+
+        request_url = '{host}{endpoint}'.format(
+            host=host, endpoint=endpoint)
+        request_data = []
+
+        try:
+            remote_data = self.get_remote_data()
+            for data in remote_data:
+                (symbol, anchor) = self.part_pair(data['pair'])
+                price = data['price']
+                volume_anchor = data['volume_anchor']
+
+                params = {
+                    "symbol": symbol,
+                    "market_id": self.exchange_id,
+                    "anchor": anchor,
+                    "price": price,
+                    "volume_24h": volume_anchor,
+                }
+                request_data.append(params)
+
+            # print(request_url, {'json': request_data})
+            self.post_json_request(
+                request_url, {'json': json.dumps(request_data)})
+        except Exception as e:
+            self.print_log('found error: {}'.format(e))
+
     def print_log(self, message, m_type='INFO'):
         m_types = ('INFO', 'WARNING', 'ERROR')
         prefix = '[exchange {}][ {} ]'.format(
@@ -144,6 +176,15 @@ class BaseExchange(object):
             raise RuntimeError('Invalid log type: {}'.format(m_type))
 
         print('{} -{}- {}'.format(prefix, m_type, message))
+
+    def get_base_url(self):
+        config = ConfigParser()
+        config.read(self.CONFIG_PATH)
+
+        if config.has_section('exchange_settings'):
+            return config.get('exchange_settings', 'base_url')
+        else:
+            return None
 
     def get_config(self):
         args = {

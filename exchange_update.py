@@ -9,19 +9,19 @@ if __name__ == '__main__':
     print_log("start sync exchanges...")
 
     le = LiquiExchange()
-    le.post_result()
+    le.post_result_batch()
     print_log("liqui done...")
 
     bt = BittrexExchange()
-    bt.post_result()
+    bt.post_result_batch()
     print_log("bittrex done...")
 
     hb = HitbtcExchange()
-    hb.post_result()
+    hb.post_result_batch()
     print_log("hitbtc done...")
 
     px = PoloniexExchange()
-    px.post_result()
+    px.post_result_batch()
     print_log("poloniex done...")
 
     print_log("all exchanges synced...")
