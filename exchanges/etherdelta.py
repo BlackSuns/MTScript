@@ -62,6 +62,7 @@ class EtherdeltaExchange(BaseExchange):
                     'ICN',
                     'IFT',
                     'IXT',
+                    'LINK',
                     'LNK',
                     'LRC',
                     'MCAP',
