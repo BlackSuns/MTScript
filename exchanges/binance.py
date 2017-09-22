@@ -28,7 +28,7 @@ class BinanceExchange(BaseExchange):
             if price > 0:
                 return_data.append({
                     'pair': pair,
-                    'price': i['prevClose'],
+                    'price': i['close'],
                     'volume_anchor': float(i['volume']) * i['prevClose'],
                     'volume': float(i['volume']),
                 })
