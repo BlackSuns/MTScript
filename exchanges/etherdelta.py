@@ -100,6 +100,7 @@ class EtherdeltaExchange(BaseExchange):
                     'TNT',
                     'TRX',
                     'VERI',
+                    'VEN',
                     'VSM',
                     'WINGS',
                     'WTC',
