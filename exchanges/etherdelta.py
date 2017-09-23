@@ -85,6 +85,7 @@ class EtherdeltaExchange(BaseExchange):
                     'PLU',
                     'POE',
                     'PPT',
+                    'PST',
                     'PTOY',
                     'REX',
                     'SAN',
