@@ -79,6 +79,7 @@ class EtherdeltaExchange(BaseExchange):
                     'OMG',
                     'OPT',
                     'PAY',
+                    'PIX',
                     'PLBT',
                     'PLR',
                     'PLU',
@@ -150,16 +151,17 @@ class EtherdeltaExchange(BaseExchange):
         return_data = []
 
         for i in result.keys():
-            symbol = i
-            anchor = 'ETH'
+            if result[i]['ETH']['LASTVOLUME'] > 0.01:
+                symbol = i
+                anchor = 'ETH'
 
-            pair = '{}/{}'.format(symbol.upper(), anchor.upper())
-            return_data.append({
-                'pair': pair,
-                'price': result[i]['ETH']['PRICE'],
-                'volume_anchor': result[i]['ETH']['VOLUME24HOURTO'],
-                'volume': result[i]['ETH']['VOLUME24HOUR'],
-            })
+                pair = '{}/{}'.format(symbol.upper(), anchor.upper())
+                return_data.append({
+                    'pair': pair,
+                    'price': result[i]['ETH']['PRICE'],
+                    'volume_anchor': result[i]['ETH']['VOLUME24HOURTO'],
+                    'volume': result[i]['ETH']['VOLUME24HOUR'],
+                })
 
         # print(return_data)
         return return_data
