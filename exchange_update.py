@@ -3,6 +3,7 @@ from exchanges.liqui import LiquiExchange
 from exchanges.bittrex import BittrexExchange
 from exchanges.hitbtc import HitbtcExchange
 from exchanges.poloniex import PoloniexExchange
+from exchanges.bitz import BitzExchange
 
 
 if __name__ == '__main__':
@@ -23,5 +24,9 @@ if __name__ == '__main__':
     px = PoloniexExchange()
     px.post_result_batch()
     print_log("poloniex done...")
+
+    # bz = BitzExchange()
+    # bz.post_result_batch()
+    # print_log("Bit-Z done...")
 
     print_log("all exchanges synced...")

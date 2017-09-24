@@ -85,7 +85,7 @@ class BaseExchange(object):
 
     def post_json_request(self, url, params):
         r = requests.post(url, data=params)
-        # print(params)
+        print(params)
 
         if r.status_code == 200 and r.json()['code'] == 0\
            and r.json()['data']:
@@ -128,6 +128,12 @@ class BaseExchange(object):
                     'volume_24h': volume_anchor,
                 }
 
+                opt_params = ('name', 'percent_change_24h', 'rank')
+
+                for p in opt_params:
+                    if p in data.keys():
+                        params[p] = data[p]
+
                 self.post_json_request(request_url, params)
                 # self.print_log(result)
         except Exception as e:
@@ -158,12 +164,19 @@ class BaseExchange(object):
                     "price": price,
                     "volume_24h": volume_anchor,
                 }
+
+                opt_params = ('name', 'percent_change_24h', 'rank')
+
+                for p in opt_params:
+                    if p in data.keys():
+                        params[p] = data[p]
+
                 request_data.append(params)
 
             # print(request_url, {'json': request_data})
             self.post_json_request(
                 request_url, {'json': json.dumps(request_data)})
-        except Exception as e:
+        except aException as e:
             self.print_log('found error: {}'.format(e))
 
     def print_log(self, message, m_type='INFO'):
