@@ -65,6 +65,7 @@ class EtherdeltaExchange(BaseExchange):
                     'LINK',
                     'LNK',
                     'LRC',
+                    'MANA',
                     'MCAP',
                     'MCO',
                     'MDA',
