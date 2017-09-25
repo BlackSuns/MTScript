@@ -25,8 +25,8 @@ if __name__ == '__main__':
     px.post_result_batch()
     print_log("poloniex done...")
 
-    # bz = BitzExchange()
-    # bz.post_result_batch()
-    # print_log("Bit-Z done...")
+    bz = BitzExchange()
+    bz.post_result_batch()
+    print_log("Bit-Z done...")
 
     print_log("all exchanges synced...")

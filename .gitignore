@@ -3,3 +3,4 @@
 */__pycache__
 /__pycache__
 *.old
+exchanges/exchange_conf/*
