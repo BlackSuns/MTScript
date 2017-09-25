@@ -23,6 +23,8 @@ class CmcExchange(BaseExchange):
         for i in result:
             name = i['name']
             symbol = i['symbol']
+            if name == 'IOTA' and symbol == 'MIOTA':
+                symbol = 'IOT'
             anchor = 'CNY'
             rank = int(i['rank'])
             price = float(i['price_cny'])

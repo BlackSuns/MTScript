@@ -85,7 +85,7 @@ class BaseExchange(object):
 
     def post_json_request(self, url, params):
         r = requests.post(url, data=params)
-        print(params)
+        # print(params)
 
         if r.status_code == 200 and r.json()['code'] == 0\
            and r.json()['data']:
