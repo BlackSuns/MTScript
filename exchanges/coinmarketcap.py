@@ -21,13 +21,14 @@ class CmcExchange(BaseExchange):
         return_data = []
 
         for i in result:
+            print(i)
             name = i['name']
             symbol = i['symbol']
             if name == 'IOTA' and symbol == 'MIOTA':
                 symbol = 'IOT'
             anchor = 'CNY'
             rank = int(i['rank'])
-            price = float(i['price_cny'])
+            price = float(i['price_cny']) if i['price_cny'] else 0
             volume_anchor = \
                 float(i['24h_volume_cny']) if i['24h_volume_cny'] else 0
             percent_change_24h = \
