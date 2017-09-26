@@ -21,7 +21,7 @@ class CmcExchange(BaseExchange):
         return_data = []
 
         for i in result:
-            print(i)
+            # print(i)
             name = i['name']
             symbol = i['symbol']
             if name == 'IOTA' and symbol == 'MIOTA':
