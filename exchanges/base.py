@@ -85,6 +85,7 @@ class BaseExchange(object):
 
     def post_json_request(self, url, params):
         r = requests.post(url, data=params)
+        print(url)
         # print(params)
 
         if r.status_code == 200 and r.json()['code'] == 0\
@@ -140,6 +141,7 @@ class BaseExchange(object):
             self.print_log('found error: {}'.format(e))
 
     def post_result_batch(self):
+        page_size = 50
         host = self.get_base_url()
         if not host:
             raise RuntimeError('not define base url in config file')
@@ -152,30 +154,32 @@ class BaseExchange(object):
 
         try:
             remote_data = self.get_remote_data()
-            for data in remote_data:
-                (symbol, anchor) = self.part_pair(data['pair'])
-                price = data['price']
-                volume_anchor = data['volume_anchor']
+            jobs = self.chunks(remote_data, page_size)
+            for j in jobs:
+                for data in j:
+                    (symbol, anchor) = self.part_pair(data['pair'])
+                    price = data['price']
+                    volume_anchor = data['volume_anchor']
 
-                params = {
-                    "symbol": symbol,
-                    "market_id": self.exchange_id,
-                    "anchor": anchor,
-                    "price": price,
-                    "volume_24h": volume_anchor,
-                }
+                    params = {
+                        "symbol": symbol,
+                        "market_id": self.exchange_id,
+                        "anchor": anchor,
+                        "price": price,
+                        "volume_24h": volume_anchor,
+                    }
 
-                opt_params = ('name', 'percent_change_24h', 'rank')
+                    opt_params = ('name', 'percent_change_24h', 'rank')
 
-                for p in opt_params:
-                    if p in data.keys():
-                        params[p] = data[p]
+                    for p in opt_params:
+                        if p in data.keys():
+                            params[p] = data[p]
 
-                request_data.append(params)
+                    request_data.append(params)
 
-            # print(request_url, {'json': request_data})
-            self.post_json_request(
-                request_url, {'json': json.dumps(request_data)})
+                # print(request_url, {'json': request_data})
+                self.post_json_request(
+                    request_url, {'json': json.dumps(request_data)})
         except aException as e:
             self.print_log('found error: {}'.format(e))
 
@@ -232,6 +236,12 @@ class BaseExchange(object):
             return dictdata
         else:
             return None
+
+    def chunks(self, l, n):
+        """Yield successive n-sized chunks from l.
+        """
+        for i in range(0, len(l), n):
+            yield l[i:i + n]
 
     def part_pair(self, pair):
         ''' part a pair to (symbol, anchor)
