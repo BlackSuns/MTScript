@@ -85,7 +85,7 @@ class BaseExchange(object):
 
     def post_json_request(self, url, params):
         r = requests.post(url, data=params)
-        print(url)
+        # print(url)
         # print(params)
 
         if r.status_code == 200 and r.json()['code'] == 0\
@@ -141,7 +141,7 @@ class BaseExchange(object):
             self.print_log('found error: {}'.format(e))
 
     def post_result_batch(self):
-        page_size = 50
+        page_size = 2000
         host = self.get_base_url()
         if not host:
             raise RuntimeError('not define base url in config file')
@@ -157,25 +157,26 @@ class BaseExchange(object):
             jobs = self.chunks(remote_data, page_size)
             for j in jobs:
                 for data in j:
-                    (symbol, anchor) = self.part_pair(data['pair'])
                     price = data['price']
-                    volume_anchor = data['volume_anchor']
+                    if float(price) > 0:
+                        (symbol, anchor) = self.part_pair(data['pair'])
+                        volume_anchor = data['volume_anchor']
 
-                    params = {
-                        "symbol": symbol,
-                        "market_id": self.exchange_id,
-                        "anchor": anchor,
-                        "price": price,
-                        "volume_24h": volume_anchor,
-                    }
+                        params = {
+                            "symbol": symbol,
+                            "market_id": self.exchange_id,
+                            "anchor": anchor,
+                            "price": price,
+                            "volume_24h": volume_anchor,
+                        }
 
-                    opt_params = ('name', 'percent_change_24h', 'rank')
+                        opt_params = ('name', 'percent_change_24h', 'rank')
 
-                    for p in opt_params:
-                        if p in data.keys():
-                            params[p] = data[p]
+                        for p in opt_params:
+                            if p in data.keys():
+                                params[p] = data[p]
 
-                    request_data.append(params)
+                        request_data.append(params)
 
                 # print(request_url, {'json': request_data})
                 self.post_json_request(

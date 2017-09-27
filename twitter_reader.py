@@ -5,6 +5,7 @@ import os
 
 import arrow
 from twitter import Twitter, OAuth
+# https://github.com/sixohsix/twitter
 import requests
 
 from utils import get_config, print_log

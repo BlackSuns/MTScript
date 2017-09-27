@@ -24,14 +24,13 @@ class BinanceExchange(BaseExchange):
             symbol = i['baseAsset']
             anchor = i['quoteAsset']
             pair = '{}/{}'.format(symbol.upper(), anchor.upper())
-            price = i['prevClose']
-            if price > 0:
-                return_data.append({
-                    'pair': pair,
-                    'price': i['close'],
-                    'volume_anchor': float(i['volume']) * i['prevClose'],
-                    'volume': float(i['volume']),
-                })
+
+            return_data.append({
+                'pair': pair,
+                'price': i['close'],
+                'volume_anchor': float(i['volume']) * i['prevClose'],
+                'volume': float(i['volume']),
+            })
 
         # print(return_data)
         return return_data
