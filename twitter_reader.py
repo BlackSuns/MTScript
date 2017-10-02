@@ -196,7 +196,7 @@ if __name__ == '__main__':
 
     while True:
         print_log('start work...')
-        messages = t.statuses.home_timeline(tweet_mode='extended')
+        messages = t.statuses.home_timeline(tweet_mode='extended', count=200)
         to_insert = []
 
         for msg in messages:

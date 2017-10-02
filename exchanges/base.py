@@ -108,7 +108,7 @@ class BaseExchange(object):
             self.print_log(error_info)
 
     def post_result(self):
-        host = 'http://internal.mytoken.iknowapp.com:12306'
+        host = 'http://internal.mytoken.io:12306'
         endpoint = '/currency/upsertcurrencyonmarket'
 
         request_url = '{host}{endpoint}'.format(

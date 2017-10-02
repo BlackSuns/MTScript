@@ -67,7 +67,7 @@ class EtherdeltaExchange(BaseExchange):
         return_data = []
 
         for i in result.keys():
-            if result[i]['ETH']['LASTVOLUME'] > 0.01:
+            if result[i]['ETH']['LASTVOLUME'] > 0.1:
                 symbol = i
                 anchor = 'ETH'
 
