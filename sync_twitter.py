@@ -27,7 +27,7 @@ def get_translation(text):
 
 
 def post(data):
-    host = 'http://internal.mytoken.iknowapp.com:12306'
+    host = 'http://internal.mytoken.io:12306'
     endpoint = '/social/addtimeline'
 
     request_url = '{host}{endpoint}'.format(
@@ -54,7 +54,7 @@ def post(data):
                     r.json())
             except:
                 pass
-        print_log(error_info)
+        raise RuntimeError(error_info)
 
 
 def get_google_trans_path():
