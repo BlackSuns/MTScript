@@ -47,11 +47,6 @@ def get_engine():
         'user':       'string',
         'password':   'string',
         'db':         'string',
-        'remote_host':       'string',
-        'remote_port':       'int',
-        'remote_user':       'string',
-        'remote_password':   'string',
-        'remote_db':         'string',
     })
 
     local_engine = create_engine(
@@ -64,25 +59,12 @@ def get_engine():
           db=settings['db']), pool_recycle=300
         )
 
-    remote_engine = create_engine(
-        'mysql+pymysql://{user}:{password}@{host}:{port}/{db}?charset=utf8mb4'
-        .format(
-          host=settings['remote_host'],
-          port=settings['remote_port'],
-          user=settings['remote_user'],
-          password=settings['remote_password'],
-          db=settings['remote_db']), pool_recycle=300
-        )
+    return local_engine
 
-    return (local_engine, remote_engine)
-
-(local_engine, remote_engine) = get_engine()
+local_engine = get_engine()
 LocalSession = sessionmaker(bind=local_engine)
-RemoteSession = sessionmaker(bind=remote_engine)
 local_session = LocalSession()
-remote_session = RemoteSession()
 LocalBase = declarative_base(bind=local_engine)
-RemoteBase = declarative_base(bind=remote_engine)
 
 
 class SocialContent(LocalBase):
@@ -121,19 +103,3 @@ class SocialCurrency(LocalBase):
     currency_id = Column(Integer)
     need_review = Column(Integer)
     remark = Column(String(20))
-
-
-class SocialTimeline(RemoteBase):
-    __tablename__ = 'social_timeline'
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    currency_id = Column(Integer, nullable=False)
-    social_nickname = Column(String(50))
-    social_account = Column(String(50))
-    social_content_id = Column(String(20), unique=True)
-    content = Column(String(500))
-    content_translation = Column(String(500))
-    source = Column(String(20))
-    review_status = Column(Integer)
-    posted_at = Column(Integer)
-    created_at = Column(Integer)
-    updated_at = Column(Integer)

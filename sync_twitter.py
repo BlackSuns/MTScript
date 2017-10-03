@@ -8,7 +8,6 @@ from google.cloud import translate
 from social_models.social import (SocialContent,
                                   SocialCurrency,
                                   local_session,
-                                  remote_session,
                                   SocialTimeline)
 from utils import get_config, print_log
 
