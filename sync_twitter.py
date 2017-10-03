@@ -28,7 +28,7 @@ def get_translation(text):
 
 def post(data):
     host = 'http://internal.mytoken.io:12306'
-    endpoint = '/social/addtimeline'
+    endpoint = '/social/addtimeline?source=script'
 
     request_url = '{host}{endpoint}'.format(
         host=host, endpoint=endpoint)

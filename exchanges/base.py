@@ -111,7 +111,7 @@ class BaseExchange(object):
         host = 'http://internal.mytoken.io:12306'
         endpoint = '/currency/upsertcurrencyonmarket'
 
-        request_url = '{host}{endpoint}'.format(
+        request_url = '{host}{endpoint}?source=script'.format(
             host=host, endpoint=endpoint)
 
         try:
