@@ -34,6 +34,9 @@ class CmcExchange(BaseExchange):
             percent_change_24h = \
                 float(i['percent_change_24h']) if i['percent_change_24h']\
                 else 0
+            market_cap_usd = \
+                float(i['market_cap_usd']) if i['market_cap_usd']\
+                else 0
 
             if anchor and symbol:
                 pair = '{}/{}'.format(symbol.upper(), anchor.upper())
@@ -45,6 +48,7 @@ class CmcExchange(BaseExchange):
                     'volume': volume_anchor / price if price else 0,
                     'rank': rank,
                     'percent_change_24h': percent_change_24h,
+                    'market_cap_usd': market_cap_usd,
                 })
 
         # print(return_data)

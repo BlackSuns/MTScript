@@ -158,7 +158,7 @@ class BaseExchange(object):
             for j in jobs:
                 for data in j:
                     price = data['price']
-                    if float(price) > 0:
+                    if price and float(price) > 0:
                         (symbol, anchor) = self.part_pair(data['pair'])
                         volume_anchor = data['volume_anchor']
 
@@ -170,7 +170,8 @@ class BaseExchange(object):
                             "volume_24h": volume_anchor,
                         }
 
-                        opt_params = ('name', 'percent_change_24h', 'rank')
+                        opt_params = ('name', 'percent_change_24h',
+                                      'rank', 'market_cap_usd')
 
                         for p in opt_params:
                             if p in data.keys():

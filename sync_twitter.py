@@ -7,8 +7,7 @@ from google.cloud import translate
 
 from social_models.social import (SocialContent,
                                   SocialCurrency,
-                                  local_session,
-                                  SocialTimeline)
+                                  local_session)
 from utils import get_config, print_log
 
 CONFIG_PATH = os.path.abspath(os.path.dirname(__file__)) + '/script.conf'
@@ -26,7 +25,7 @@ def get_translation(text):
 
 
 def post(data):
-    host = 'http://internal.mytoken.io:12306'
+    host = 'http://52.56.166.200:12306:12306'
     endpoint = '/social/addtimeline?source=script'
 
     request_url = '{host}{endpoint}'.format(
@@ -63,7 +62,7 @@ def get_google_trans_path():
 
 
 if __name__ == '__main__':
-    time.sleep(60)
+    time.sleep(30)
 
     trans_path = get_google_trans_path()['path']
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = trans_path

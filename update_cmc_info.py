@@ -22,6 +22,7 @@ def get_mysql_conn_params(section):
 
 
 def get_json_request(url):
+    # print(url)
     r = requests.get(url)
 
     if r.status_code == 200 and r.json()['code'] == 0:
@@ -31,52 +32,59 @@ def get_json_request(url):
 
 
 def post_json_request(url, params):
-    print(url)
-    print(params)
+    # print(url)
+    # print(params)
     r = requests.post(url, data=params)
 
-    if r.status_code == 200\
-       and 'code' in r.json().keys()\
-       and r.json()['code'] == 0\
-       and r.json()['data']:
-        # self.print_log(
-        #     'post success: {symbol}/{anchor} on {market}'.format(
-        #         symbol=params['symbol'],
-        #         anchor=params['anchor'],
-        #         market=self.exchange))
-        return r.json()
-    else:
-        # print(params)
-        error_info = "http code: {}".format(r.status_code)
-        if r.status_code == 200:
-            try:
-                error_info += ' and server return error: {}'.format(
-                    r.json())
-            except:
-                pass
-        print_log(error_info)
+    try:
+        if r.status_code == 200\
+           and 'code' in r.json().keys()\
+           and r.json()['code'] == 0\
+           and 'data' in r.json().keys()\
+           and r.json()['data']\
+           and 'false' not in r.text:
+                return r.json()
+        else:
+            # print(params)
+            error_info = "http code: {}".format(r.status_code)
+            if r.status_code == 200:
+                try:
+                    error_info += ' and server return error: {}'.format(
+                        r.json())
+                except:
+                    pass
+            print_log(error_info)
+    except Exception as e:
+        print_log(e)
 
 
 def analysis_currency(currency_data):
     rd = []
     for cd in currency_data:
         jd = json.loads(cd[0].decode("utf-8"))
+        if 'name' in jd.keys() and 'symbol' in jd.keys()\
+                and jd['name'] and jd['symbol']:
+            # deal supplies
+            for s in ('total_supply', 'max_supply', 'circulating_supply'):
+                if s in jd.keys() and jd[s] != '-':
+                    jd[s] = translate_sp_str_to_number(jd[s])
+                else:
+                    jd[s] = 0
 
-        # deal supplies
-        for s in ('total_supply', 'max_supply', 'circulating_supply'):
-            if s in jd.keys() and jd[s] != '-':
-                jd[s] = translate_sp_str_to_number(jd[s])
-            else:
-                jd[s] = 0
+            # deal media
+            media_types = ('Website', 'Explorer',
+                           'Announcement', 'Message Board')
+            for m in jd['media']:
+                if m[1] in media_types:
+                    key = str(m[1]).lower().replace(' ', '_')
+                    jd[key] = m[0]
 
-        # deal media
-        media_types = ('Website', 'Explorer', 'Announcement', 'Message Board')
-        for m in jd['media']:
-            if m[1] in media_types:
-                key = str(m[1]).lower().replace(' ', '_')
-                jd[key] = m[0]
-
-        rd.append(jd)
+            rd.append(jd)
+        else:
+            print_log('error found, no name or symbol:'
+                      ' name is {}, symbol is {}'.format(
+                        jd.get('name', None), jd.get('symbol', None)))
+            print_log(jd['url'])
 
     return rd
 
@@ -108,37 +116,33 @@ def filter_currency_param(currency):
     return dealed_currency
 
 
-def format_com(com, exist_markets):
+def format_com(com, currency, exist_markets):
     market_id = None
-    must_keys = ('markets', 'pair', 'price', 'volume')
+    must_keys = ('market', 'pair', 'price', 'volume')
 
     for k in must_keys:
         if k not in com.keys():
             return None
-
-    # get market_id
-    market_id = exist_markets.get(com['markets'], None)
-    if not market_id:
-        print_log('passed {}: not exist'.format(com['markets']))
-        return None
 
     # get symbol / anchor
     (symbol, anchor) = com['pair'].split('/')
     if not symbol or not anchor:
         return None
 
-    # get symbol 24h volume
-    price = float(com['price'])
+    # get market_id
+    market_id = exist_markets.get(com['market'], None)
+    if not market_id:
+        print_log('passed {}: not exist'.format(com['market']))
+        return None
+
     volume = float(com['volume'])
-    volume_symbol = 0
-    if price > 0:
-        volume_symbol = volume / price
 
     return {
+        'name': currency,
         'market_id': market_id,
         'symbol': symbol,
         'anchor': anchor,
-        'volume': volume_symbol,
+        'volume_24h_usd': volume,
     }
 
 
@@ -203,29 +207,45 @@ if __name__ == '__main__':
     cnx = pymysql.connect(**get_mysql_conn_params('cmc_spider_db'))
 
     # update markets
-    # markets = get_market_info(cnx, [])
-    # markets_url = '{}/market/upsertmarket?source=script'.format(BASE_URL)
-    # for m in markets:
-    #     post_json_request(markets_url, m)
+    exist_markets = get_exist_markets()
+    markets = get_market_info(cnx, exist_markets)
+    markets_url = '{}/market/upsertmarket?source=script'.format(BASE_URL)
+    for m in markets:
+        post_json_request(markets_url, m)
+
+    print_log('market done')
 
     # update currencies
     currencies = get_currency_info(cnx)
     exist_markets = get_exist_markets()
     currency_url = '{}/currency/upsertcurrency?source=script'.format(BASE_URL)
     com_url = '{}/currency/batchupsert'.format(BASE_URL)
-    # for c in currencies:
-    #     param = filter_currency_param(c)
-    #     post_json_request(currency_url, param)
 
-    for i in range(10):
-        param = filter_currency_param(currencies[i])
-        # post_json_request(currency_url, param)
+    for c in currencies:
+        print_log('dealing {}/{}'.format(c['name'], c['symbol']))
+        # currency
+        param = filter_currency_param(c)
+        post_json_request(currency_url, param)
 
         # com
         post_com_param = []
-        for com in currencies[i]['markets']:
-            com_param = format_com(com, exist_markets)
-            if com_param:
-                # print_log(com_param)
-                post_com_param.append(com_param)
+        for com in c['markets']:
+            if not str(com['pair']).endswith(c['symbol']):
+                com_param = format_com(com, c['name'], exist_markets)
+                if com_param:
+                    # print_log(com_param)
+                    post_com_param.append(com_param)
         post_json_request(com_url, {'json': json.dumps(post_com_param)})
+
+    # for i in range(9, 10):
+    #     param = filter_currency_param(currencies[i])
+    #     post_json_request(currency_url, param)
+
+        # com
+            # post_com_param = []
+            # for com in currencies[i]['markets']:
+            #     com_param = format_com(com, currencies[i]['name'], exist_markets)
+            #     if com_param:
+            #         # print_log(com_param)
+            #         post_com_param.append(com_param)
+            # post_json_request(com_url, {'json': json.dumps(post_com_param)})
