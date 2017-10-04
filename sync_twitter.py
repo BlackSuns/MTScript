@@ -25,7 +25,7 @@ def get_translation(text):
 
 
 def post(data):
-    host = 'http://52.56.166.200:12306:12306'
+    host = 'http://52.56.166.200:12306'
     endpoint = '/social/addtimeline?source=script'
 
     request_url = '{host}{endpoint}'.format(
