@@ -111,7 +111,10 @@ def filter_currency_param(currency):
 
     for k in currency.keys():
         if k.lower() in params and currency[k]:
-            dealed_currency[k] = currency[k]
+            if k == 'circulating_supply':
+                dealed_currency['available_supply'] = currency[k]
+            else:
+                dealed_currency[k] = currency[k]
 
     return dealed_currency
 
