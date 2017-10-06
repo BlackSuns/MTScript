@@ -46,6 +46,6 @@ class BitflyerExchange(BaseExchange):
             return {
                     'pair': pair,
                     'price': result['best_bid'],
-                    'volume_anchor': result['volume'] * result['best_bid'],
+                    'volume_anchor': result['volume_by_product'] * result['best_bid'],
                     'volume': result['volume_by_product'],
             }
