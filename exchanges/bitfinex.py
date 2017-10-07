@@ -1,3 +1,7 @@
+import json
+import re
+import os
+
 from .base import BaseExchange
 
 
@@ -6,53 +10,64 @@ class BitfinexExchange(BaseExchange):
         super().__init__()
         self.exchange = 'bitfinex'
         self.exchange_id = 126
-        self.base_url = 'https://api.bitfinex.com/v1'
+        self.base_url = 'https://min-api.cryptocompare.com'
 
-        self.pair_url = '/symbols'
-        self.ticker_url = '/pubticker/'
+        self.ticker_url = '/data/pricemultifull'
 
         self.alias = 'bitfinex'
 
-    # get all available_pairs
-    # update result to self.support_pairs
-    # self.support_pairs is a list
-    def get_available_pair(self):
-        url = '{}{}'.format(self.base_url, self.pair_url)
-        self.pair_callback(self.get_json_request(url))
+    def get_available_symbol(self):
+        conf_path = os.path.abspath(os.path.dirname(__file__)) +\
+                    '/exchange_conf/bitfinex.json'
+        with open(conf_path, 'r') as f:
+            data = json.load(f)
 
-    def pair_callback(self, result):
-        self.support_pairs = []
-        for r in result:
-            self.support_pairs.append(r)
+        return data
+
+    def chunks(self, l, n):
+        """Yield successive n-sized chunks from l.
+        """
+        for i in range(0, len(l), n):
+            yield l[i:i + n]
 
     def get_remote_data(self):
-        self.get_available_pair()
-        result = []
+        return_data = []
+        anchors = ('USD', 'BTC', 'ETH')
+        conf_data = self.get_available_symbol()
+        for a in anchors:
+            p = conf_data[a]
+            fsyms = ','.join(p)
+            url = '{}{}'.format(self.base_url, self.ticker_url)
+            url = '{}?fsyms={}&tsyms={}&e=Bitfinex'.format(url, fsyms, a)
+            # print(url)
+            r = self.get_json_request(url)
+            if 'Response' in r.keys() and r['Response'] == 'Error':
+                try:
+                    pattern = re.compile(r'(\w*-\w*)')
+                    m = pattern.search(r['Message'])
+                    if m:
+                        symbol = m.group().split('-')[0]
+                        p.remove(symbol)
+                        print('removed symbol: {}'.format(symbol))
+                except Exception as e:
+                    print(e)
+            else:
+                return_data += self.ticker_callback(r['RAW'], a)
+        return return_data
 
-        for pair in self.support_pairs:
-            if pair[-3:].upper() in ('USD', 'BTC', 'ETH'):
-                url = '{}{}{}'.format(self.base_url, self.ticker_url, pair)
-                ticker = self.ticker_callback(self.get_json_request(url))
-                if ticker:
-                    ticker['pair'] = '{}/{}'.format(pair[:-3].upper(),
-                                                    pair[-3:].upper())
-                    self.print_log('updating {} ... '.format(ticker['pair']))
-                    # self.print_log(ticker)
-                    result.append(ticker)
-                else:
-                    self.print_log(
-                        'sth wrong, skipped {}'.format(pair[:-3].upper(),
-                                                       pair[-3:].upper()))
-        return result
+    def ticker_callback(self, result, anchor):
+        return_data = []
 
-    def ticker_callback(self, result):
-        try:
-            return {
-                'price': result['last_price'],
-                'volume_anchor': round(
-                    float(result['volume']) * float(result['last_price']),
-                    8),
-                'volume': result['volume'],
-            }
-        except:
-            return False
+        for i in result.keys():
+            symbol = i
+
+            pair = '{}/{}'.format(symbol.upper(), anchor.upper())
+            return_data.append({
+                'pair': pair,
+                'price': result[i][anchor]['PRICE'],
+                'volume_anchor': result[i][anchor]['VOLUME24HOURTO'],
+                'volume': result[i][anchor]['VOLUME24HOUR'],
+            })
+
+        # print(return_data)
+        return return_data
