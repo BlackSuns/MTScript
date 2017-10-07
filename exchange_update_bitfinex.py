@@ -13,5 +13,6 @@ if __name__ == '__main__':
     if random.randint(0, 1000) < 5:
         bfp = BitfinexProbeExchange()
         bfp.post_result_batch()
+        print_log("probed...")
 
     print_log("Bitfinex Done...")
