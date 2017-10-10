@@ -21,7 +21,7 @@ class GateioExchange(BaseExchange):
         return_data = []
 
         for k in result.keys():
-            (anchor, symbol) = str(k).split('_')
+            (symbol, anchor) = str(k).split('_')
             if anchor and symbol:
                 pair = '{}/{}'.format(symbol.upper(), anchor.upper())
                 return_data.append({
