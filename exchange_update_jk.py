@@ -1,6 +1,7 @@
 from exchanges.bithumb import BithumbExchange
 from exchanges.bitflyer import BitflyerExchange
 from exchanges.nereax import NeraexExchange
+from exchanges.coinone import CoinoneExchange
 
 from utils import print_log
 
@@ -15,6 +16,10 @@ if __name__ == '__main__':
     bf = BitflyerExchange()
     bf.post_result_batch()
     print_log("bitFlyer done...")
+
+    co = CoinoneExchange()
+    co.post_result_batch()
+    print_log('Coinone done...')
 
     nx = NeraexExchange()
     nx.post_result_batch()
