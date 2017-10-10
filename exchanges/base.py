@@ -168,6 +168,7 @@ class BaseExchange(object):
                             "anchor": anchor,
                             "price": price,
                             "volume_24h": volume_anchor,
+                            "volume_24h_symbol": volume,
                         }
 
                         opt_params = ('name', 'percent_change_24h',

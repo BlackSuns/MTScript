@@ -55,6 +55,7 @@ def post_json_request(url, params):
                     pass
             print_log(error_info)
     except Exception as e:
+        print_log('get error when dealing {}'.format(params['']))
         print_log(e)
 
 
@@ -224,8 +225,9 @@ if __name__ == '__main__':
     currency_url = '{}/currency/upsertcurrency?source=script'.format(BASE_URL)
     com_url = '{}/currency/batchupsert'.format(BASE_URL)
 
-    for c in currencies:
-        print_log('dealing {}/{}'.format(c['name'], c['symbol']))
+    total = len(currencies)
+    for i, c in enumerate(currencies, 1):
+        print_log('dealing {}/{}, {}/{}'.format(i, total, c['name'], c['symbol']))
         # currency
         param = filter_currency_param(c)
         post_json_request(currency_url, param)
@@ -239,16 +241,3 @@ if __name__ == '__main__':
                     # print_log(com_param)
                     post_com_param.append(com_param)
         post_json_request(com_url, {'json': json.dumps(post_com_param)})
-
-    # for i in range(9, 10):
-    #     param = filter_currency_param(currencies[i])
-    #     post_json_request(currency_url, param)
-
-        # com
-            # post_com_param = []
-            # for com in currencies[i]['markets']:
-            #     com_param = format_com(com, currencies[i]['name'], exist_markets)
-            #     if com_param:
-            #         # print_log(com_param)
-            #         post_com_param.append(com_param)
-            # post_json_request(com_url, {'json': json.dumps(post_com_param)})
