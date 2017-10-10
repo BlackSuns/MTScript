@@ -1,0 +1,35 @@
+from .base import BaseExchange
+
+
+class GateioExchange(BaseExchange):
+    def __init__(self):
+        super().__init__()
+        self.exchange = 'Gate.io'
+        self.exchange_id = 1333
+        self.base_url = 'http://data.gate.io/api2/1'
+
+        self.ticker_url = '/tickers'
+
+        self.alias = ''
+
+    def get_remote_data(self):
+        url = '{}{}'.format(
+            self.base_url, self.ticker_url)
+        return self.ticker_callback(self.get_json_request(url))
+
+    def ticker_callback(self, result):
+        return_data = []
+
+        for k in result.keys():
+            (anchor, symbol) = str(k).split('_')
+            if anchor and symbol:
+                pair = '{}/{}'.format(symbol.upper(), anchor.upper())
+                return_data.append({
+                    'pair': pair,
+                    'price': result[k]['last'],
+                    'volume_anchor': result[k]['baseVolume'],
+                    'volume': result[k]['quoteVolume'],
+                })
+
+        # print(return_data)
+        return return_data

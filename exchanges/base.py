@@ -161,6 +161,7 @@ class BaseExchange(object):
                     if price and float(price) > 0:
                         (symbol, anchor) = self.part_pair(data['pair'])
                         volume_anchor = data['volume_anchor']
+                        volume = data['volume']
 
                         params = {
                             "symbol": symbol,
