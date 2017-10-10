@@ -6,7 +6,6 @@ from exchanges.poloniex import PoloniexExchange
 from exchanges.bitz import BitzExchange
 from exchanges.gateio import GateioExchange
 from exchanges.bitstamp import BitstampExchange
-from exchanges.nereax import NeraexExchange
 
 
 if __name__ == '__main__':
@@ -39,9 +38,5 @@ if __name__ == '__main__':
     bs = BitstampExchange()
     bs.post_result_batch()
     print_log('Bitstamp done...')
-
-    nx = NeraexExchange()
-    nx.post_result_batch()
-    print_log('Nereax done...')
 
     print_log("all exchanges synced...")
