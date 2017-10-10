@@ -54,6 +54,8 @@ def post_json_request(url, params):
                 except:
                     pass
             print_log(error_info)
+            print_log(url)
+            print_log(params)
     except Exception as e:
         print_log('get error when dealing {}'.format(params['']))
         print_log(e)
@@ -240,4 +242,7 @@ if __name__ == '__main__':
                 if com_param:
                     # print_log(com_param)
                     post_com_param.append(com_param)
-        post_json_request(com_url, {'json': json.dumps(post_com_param)})
+        if post_com_param:
+            # if c['symbol'].upper() == 'CDT':
+            #     print_log(post_com_param)
+            post_json_request(com_url, {'json': json.dumps(post_com_param)})
