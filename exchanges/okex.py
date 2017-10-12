@@ -15,7 +15,8 @@ class OkexExchange(BaseExchange):
 
     def get_remote_data(self):
         return_data = []
-        symbols = ('eth_btc', 'ltc_btc', 'etc_btc', 'bcc_btc')
+        symbols = ('eth_btc', 'ltc_btc', 'etc_btc',
+                   'bcc_btc', 'btc_usdt', 'eth_usdt')
         for s in symbols:
             url = '{}{}?symbol={}'.format(
                 self.base_url,
@@ -23,11 +24,12 @@ class OkexExchange(BaseExchange):
                 s)
             print(url)
             r = self.get_json_request(url)
+            (symbol, anchor) = s.split('_')
             price = float(r['ticker']['last'])
             volume = float(r['ticker']['vol'])
             return_data.append(
                 {
-                    'pair': '{}/BTC'.format(s[:-4].upper()),
+                    'pair': '{}/{}'.format(symbol.upper(), anchor.upper()),
                     'price': price,
                     'volume': volume,
                     'volume_anchor': price * volume,
