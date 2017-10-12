@@ -106,10 +106,12 @@ if __name__ == '__main__':
 
         # print('rd: ', rd)
         result = post(rd)
-        print(result)
+        print_log(result)
 
         if result:
             try:
                 local_session.commit()
             except Exception as e:
                 print_log(e)
+        else:
+            print_log('skipped {}'.format(rd['social_content_id']))
