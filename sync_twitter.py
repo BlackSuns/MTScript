@@ -32,6 +32,8 @@ def post(data):
         host=host, endpoint=endpoint)
 
     r = requests.post(request_url, data=data)
+    # print(request_url)
+    # print(data)
 
     if r.status_code == 200 and r.json()['code'] == 0\
        and r.json()['data']:
@@ -52,7 +54,7 @@ def post(data):
                     r.json())
             except:
                 pass
-        raise RuntimeError(error_info)
+        return None
 
 
 def get_google_trans_path():
@@ -102,11 +104,12 @@ if __name__ == '__main__':
 
         content.synchronized = 1
 
-        print('rd: ', rd)
+        # print('rd: ', rd)
         result = post(rd)
         print(result)
 
-        try:
-            local_session.commit()
-        except Exception as e:
-            print_log(e)
+        if result:
+            try:
+                local_session.commit()
+            except Exception as e:
+                print_log(e)
