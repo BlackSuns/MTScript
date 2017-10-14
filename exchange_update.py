@@ -4,7 +4,6 @@ from exchanges.bittrex import BittrexExchange
 from exchanges.hitbtc import HitbtcExchange
 from exchanges.poloniex import PoloniexExchange
 from exchanges.bitz import BitzExchange
-from exchanges.gateio import GateioExchange
 from exchanges.bitstamp import BitstampExchange
 
 
@@ -30,10 +29,6 @@ if __name__ == '__main__':
     bz = BitzExchange()
     bz.post_result_batch()
     print_log("Bit-Z done...")
-
-    gt = GateioExchange()
-    gt.post_result_batch()
-    print_log("Gate.io done...")
 
     bs = BitstampExchange()
     bs.post_result_batch()
