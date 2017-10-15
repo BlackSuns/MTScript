@@ -75,7 +75,11 @@ class BaseExchange(object):
     def get_json_request(self, url):
         s = requests.Session()
         s.mount('https://', MyAdapter())
-        r = requests.get(url, timeout=30)
+        headers = {
+            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+        }
+        r = requests.get(url, headers=headers, timeout=30)
+        # print(r.text)
 
         if r.status_code == 200:
             return r.json()
