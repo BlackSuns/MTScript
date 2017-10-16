@@ -38,10 +38,13 @@ class HitbtcExchange(BaseExchange):
         return_data = []
         for pair in result.keys():
             if pair in self.support_pairs.keys():
+                anchor = self.support_pairs[pair]['anchor'].upper()
+                if anchor == 'USD':
+                    anchor = 'USDT'
                 return_data.append({
                     'pair': '{}/{}'.format(
                         self.support_pairs[pair]['symbol'].upper(),
-                        self.support_pairs[pair]['anchor'].upper(),
+                        anchor.upper(),
                         ),
                     'price': result[pair]['last'],
                     'volume_anchor': result[pair]['volume_quote'],
