@@ -91,6 +91,7 @@ class BaseExchange(object):
         r = requests.post(url, data=params)
         # print(url)
         # print(params)
+        # print(r.text)
 
         if r.status_code == 200 and r.json()['code'] == 0\
            and r.json()['data']:

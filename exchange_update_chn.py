@@ -10,7 +10,7 @@ if __name__ == '__main__':
 
     bn = BinanceExchange()
     bn.post_result_batch()
-    print_log("Gate.io done...")
+    print_log("Binance done...")
 
     gt = GateioExchange()
     gt.post_result_batch()
