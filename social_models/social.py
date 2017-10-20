@@ -103,3 +103,4 @@ class SocialCurrency(LocalBase):
     currency_id = Column(Integer)
     need_review = Column(Integer)
     remark = Column(String(20))
+    avatar = Column(String(255))

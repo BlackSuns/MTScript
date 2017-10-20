@@ -57,7 +57,7 @@ def post_json_request(url, params):
             print_log(url)
             print_log(params)
     except Exception as e:
-        print_log('get error when dealing {}'.format(params['']))
+        # print_log('get error when dealing {}'.format(params['']))
         print_log(e)
 
 

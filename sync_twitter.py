@@ -97,6 +97,7 @@ if __name__ == '__main__':
                 content.retweet_author,
                 content.text_chinese)
         rd['source'] = 'twitter'
+        rd['social_avatar'] = currency.avatar if currency.avatar else ''
         rd['review_status'] = 1 - int(currency.need_review)
         rd['posted_at'] = content.created_at
         rd['created_at'] = arrow.now().timestamp
