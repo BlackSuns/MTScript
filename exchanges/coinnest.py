@@ -47,6 +47,6 @@ class CoinnestExchange(BaseExchange):
                 }
 
                 return_data.append(data)
-            except aException as e:
+            except Exception as e:
                 print('error happened, exist {}: {}'.format(p, e))
         return return_data
