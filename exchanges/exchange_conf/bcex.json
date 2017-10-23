@@ -1,0 +1,32 @@
+{
+    "pairs": [
+        "ANS_BTC",
+        "XLM_BTC",
+        "YBCT_BTC",
+        "QTUM_BTC",
+        "NAS_BTC",
+        "ETH_BTC",
+        "DOGE_BTC",
+        "XRP_BTC",
+        "DCT_BTC",
+        "ETC_BTC",
+        "ZEC_BTC",
+        "LTC_BTC",
+        "FCT_BTC"
+    ],
+    "name_symbol": {
+        "NEO":  "NEO",
+        "YBCT": "YBCT",
+        "QTUM": "Qtum",
+        "LTC":  "Litecoin",
+        "NAS":  "Nebulas Token",
+        "XLM":  "Stellar Lumens",
+        "ETC":  "Ethereum Classic",
+        "ZEC":  "Zcash",
+        "ETH":  "Ethereum",
+        "FCT":  "Factom",
+        "XRP":  "Ripple",
+        "DCT":  "DECENT",
+        "DOGE": "Dogecoin"
+    }
+}

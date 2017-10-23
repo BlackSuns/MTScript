@@ -1,3 +1,5 @@
+import os
+
 from .base import BaseExchange
 
 
@@ -12,6 +14,9 @@ class HuobiExchange(BaseExchange):
         self.ticker_url = '/market/detail/merged'
 
         self.alias = '火币'
+        self.with_name = False
+        self.exchange_conf = os.path.abspath(os.path.dirname(__file__)) +\
+            '/exchange_conf/{}.json'.format(self.exchange)
 
     def get_remote_data(self):
         return_data = []

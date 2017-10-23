@@ -1,0 +1,24 @@
+{
+    "pairs": [
+        "btc_krw",
+        "bcc_krw",
+        "eth_krw",
+        "etc_krw",
+        "qtum_krw",
+        "neo_krw",
+        "gas_krw",
+        "knc_krw",
+        "tsl_krw",
+        "omg_krw"
+    ],
+    "name_symbol": {
+        "BCC":  "Bitcoin Cash",
+        "BTC":  "Bitcoin",
+        "ETC":  "Ethereum Classic",
+        "ETH":  "Ethereum",
+        "KNC":  "KingN Coin",
+        "NEO":  "NEO",
+        "QTUM": "Qtum",
+        "TSL":  "Energo"
+    }
+}

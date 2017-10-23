@@ -11,6 +11,7 @@ class CmcExchange(BaseExchange):
         self.ticker_url = '/ticker/?convert=CNY'
 
         self.alias = 'CoinMarketCap'
+        self.with_name = True
 
     def get_remote_data(self):
         url = '{}{}'.format(

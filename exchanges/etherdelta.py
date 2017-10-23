@@ -15,14 +15,15 @@ class EtherdeltaExchange(BaseExchange):
         self.ticker_url = '/data/pricemultifull'
 
         self.alias = 'EtherDelta'
+        self.with_name = False
+        self.exchange_conf = os.path.abspath(os.path.dirname(__file__)) +\
+            '/exchange_conf/{}.json'.format(self.exchange)
 
     def get_available_symbol(self):
-        conf_path = os.path.abspath(os.path.dirname(__file__)) +\
-                    '/exchange_conf/etherdelta.json'
-        with open(conf_path, 'r') as f:
+        with open(self.exchange_conf, 'r') as f:
             data = json.load(f)
 
-        return data['symbols']
+        return list(data['name_symbol'].keys())
 
     def chunks(self, l, n):
         """Yield successive n-sized chunks from l.

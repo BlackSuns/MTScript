@@ -1,16 +1,21 @@
+import os
+
 from .base import BaseExchange
 
 
 class GateioExchange(BaseExchange):
     def __init__(self):
         super().__init__()
-        self.exchange = 'Gate.io'
+        self.exchange = 'Gateio'
         self.exchange_id = 1333
         self.base_url = 'http://data.gate.io/api2/1'
 
         self.ticker_url = '/tickers'
 
         self.alias = ''
+        self.with_name = False
+        self.exchange_conf = os.path.abspath(os.path.dirname(__file__)) +\
+            '/exchange_conf/{}.json'.format(self.exchange)
 
     def get_remote_data(self):
         url = '{}{}'.format(

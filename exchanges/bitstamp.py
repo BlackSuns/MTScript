@@ -1,3 +1,5 @@
+import os
+
 from .base import BaseExchange
 
 
@@ -11,6 +13,9 @@ class BitstampExchange(BaseExchange):
         self.ticker_url = '/ticker'
 
         self.alias = ''
+        self.with_name = False
+        self.exchange_conf = os.path.abspath(os.path.dirname(__file__)) +\
+            '/exchange_conf/{}.json'.format(self.exchange)
 
     # get all available_pairs
     # update result to self.support_pairs

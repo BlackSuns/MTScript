@@ -1,3 +1,5 @@
+import os
+
 from .base import BaseExchange
 
 
@@ -11,6 +13,9 @@ class BithumbExchange(BaseExchange):
         self.ticker_url = '/public/ticker/ALL'
 
         self.alias = 'bithumb'
+        self.with_name = False
+        self.exchange_conf = os.path.abspath(os.path.dirname(__file__)) +\
+            '/exchange_conf/{}.json'.format(self.exchange)
 
     def get_remote_data(self):
         url = '{}{}'.format(

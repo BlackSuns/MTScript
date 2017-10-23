@@ -1,3 +1,5 @@
+import os
+
 from .base import BaseExchange
 
 
@@ -11,6 +13,9 @@ class ChaoexExchange(BaseExchange):
         self.ticker_url = '/quote/realTime'
 
         self.alias = '12链 Chaoex'
+        self.with_name = False
+        self.exchange_conf = os.path.abspath(os.path.dirname(__file__)) +\
+            '/exchange_conf/{}.json'.format(self.exchange)
 
         self.currency_ids = {
             'BTC': 1,

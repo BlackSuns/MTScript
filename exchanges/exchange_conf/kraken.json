@@ -1,0 +1,22 @@
+{
+    "name_symbol": {
+        "BCH":  "Bitcoin Cash",
+        "BTC":  "Bitcoin",
+        "DASH": "Dash",
+        "DOGE": "Dogecoin",
+        "EOS":  "EOS",
+        "ETC":  "Ethereum Classic",
+        "ETH":  "Ethereum",
+        "GNO":  "Gnosis",
+        "ICN":  "Iconomi",
+        "LTC":  "Litecoin",
+        "MLN":  "Melon",
+        "REP":  "Augur",
+        "USDT": "Tether",
+        "XDG":  "Dogecoin",
+        "XLM":  "Stellar Lumens",
+        "XMR":  "Monero",
+        "XRP":  "Ripple",
+        "ZEC":  "Zcash"
+    }
+}

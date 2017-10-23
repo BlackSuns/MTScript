@@ -1,0 +1,10 @@
+{
+    "name_symbol": {
+        "BCH":  "Bitcoin Cash",
+        "BTC":  "Bitcoin",
+        "ETC":  "Ethereum Classic",
+        "ETH":  "Ethereum",
+        "QTUM": "Qtum",
+        "XRP":  "Ripple"
+    }
+}

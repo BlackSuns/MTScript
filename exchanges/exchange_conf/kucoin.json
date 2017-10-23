@@ -1,0 +1,22 @@
+{
+    "name_symbol": {
+        "BHC":  "Black Hole Coin",
+        "BTC":  "Bitcoin",
+        "BTM":  "Bytom",
+        "CVC":  "Civic",
+        "EOS":  "EOS",
+        "ETH":  "Ethereum",
+        "GAS":  "Gas",
+        "HSR":  "Hshare",
+        "KCS":  "Kucoin Shares",
+        "KNC":  "Kyber Network",
+        "LTC":  "Litecoin",
+        "MTH":  "Monetha",
+        "NEO":  "NEO",
+        "OMG":  "OmiseGO",
+        "PAY":  "TenX",
+        "QTUM": "Qtum",
+        "SNT":  "Status",
+        "WTC":  "Walton"
+    }
+}

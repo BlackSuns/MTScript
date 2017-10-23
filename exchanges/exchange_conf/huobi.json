@@ -1,0 +1,9 @@
+{
+    "name_symbol": {
+        "BCC":  "Bitcoin Cash",
+        "BTC":  "Bitcoin",
+        "ETC":  "Ethereum Classic",
+        "ETH":  "Ethereum",
+        "LTC":  "Litecoin"
+    }
+}

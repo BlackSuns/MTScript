@@ -1,0 +1,19 @@
+{
+    "name_symbol": {
+        "BLK":  "BlackCoin",
+        "DOGE": "Dogecoin",
+        "ETC":  "Ethereum Classic",
+        "ETH":  "Ethereum",
+        "FCT":  "Factom",
+        "GXS":  "GXShares",
+        "HSR":  "Hshare",
+        "LSK":  "Lisk",
+        "LTC":  "Litecoin",
+        "MZC":  "MazaCoin",
+        "NULS": "NULS",
+        "PPC":  "Peercoin",
+        "XAS":  "Asch",
+        "XPM":  "Primecoin",
+        "ZEC":  "Zcash"
+    }
+}

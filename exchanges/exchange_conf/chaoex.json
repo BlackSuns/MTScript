@@ -1,0 +1,11 @@
+{
+    "name_symbol": {
+        "DLC":  "DLC",
+        "ETH":  "Ethereum",
+        "LSK":  "Lisk",
+        "LTC":  "Litecoin",
+        "NULS": "NULS",
+        "TLC":  "TLC",
+        "XAS":  "Asch"
+    }
+}

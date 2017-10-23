@@ -47,11 +47,6 @@ class BaseExchange(object):
 
     def __init__(self):
         super().__init__()
-        self.exchange = ''
-        self.exchange_id = 0
-
-        self.price_anchor_tmp = {}  # used for restore temp price of anchor
-        self.assigned_com_id = {}
 
     def get_remote_data(self):
         ''' get data from markets and return value
@@ -76,10 +71,12 @@ class BaseExchange(object):
         s = requests.Session()
         s.mount('https://', MyAdapter())
         headers = {
-            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+            'Content-Type': 'application/json',
         }
         r = requests.get(url, headers=headers, timeout=30)
         # print(r.text)
+        # print(url)
 
         if r.status_code == 200:
             return r.json()
@@ -88,9 +85,10 @@ class BaseExchange(object):
                 r.status_code))
 
     def post_json_request(self, url, params):
-        r = requests.post(url, data=params)
         # print(url)
         # print(params)
+
+        r = requests.post(url, data=params)
         # print(r.text)
 
         if r.status_code == 200 and r.json()['code'] == 0\
@@ -112,38 +110,38 @@ class BaseExchange(object):
                     pass
             self.print_log(error_info)
 
-    def post_result(self):
-        host = 'http://internal.mytoken.io:12306'
-        endpoint = '/currency/upsertcurrencyonmarket'
+    # def post_result(self):
+    #     host = 'http://internal.mytoken.io:12306'
+    #     endpoint = '/currency/upsertcurrencyonmarket'
 
-        request_url = '{host}{endpoint}?source=script'.format(
-            host=host, endpoint=endpoint)
+    #     request_url = '{host}{endpoint}?source=script'.format(
+    #         host=host, endpoint=endpoint)
 
-        try:
-            remote_data = self.get_remote_data()
-            for data in remote_data:
-                (symbol, anchor) = self.part_pair(data['pair'])
-                price = data['price']
-                volume_anchor = data['volume_anchor']
+    #     try:
+    #         remote_data = self.get_remote_data()
+    #         for data in remote_data:
+    #             (symbol, anchor) = self.part_pair(data['pair'])
+    #             price = data['price']
+    #             volume_anchor = data['volume_anchor']
 
-                params = {
-                    'symbol': symbol,
-                    'market_id': self.exchange_id,
-                    'anchor': anchor,
-                    'price': price,
-                    'volume_24h': volume_anchor,
-                }
+    #             params = {
+    #                 'symbol': symbol,
+    #                 'market_id': self.exchange_id,
+    #                 'anchor': anchor,
+    #                 'price': price,
+    #                 'volume_24h': volume_anchor,
+    #             }
 
-                opt_params = ('name', 'percent_change_24h', 'rank')
+    #             opt_params = ('name', 'percent_change_24h', 'rank')
 
-                for p in opt_params:
-                    if p in data.keys():
-                        params[p] = data[p]
+    #             for p in opt_params:
+    #                 if p in data.keys():
+    #                     params[p] = data[p]
 
-                self.post_json_request(request_url, params)
-                # self.print_log(result)
-        except Exception as e:
-            self.print_log('found error: {}'.format(e))
+    #             self.post_json_request(request_url, params)
+    #             # self.print_log(result)
+    #     except Exception as e:
+    #         self.print_log('found error: {}'.format(e))
 
     def post_result_batch(self):
         page_size = 2000
@@ -186,10 +184,17 @@ class BaseExchange(object):
 
                         request_data.append(params)
 
+                if not self.with_name:
+                    with open(self.exchange_conf, 'r') as f:
+                        data = json.load(f)
+                    name_symbol = data['name_symbol']
+                    for d in request_data:
+                        d['name'] = name_symbol.get(d['symbol'], '')
+
                 # print(request_url, {'json': request_data})
                 self.post_json_request(
                     request_url, {'json': json.dumps(request_data)})
-        except aException as e:
+        except Exception as e:
             self.print_log('found error: {}'.format(e))
 
     def print_log(self, message, m_type='INFO'):

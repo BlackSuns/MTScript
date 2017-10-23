@@ -244,5 +244,5 @@ if __name__ == '__main__':
                     post_com_param.append(com_param)
         if post_com_param:
             # if c['symbol'].upper() == 'CDT':
-            #     print_log(post_com_param)
+            #   print_log(json.dumps(post_com_param))
             post_json_request(com_url, {'json': json.dumps(post_com_param)})

@@ -1,0 +1,12 @@
+{
+    "name_symbol": {
+        "ACC":  "ACChain",
+        "BTC":  "Bitcoin",
+        "ETH":  "Ethereum",
+        "HSR":  "Hshare",
+        "OMG":  "OmiseGO",
+        "PAY":  "TenX",
+        "RSS":  "Red Sea Shells",
+        "SNT":  "Status"
+    }
+}
