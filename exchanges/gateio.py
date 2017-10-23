@@ -6,7 +6,7 @@ from .base import BaseExchange
 class GateioExchange(BaseExchange):
     def __init__(self):
         super().__init__()
-        self.exchange = 'Gateio'
+        self.exchange = 'gateio'
         self.exchange_id = 1333
         self.base_url = 'http://data.gate.io/api2/1'
 

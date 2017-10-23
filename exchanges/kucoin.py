@@ -6,7 +6,7 @@ from .base import BaseExchange
 class KucoinExchange(BaseExchange):
     def __init__(self):
         super().__init__()
-        self.exchange = 'KuCoin'
+        self.exchange = 'kucoin'
         self.exchange_id = 1337
         self.base_url = 'https://api.kucoin.com/v1/market/open'
 

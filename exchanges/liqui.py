@@ -6,7 +6,7 @@ from .base import BaseExchange
 class LiquiExchange(BaseExchange):
     def __init__(self):
         super().__init__()
-        self.exchange = 'Liqui'
+        self.exchange = 'liqui'
         self.exchange_id = 46
         self.base_url = 'https://api.liqui.io/api/3'
 

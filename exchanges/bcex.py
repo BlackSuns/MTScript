@@ -7,7 +7,7 @@ from .base import BaseExchange
 class BcexExchange(BaseExchange):
     def __init__(self):
         super().__init__()
-        self.exchange = 'BCEX'
+        self.exchange = 'bcex'
         self.exchange_id = 1339
         self.base_url = 'https://www.bcex.ca/api_market/getinfo_btc'
 

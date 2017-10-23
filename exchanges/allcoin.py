@@ -7,7 +7,7 @@ from .base import BaseExchange
 class AllcoinExchange(BaseExchange):
     def __init__(self):
         super().__init__()
-        self.exchange = 'Allcoin'
+        self.exchange = 'allcoin'
         self.exchange_id = 41
         self.base_url = 'https://api.allcoin.com/api/v1'
 

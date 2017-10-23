@@ -5,7 +5,7 @@ from .base import BaseExchange
 class CryptopiaExchange(BaseExchange):
     def __init__(self):
         super().__init__()
-        self.exchange = 'Cryptopia'
+        self.exchange = 'cryptopia'
         self.exchange_id = 40
         self.base_url = 'https://www.cryptopia.co.nz/api'
 

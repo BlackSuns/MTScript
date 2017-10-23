@@ -5,7 +5,7 @@ from .base import BaseExchange
 class BitflyerExchange(BaseExchange):
     def __init__(self):
         super().__init__()
-        self.exchange = 'bitFlyer'
+        self.exchange = 'bitflyer'
         self.exchange_id = 17
         self.base_url = 'https://api.bitflyer.jp/v1'
 

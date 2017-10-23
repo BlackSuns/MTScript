@@ -6,7 +6,7 @@ from .base import BaseExchange
 class BitzExchange(BaseExchange):
     def __init__(self):
         super().__init__()
-        self.exchange = 'Bit-Z'
+        self.exchange = 'bit-z'
         self.exchange_id = 1321
         self.base_url = 'https://www.bit-z.com'
 

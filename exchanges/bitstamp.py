@@ -6,7 +6,7 @@ from .base import BaseExchange
 class BitstampExchange(BaseExchange):
     def __init__(self):
         super().__init__()
-        self.exchange = 'BitStamp'
+        self.exchange = 'bitstamp'
         self.exchange_id = 101
         self.base_url = 'https://www.bitstamp.net/api/v2'
 

@@ -6,7 +6,7 @@ from .base import BaseExchange
 class PoloniexExchange(BaseExchange):
     def __init__(self):
         super().__init__()
-        self.exchange = 'Poloniex'
+        self.exchange = 'poloniex'
         self.exchange_id = 100
         self.base_url = 'https://poloniex.com'
 

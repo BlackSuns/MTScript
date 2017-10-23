@@ -7,7 +7,7 @@ from .base import BaseExchange
 class CoinnestExchange(BaseExchange):
     def __init__(self):
         super().__init__()
-        self.exchange = 'Coinnest'
+        self.exchange = 'coinnest'
         self.exchange_id = 1340
         self.base_url = 'https://api.coinnest.co.kr/api/pub'
 

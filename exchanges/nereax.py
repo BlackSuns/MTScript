@@ -6,7 +6,7 @@ from .base import BaseExchange
 class NeraexExchange(BaseExchange):
     def __init__(self):
         super().__init__()
-        self.exchange = 'Neraex'
+        self.exchange = 'neraex'
         self.exchange_id = 1334
         self.base_url = 'https://neraex.com/api/v2'
 

@@ -6,7 +6,7 @@ from .base import BaseExchange
 class ChaoexExchange(BaseExchange):
     def __init__(self):
         super().__init__()
-        self.exchange = 'Chaoex'
+        self.exchange = 'chaoex'
         self.exchange_id = 1338
         self.base_url = 'https://www.chaoex.com/12lian'
 

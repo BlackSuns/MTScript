@@ -6,7 +6,7 @@ from .base import BaseExchange
 class KrakenExchange(BaseExchange):
     def __init__(self):
         super().__init__()
-        self.exchange = 'Kraken'
+        self.exchange = 'kraken'
         self.exchange_id = 114
         self.base_url = 'https://api.kraken.com/0/public'
 
