@@ -14,6 +14,7 @@ class CryptopiaExchange(BaseExchange):
         self.alias = 'Cryptopia'
         self.with_name = False
         self.exchange_conf = os.path.abspath(os.path.dirname(__file__)) +\
+            '/exchange_conf/{}.json'.format(self.exchange)
 
     def get_remote_data(self):
         url = '{}{}'.format(
