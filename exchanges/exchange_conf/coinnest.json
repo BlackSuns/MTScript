@@ -19,6 +19,7 @@
         "KNC":  "KingN Coin",
         "NEO":  "NEO",
         "QTUM": "Qtum",
-        "TSL":  "Energo"
+        "TSL":  "Energo",
+        "GAS":  "GAS"
     }
 }

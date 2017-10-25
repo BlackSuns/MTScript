@@ -18,7 +18,8 @@
                "IOT",
                "ETP",
                "BT1",
-               "BT2"
+               "BT2",
+               "BTG"
      ],
     "ETH": [
                "EOS",
@@ -49,7 +50,8 @@
                "BTC",
                "ETP",
                "BT1",
-               "BT2"
+               "BT2",
+               "BTG"
     ],
     "name_symbol": {
           "AVT":  "Aventus",
