@@ -17,6 +17,7 @@
         "PAY":  "TenX",
         "QTUM": "Qtum",
         "SNT":  "Status",
-        "WTC":  "Walton"
+        "WTC":  "Walton",
+        "VEN":  "VeChain"
     }
 }
