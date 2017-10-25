@@ -1,5 +1,8 @@
 {
     "BTC": [
+               "AVT",
+               "EDO",
+               "QTM",
                "LTC",
                "ETH",
                "ETC",
@@ -20,8 +23,14 @@
                "BT1",
                "BT2",
                "BTG"
+
+
+
      ],
     "ETH": [
+               "AVT",
+               "EDO",
+               "QTM",
                "EOS",
                "SAN",
                "OMG",
@@ -31,6 +40,9 @@
                "ETP"
      ],
     "USD": [
+               "AVT",
+               "EDO",
+               "QTM",
                "ETC",
                "OMG",
                "LTC",
