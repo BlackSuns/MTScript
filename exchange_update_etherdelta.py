@@ -1,5 +1,6 @@
 from utils import print_log
-from exchanges.etherdelta import EtherdeltaExchange
+# from exchanges.etherdelta import EtherdeltaExchange
+from exchanges.etherdelta_of import EtherdeltaExchange
 
 if __name__ == '__main__':
     print_log("start sync exchanges...")

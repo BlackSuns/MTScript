@@ -7,7 +7,8 @@
         "btc_usdt",
         "eth_usdt",
         "bt1_btc",
-        "bt2_btc"
+        "bt2_btc",
+        "btg_btc"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -16,6 +17,7 @@
         "ETH":  "Ethereum",
         "LTC":  "Litecoin",
         "BT1":  "CST-BT1",
-        "BT2":  "CST-BT2"
+        "BT2":  "CST-BT2",
+        "BTG":  "Bitcoin Gold"
     }
 }
