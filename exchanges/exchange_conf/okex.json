@@ -1,9 +1,21 @@
-{
+{   
+    "pairs": [
+        "eth_btc",
+        "ltc_btc",
+        "etc_btc",
+        "bcc_btc",
+        "btc_usdt",
+        "eth_usdt",
+        "bt1_btc",
+        "bt2_btc"
+    ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
         "BTC":  "Bitcoin",
         "ETC":  "Ethereum Classic",
         "ETH":  "Ethereum",
-        "LTC":  "Litecoin"
+        "LTC":  "Litecoin",
+        "BT1":  "CST-BT1",
+        "BT2":  "CST-BT2"
     }
 }

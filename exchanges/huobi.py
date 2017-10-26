@@ -1,3 +1,4 @@
+import json
 import os
 
 from .base import BaseExchange
@@ -18,19 +19,27 @@ class HuobiExchange(BaseExchange):
         self.exchange_conf = os.path.abspath(os.path.dirname(__file__)) +\
             '/exchange_conf/{}.json'.format(self.exchange)
 
+    def get_available_pair(self):
+        with open(self.exchange_conf, 'r') as f:
+            data = json.load(f)
+
+        return list(data['pairs'])
+
     def get_remote_data(self):
         return_data = []
-        symbols = ('ethbtc', 'ltcbtc', 'etcbtc', 'bccbtc')
-        for s in symbols:
-            url = '{}{}?symbol={}'.format(
+        pairs = self.get_available_pair()
+        for p in pairs:
+            (symbol, anchor) = str(p).split('_')
+            url = '{}{}?symbol={}{}'.format(
                 self.base_url,
                 self.ticker_url,
-                s)
+                symbol,
+                anchor)
             print(url)
             r = self.get_json_request(url)
             return_data.append(
                 {
-                    'pair': '{}/BTC'.format(s[:-3].upper()),
+                    'pair': '{}/{}'.format(symbol.upper(), anchor.upper()),
                     'price': r['tick']['close'],
                     'volume': r['tick']['amount'],
                     'volume_anchor': r['tick']['vol'],

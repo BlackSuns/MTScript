@@ -1,3 +1,4 @@
+import json
 import os
 from .base import BaseExchange
 
@@ -17,18 +18,24 @@ class OkexExchange(BaseExchange):
         self.exchange_conf = os.path.abspath(os.path.dirname(__file__)) +\
             '/exchange_conf/{}.json'.format(self.exchange)
 
+    def get_available_pair(self):
+        with open(self.exchange_conf, 'r') as f:
+            data = json.load(f)
+
+        return list(data['pairs'])
+
     def get_remote_data(self):
         return_data = []
-        symbols = ('eth_btc', 'ltc_btc', 'etc_btc',
-                   'bcc_btc', 'btc_usdt', 'eth_usdt')
-        for s in symbols:
+        pairs = self.get_available_pair()
+
+        for p in pairs:
             url = '{}{}?symbol={}'.format(
                 self.base_url,
                 self.ticker_url,
-                s)
+                p)
             print(url)
             r = self.get_json_request(url)
-            (symbol, anchor) = s.split('_')
+            (symbol, anchor) = p.split('_')
             price = float(r['ticker']['last'])
             volume = float(r['ticker']['vol'])
             return_data.append(
