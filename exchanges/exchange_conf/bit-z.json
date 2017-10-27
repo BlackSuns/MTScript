@@ -14,6 +14,7 @@
         "PPC":  "Peercoin",
         "XAS":  "Asch",
         "XPM":  "Primecoin",
-        "ZEC":  "Zcash"
+        "ZEC":  "Zcash",
+        "PAY":  "TenX"
     }
 }
