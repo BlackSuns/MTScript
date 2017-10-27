@@ -9,7 +9,8 @@
         "gas_krw",
         "knc_krw",
         "tsl_krw",
-        "omg_krw"
+        "omg_krw",
+        "btg_krw"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -20,6 +21,7 @@
         "NEO":  "NEO",
         "QTUM": "Qtum",
         "TSL":  "Energo",
-        "GAS":  "GAS"
+        "GAS":  "GAS",
+        "BTG":  "Bitcoin Gold"
     }
 }
