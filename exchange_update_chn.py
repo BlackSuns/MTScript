@@ -3,6 +3,7 @@ from exchanges.binance import BinanceExchange
 from exchanges.gateio import GateioExchange
 from exchanges.kucoin import KucoinExchange
 from exchanges.chaoex import ChaoexExchange
+from exchanges.coinegg import CoineggExchange
 
 
 if __name__ == '__main__':
@@ -23,5 +24,9 @@ if __name__ == '__main__':
     ce = ChaoexExchange()
     ce.post_result_batch()
     print_log("ChaoEx done...")
+
+    egg = CoineggExchange()
+    egg.post_result_batch()
+    print_log("Coinegg done...")
 
     print_log("all exchanges synced...")
