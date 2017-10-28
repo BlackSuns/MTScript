@@ -34,7 +34,8 @@
         "SHC_BTC",
         "AIC_BTC",
         "IQT_BTC",
-        "ACT_BTC"
+        "ACT_BTC",
+        "HPB_BTC"
     ],
     "name_symbol": {
         "ETH":  "Ethereum",
@@ -71,6 +72,7 @@
         "CFS":   "CFS",
         "MCC":   "Moving Cloud Coin",
         "XKC":   "XKC",
-        "EDR":   "E-Dinar Coin"
+        "EDR":   "E-Dinar Coin",
+        "HPB":   "High Performance Blockchain"
     }
 }
