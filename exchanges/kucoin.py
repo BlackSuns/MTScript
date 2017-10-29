@@ -26,7 +26,7 @@ class KucoinExchange(BaseExchange):
         return_data = []
 
         for i in result['data']:
-            if i['trading']:
+            if 'lastDealPrice' in i.keys() and i['trading']:
                 (symbol, anchor) = str(i['symbol']).split('-')
                 if anchor and symbol:
                     pair = '{}/{}'.format(symbol.upper(), anchor.upper())
