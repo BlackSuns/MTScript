@@ -4,6 +4,7 @@
         "BTC":  "Bitcoin",
         "ETC":  "Ethereum Classic",
         "ETH":  "Ethereum",
+        "LTC":  "Litecoin",
         "QTUM": "Qtum",
         "XRP":  "Ripple"
     }
