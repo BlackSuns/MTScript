@@ -1,0 +1,33 @@
+{
+    "name_symbol": {
+        "LTC":  "Litecoin",
+        "XPM":  "Primecoin",
+        "XRP": "Ripple",
+        "XLM":  "Stellar Lumens",
+        "BTS":  "BitShares",
+        "ZCC":  "ZcCoin",
+        "MEC":  "Megacoin",
+        "PPC":  "Peercoin",
+        "TAG": "TagCoin",
+        "DOGE": "Dogecoin",
+        "YBC":  "YbCoin",
+        "RIC":  "Riecoin",
+        "DASH":  "DASH",
+        "NXT":  "Nxt",
+        "EAC":  "EarthCoin",
+        "XEM":  "NEM",
+        "EMC":  "Emercoin",
+        "HLB":  "Lepaoquan",
+        "XZC":  "ZCoin",
+        "MGC":  "MergeCoin",
+        "XCN": "Cryptonite",
+        "ARDR":  "Ardor",
+        "QRK":  "Quark",
+        "WDC":    "WorldCoin",
+        "SYS":  "Syscoin",
+        "ETH":  "Ethereum",
+        "ETC":  "Ethereum Classic",
+        "BCC":  "Bitcoin Cash",
+        "INF":  "InfChain"
+    }
+}
