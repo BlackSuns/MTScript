@@ -8,7 +8,8 @@
         "bt2_btc",
         "btc_usdt",
         "eth_usdt",
-        "ltc_usdt"
+        "ltc_usdt",
+        "bcc_usdt"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",

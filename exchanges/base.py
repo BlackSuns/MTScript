@@ -84,15 +84,23 @@ class BaseExchange(object):
             self.print_log('someting wrong and return http code: {}'.format(
                 r.status_code))
 
-    def post_json_request(self, url, params):
+    def post_json_request(self, url, params=None):
+        headers = {
+            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+            'Content-Type': 'application/json',
+        }
+
         # print(url)
         # print(params)
 
-        r = requests.post(url, data=params)
+        if params:
+            r = requests.post(url, headers=headers, data=params)
+        else:
+            r = requests.post(url, headers=headers)
+
         # print(r.text)
 
-        if r.status_code == 200 and r.json()['code'] == 0\
-           and r.json()['data']:
+        if r.status_code == 200:
             # self.print_log(
             #     'post success: {symbol}/{anchor} on {market}'.format(
             #         symbol=params['symbol'],
@@ -102,12 +110,8 @@ class BaseExchange(object):
         else:
             # print(params)
             error_info = "http code: {}".format(r.status_code)
-            if r.status_code == 200:
-                try:
-                    error_info += ' and server return error: {}'.format(
-                        r.json())
-                except:
-                    pass
+            error_info += ' and server return error: {}'.format(
+                r.json())
             self.print_log(error_info)
 
     # def post_result(self):
@@ -194,7 +198,7 @@ class BaseExchange(object):
                 # print(request_url, {'json': request_data})
                 self.post_json_request(
                     request_url, {'json': json.dumps(request_data)})
-        except Exception as e:
+        except aException as e:
             self.print_log('found error when post: {}'.format(e))
 
     def print_log(self, message, m_type='INFO'):

@@ -5,7 +5,22 @@
         "LSK":  "Lisk",
         "LTC":  "Litecoin",
         "NULS": "NULS",
-        "TLC":  "TLC",
-        "XAS":  "Asch"
+        "TLC":  "Treasure Land",
+        "XAS":  "Asch",
+        "ARC":  "ArronCoin",
+        "EXP":  "EXPANSE",
+        "BCC":  "Bitcoin Cash",
+        "BTC":  "Bitcoin",
+        "OMG":  "OmiseGo",
+        "PAY":  "TenX",
+        "PST":  "Primas",
+        "REP":  "Augur",
+        "SNT":  "Status",
+        "STORJ":  "Storj",
+        "TNT":  "Tierion",
+        "ZRX":  "Ox",
+        "BAT":  "Basic Attention Token",
+        "CVC":  "Civic",
+        "DNT":  "district0x"
     }
 }
