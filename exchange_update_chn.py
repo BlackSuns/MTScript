@@ -20,8 +20,4 @@ if __name__ == '__main__':
     kc.post_result_batch()
     print_log("Kucoin done...")
 
-    ce = ChaoexExchange()
-    ce.post_result_batch()
-    print_log("ChaoEx done...")
-
     print_log("all exchanges synced...")

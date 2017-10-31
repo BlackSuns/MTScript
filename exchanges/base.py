@@ -85,22 +85,14 @@ class BaseExchange(object):
                 r.status_code))
 
     def post_json_request(self, url, params=None):
-        headers = {
-            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
-            'Content-Type': 'application/json',
-        }
-
         # print(url)
         # print(params)
-
-        if params:
-            r = requests.post(url, headers=headers, data=params)
-        else:
-            r = requests.post(url, headers=headers)
+        r = requests.post(url, data=params)
 
         # print(r.text)
 
-        if r.status_code == 200:
+        if r.status_code == 200 and r.json()['code'] == 0\
+           and r.json()['data']:
             # self.print_log(
             #     'post success: {symbol}/{anchor} on {market}'.format(
             #         symbol=params['symbol'],
@@ -110,8 +102,12 @@ class BaseExchange(object):
         else:
             # print(params)
             error_info = "http code: {}".format(r.status_code)
-            error_info += ' and server return error: {}'.format(
-                r.json())
+            if r.status_code == 200:
+                try:
+                    error_info += ' and server return error: {}'.format(
+                        r.json())
+                except:
+                    pass
             self.print_log(error_info)
 
     # def post_result(self):
