@@ -22,6 +22,6 @@ if __name__ == '__main__':
 
     aex = AexExchange()
     aex.post_result_batch()
-    print_log("AEZ done...")
+    print_log("AEX done...")
 
     print_log("all exchanges synced...")
