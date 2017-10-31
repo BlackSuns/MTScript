@@ -28,6 +28,8 @@
         "ETH":  "Ethereum",
         "ETC":  "Ethereum Classic",
         "BCC":  "Bitcoin Cash",
-        "INF":  "InfChain"
+        "INF":  "InfChain",
+        "TMC":  "TimesCoin",
+        "VASH": "VPNCoin"
     }
 }
