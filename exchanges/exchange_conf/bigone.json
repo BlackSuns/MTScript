@@ -1,0 +1,9 @@
+{
+    "name_symbol": {
+        "BTS":  "BitShares",
+        "EOS":  "EOS",
+        "ETH":  "Ethereum",
+        "LTC":  "Litecoin",
+        "ZEC":  "Zcash"
+    }
+}
