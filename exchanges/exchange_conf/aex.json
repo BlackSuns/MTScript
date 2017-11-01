@@ -1,5 +1,6 @@
 {
     "name_symbol": {
+        "BLK":  "BlackCoin",
         "LTC":  "Litecoin",
         "XPM":  "Primecoin",
         "XRP": "Ripple",
@@ -14,6 +15,7 @@
         "RIC":  "Riecoin",
         "DASH":  "DASH",
         "NXT":  "Nxt",
+        "NCS":  "NCShares",
         "EAC":  "EarthCoin",
         "XEM":  "NEM",
         "EMC":  "Emercoin",
