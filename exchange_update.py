@@ -5,6 +5,7 @@ from exchanges.hitbtc import HitbtcExchange
 from exchanges.poloniex import PoloniexExchange
 from exchanges.bitz import BitzExchange
 from exchanges.bitstamp import BitstampExchange
+from exchanges.bigone import BigoneExchange
 
 
 if __name__ == '__main__':
@@ -33,5 +34,9 @@ if __name__ == '__main__':
     bs = BitstampExchange()
     bs.post_result_batch()
     print_log('Bitstamp done...')
+
+    # bo = BigoneExchange()
+    # bo.post_result_batch()
+    # print_log('Bigone done...')
 
     print_log("all exchanges synced...")
