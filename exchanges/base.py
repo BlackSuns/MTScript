@@ -86,7 +86,7 @@ class BaseExchange(object):
 
     def post_json_request(self, url, params=None):
         # print(url)
-        # print(params)
+        print(params)
         r = requests.post(url, data=params)
 
         # print(r.text)

@@ -1,0 +1,36 @@
+{
+    "pairs": [
+        "btc_usd",
+        "eth_usd",
+        "eth_btc",
+        "etc_usd",
+        "etc_btc",
+        "ltc_usd",
+        "ltc_btc",
+        "bcc_btc",
+        "bcc_eth",
+        "bcc_usd",
+        "qtum_btc",
+        "qtum_eth",
+        "eos_btc",
+        "eos_eth",
+        "omg_eth",
+        "omg_btc",
+        "inf_btc",
+        "inf_eth",
+        "cdt_btc",
+        "cdt_eth"
+    ],
+    "name_symbol": {
+        "BCC":  "Bitcoin Cash",
+        "BTC":  "Bitcoin",
+        "ETC":  "Ethereum Classic",
+        "ETH":  "Ethereum",
+        "LTC":  "Litecoin",
+        "QTUM": "Qtum",
+        "EOS":  "EOS",
+        "OMG":  "OmiseGO",
+        "INF":  "InfChain",
+        "CDT":  "CoinDash"
+    }
+}
