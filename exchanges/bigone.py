@@ -8,7 +8,7 @@ class BigoneExchange(BaseExchange):
         super().__init__()
         self.exchange = 'bigone'
         self.exchange_id = 1352
-        self.base_url = 'https://api.big.one/markets'
+        self.base_url = 'https://api.big.one'
 
         self.ticker_url = '/markets'
 

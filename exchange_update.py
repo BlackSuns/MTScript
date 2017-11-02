@@ -35,8 +35,8 @@ if __name__ == '__main__':
     bs.post_result_batch()
     print_log('Bitstamp done...')
 
-    # bo = BigoneExchange()
-    # bo.post_result_batch()
-    # print_log('Bigone done...')
+    bo = BigoneExchange()
+    bo.post_result_batch()
+    print_log('Bigone done...')
 
     print_log("all exchanges synced...")

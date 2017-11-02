@@ -9,6 +9,7 @@ class AexExchange(BaseExchange):
         self.exchange = 'aex'
         self.exchange_id = 1351
         self.base_url = 'http://api.aex.com'
+        # https://coding.net/u/byoneself/p/cex_api/git/blob/master/cex_api.md
 
         self.ticker_url = '/ticker.php?c=all&mk_type=btc'
 
