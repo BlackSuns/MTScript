@@ -1,4 +1,4 @@
-import re
+import json
 import os
 
 from .base import BaseExchange
@@ -23,8 +23,16 @@ class EtherdeltaExchange(BaseExchange):
             self.base_url, self.ticker_url)
         return self.ticker_callback(self.get_json_request(url))
 
+    def get_whitelist(self):
+        with open(self.exchange_conf, 'r') as f:
+            data = json.load(f)
+
+        return data['sc_whitelist'] if 'sc_whitelist' in data.keys() else []
+
     def ticker_callback(self, result):
         return_data = []
+        whitelist = self.get_whitelist()
+        # print(whitelist)
 
         total = len(result)
         curr = 0
@@ -32,18 +40,19 @@ class EtherdeltaExchange(BaseExchange):
             curr = curr + 1
             if result[k]['last']:
                 (anchor, symbol) = str(k).split('_')
-                ask = result[k]['ask']
-                last = result[k]['last']
-                percentChange = result[k]['percentChange']
-                rate = round(last/ask, 2) if ask else 0
-                print('{}/{} {}: rate is {}, last: {} ask: {} perc: {}'.format(curr, total, k, rate, last, ask, percentChange))
-                if anchor and symbol:
-                    pair = '{}/{}'.format(symbol.upper(), anchor.upper())
-                    return_data.append({
-                        'pair': pair,
-                        'price': result[k]['last'],
-                        'volume_anchor': result[k]['baseVolume'],
-                        'volume': result[k]['quoteVolume'],
-                    })
+                if not str(symbol).startswith('0x') or symbol in whitelist:
+                    ask = result[k]['ask']
+                    last = result[k]['last']
+                    percentChange = result[k]['percentChange']
+                    rate = round(last/ask, 2) if ask else 0
+                    print('{}/{} {}: rate is {}, last: {} ask: {} perc: {}'.format(curr, total, k, rate, last, ask, percentChange))
+                    if anchor and symbol:
+                        pair = '{}/{}'.format(symbol.upper(), anchor.upper())
+                        return_data.append({
+                            'pair': pair,
+                            'price': result[k]['last'],
+                            'volume_anchor': result[k]['baseVolume'],
+                            'volume': result[k]['quoteVolume'],
+                        })
 
         return return_data
