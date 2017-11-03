@@ -22,10 +22,8 @@
                "ETP",
                "BT1",
                "BT2",
-               "BTG"
-
-
-
+               "BTG",
+               "DAT"
      ],
     "ETH": [
                "AVT",
@@ -37,7 +35,8 @@
                "BCH",
                "NEO",
                "IOT",
-               "ETP"
+               "ETP",
+               "DAT"
      ],
     "USD": [
                "AVT",
@@ -63,7 +62,8 @@
                "ETP",
                "BT1",
                "BT2",
-               "BTG"
+               "BTG",
+               "DAT"
     ],
     "name_symbol": {
           "AVT":  "Aventus",
@@ -74,6 +74,7 @@
           "BT2":  "CST-BT2",
           "BTC":  "Bitcoin",
           "DASH": "Dash",
+          "DAT":  "Streamr",
           "DSH":  "Dashcoin",
           "EDO":  "Eidoo",
           "EOS":  "EOS",
@@ -91,6 +92,5 @@
           "XMR":  "Monero",
           "XRP":  "Ripple",
           "ZEC":  "Zcash"
-
     }
 }
