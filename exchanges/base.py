@@ -74,6 +74,9 @@ class BaseExchange(object):
             'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
             'Content-Type': 'application/json',
         }
+
+        if url.startswith("https://api.etherdelta.com"):
+            headers['cookie'] = '__cfduid=d42b240e518dad58587086f22eab9d7f11505272987; _ga=GA1.2.40686394.1505272998; _TRAEFIK_BACKEND=http://10.0.0.13:8001'
         r = requests.get(url, headers=headers, timeout=30)
         # print(r.text)
         # print(url)
