@@ -109,8 +109,8 @@ def get_currency_info(cnx):
 def filter_currency_param(currency):
     dealed_currency = {}
     params = ('name', 'symbol', 'cmc_url', 'logo', 'website',
-              'explorer', 'announcement', 'message_board')
-              # 'circulating_supply', 'total_supply', 'max_supply')
+              'explorer', 'announcement', 'message_board',
+              'circulating_supply', 'total_supply', 'max_supply')
 
     for k in currency.keys():
         if k.lower() in params and currency[k]:
