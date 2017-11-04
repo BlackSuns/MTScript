@@ -3,6 +3,7 @@ from exchanges.binance import BinanceExchange
 from exchanges.gateio import GateioExchange
 from exchanges.kucoin import KucoinExchange
 from exchanges.aex import AexExchange
+from exchanges.ceo import CeoExchange
 
 
 if __name__ == '__main__':
@@ -23,5 +24,9 @@ if __name__ == '__main__':
     aex = AexExchange()
     aex.post_result_batch()
     print_log("AEX done...")
+
+    ceo = CeoExchange()
+    ceo.post_result_batch()
+    print_log("CEO done...")
 
     print_log("all exchanges synced...")

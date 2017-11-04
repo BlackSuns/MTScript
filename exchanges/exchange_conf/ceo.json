@@ -1,0 +1,11 @@
+{
+    "name_symbol": {
+        "BTC":  "Bitcoin",
+        "ETH":  "Ethereum",
+        "LTC":  "Litecoin",
+        "CEO":  "CEOcoin",
+        "HSR":  "Hshare",
+        "QTUM": "Qtum",
+        "HPY":  "Hyperpay"
+    }
+}

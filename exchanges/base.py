@@ -77,7 +77,11 @@ class BaseExchange(object):
 
         if url.startswith("https://api.etherdelta.com"):
             headers['cookie'] = '__cfduid=d42b240e518dad58587086f22eab9d7f11505272987; _ga=GA1.2.40686394.1505272998; _TRAEFIK_BACKEND=http://10.0.0.13:8001'
-        r = requests.get(url, headers=headers, timeout=30)
+
+        if url.startswith("https://www.bite.ceo"):
+            r = requests.get(url, headers=headers, timeout=30, verify=False)
+        else:
+            r = requests.get(url, headers=headers, timeout=30)
         # print(r.text)
         # print(url)
 
@@ -197,7 +201,7 @@ class BaseExchange(object):
                 # print(request_url, {'json': request_data})
                 self.post_json_request(
                     request_url, {'json': json.dumps(request_data)})
-        except Exception as e:
+        except aException as e:
             self.print_log('found error when post: {}'.format(e))
 
     def print_log(self, message, m_type='INFO'):
