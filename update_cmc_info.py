@@ -109,8 +109,8 @@ def get_currency_info(cnx):
 def filter_currency_param(currency):
     dealed_currency = {}
     params = ('name', 'symbol', 'cmc_url', 'logo', 'website',
-              'explorer', 'announcement', 'message_board',
-              'circulating_supply', 'total_supply', 'max_supply')
+              'explorer', 'announcement', 'message_board')
+              # 'circulating_supply', 'total_supply', 'max_supply')
 
     for k in currency.keys():
         if k.lower() in params and currency[k]:
@@ -232,6 +232,7 @@ if __name__ == '__main__':
         print_log('dealing {}/{}, {}/{}'.format(i, total, c['name'], c['symbol']))
         # currency
         param = filter_currency_param(c)
+        # print(param)
         post_json_request(currency_url, param)
 
         # com
