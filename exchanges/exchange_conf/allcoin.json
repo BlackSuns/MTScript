@@ -22,6 +22,7 @@
         "QTUM_USD",
         "GP_USD",
         "BTC_USD",
+        "ABC_USD",
         "TSL_QTUM",
         "LMC_BTC",
         "MCC_BTC",
@@ -35,9 +36,19 @@
         "AIC_BTC",
         "IQT_BTC",
         "ACT_BTC",
-        "HPB_BTC"
+        "HPB_BTC",
+        "ACT_ABC",
+        "YUAN_ABC",
+        "MCC_ABC",
+        "LMC_ABC",
+        "AIC_ABC",
+        "SHC_ABC",
+        "BTE_ABC",
+        "DWC_ABC",
+        "A0101_ABC"
     ],
     "name_symbol": {
+        "ABC":  "CNET",
         "ETH":  "Ethereum",
         "LTC":   "Litecoin",
         "QTUM":  "Qtum",
@@ -73,6 +84,7 @@
         "MCC":   "Moving Cloud Coin",
         "XKC":   "XKC",
         "EDR":   "E-Dinar Coin",
-        "HPB":   "High Performance Blockchain"
+        "HPB":   "High Performance Blockchain",
+        "BTE":   "BTE"
     }
 }
