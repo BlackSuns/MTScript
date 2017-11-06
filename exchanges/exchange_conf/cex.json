@@ -2,24 +2,34 @@
     "pairs": [
         "btc_usd",
         "eth_usd",
-        "eth_btc",
         "etc_usd",
-        "etc_btc",
         "ltc_usd",
+        "bcc_usd",
+
+        "eth_btc",
+        "etc_btc",
         "ltc_btc",
         "bcc_btc",
-        "bcc_eth",
-        "bcc_usd",
         "qtum_btc",
-        "qtum_eth",
         "eos_btc",
-        "eos_eth",
-        "omg_eth",
         "omg_btc",
         "inf_btc",
-        "inf_eth",
         "cdt_btc",
-        "cdt_eth"
+
+        "bcc_eth",
+        "qtum_eth",
+        "eos_eth",
+        "omg_eth",
+        "inf_eth",
+        "cdt_eth",
+        "ae_eth",
+
+        "btc_usdt",
+        "eth_usdt",
+        "bcc_usdt",
+        "etc_usdt",
+        "ltc_usdt",
+        "ae_usdt"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -31,6 +41,7 @@
         "EOS":  "EOS",
         "OMG":  "OmiseGO",
         "INF":  "InfChain",
-        "CDT":  "CoinDash"
+        "CDT":  "CoinDash",
+        "AE":   "Aeternity"
     }
 }
