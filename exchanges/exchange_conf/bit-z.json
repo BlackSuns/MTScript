@@ -18,6 +18,7 @@
         "ZEC":  "Zcash",
         "PAY":  "TenX",
         "EOS":  "EOS",
-        "OMG":  "OmiseGO" 
+        "OMG":  "OmiseGO",
+        "VOISE":    "Voise"
     }
 }
