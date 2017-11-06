@@ -40,7 +40,9 @@ class EtherdeltaExchange(BaseExchange):
             curr = curr + 1
             if result[k]['last']:
                 (anchor, symbol) = str(k).split('_')
-                if not str(symbol).startswith('0x') or symbol in whitelist:
+                if not (str(symbol).startswith('0x') or
+                        str(symbol).startswith('0X')) or\
+                   symbol in whitelist:
                     ask = result[k]['ask']
                     last = result[k]['last']
                     percentChange = result[k]['percentChange']

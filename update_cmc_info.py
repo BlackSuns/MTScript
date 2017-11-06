@@ -192,11 +192,10 @@ def get_market_info(cnx, exist_markets):
             twitter = ''
 
             if name not in exist_markets:
-                for media in jm['media']:
-                    if str(media[0]).startswith('http'):
-                        website = media[0]
-                    if 'twitter' in str(media[0]):
-                        twitter = media[0]
+                website = jm['media'][0][0]
+                twitter = ''
+                if 'twitter' in jm['media'][1][0]:
+                    twitter = jm['media'][1][0]
 
                 result.append({
                     'name': jm['name'],
