@@ -2,9 +2,6 @@
     "sc_whitelist": [
     ],
     "name_symbol": {
-          "AMB": "Amber",
-          "ALCO":   "Alaricoin",
-          "POWR": "Power Ledger",
           "10MT":   "10M Token",
           "1LIFE":  "LIFECREDIT",
           "1ST":    "FirstBlood",
@@ -16,8 +13,10 @@
           "AE":     "Aeternity",
           "AION":   "Aion",
           "AIR":    "AirToken",
+          "ALCO":   "Alaricoin",
           "ALIS":   "ALIS",
           "ALPC":   "alpc",
+          "AMB":    "Amber",
           "AMIS":   "AMIS",
           "AMO":    "Anonymous Mobile Organization",
           "ANT":    "Aragon",
@@ -201,6 +200,7 @@
           "PPP":    "PayPie",
           "PPT":    "Populous",
           "POLL":   "ClearPoll",
+          "POWR": "Power Ledger",
           "PRG":    "Paragon",
           "PRO":    "Propy",
           "PST":    "Primas",
