@@ -9,7 +9,7 @@ class BcexExchange(BaseExchange):
         super().__init__()
         self.exchange = 'bcex'
         self.exchange_id = 1339
-        self.base_url = 'https://www.bcex.ca/api_market/getinfo_btc'
+        self.base_url = 'https://www.bcex.ca/api_market/getinfo_'
 
         self.ticker_url = '/coin'
 
@@ -33,9 +33,10 @@ class BcexExchange(BaseExchange):
             print('dealing {}/{} pair: {}'.format(i, len(pairs), p))
             try:
                 (symbol, anchor) = p.split('_')
-                url = '{}{}/{}'.format(self.base_url,
-                                       self.ticker_url,
-                                       str(symbol).lower())
+                url = '{}{}{}/{}'.format(self.base_url,
+                                         str(anchor).lower(),
+                                         self.ticker_url,
+                                         str(symbol).lower())
                 # print(url)
                 r = self.get_json_request(url)
                 if symbol.lower() == 'ans':

@@ -1,11 +1,10 @@
 {
     "sc_whitelist": [
-          "0x5958"
     ],
     "name_symbol": {
           "AMB": "Amber",
           "ALCO":   "Alaricoin",
-          "0x5958": "PowerLedger",
+          "POWR": "PowerLedger",
           "10MT":   "10M Token",
           "1LIFE":  "LIFECREDIT",
           "1ST":    "FirstBlood",
