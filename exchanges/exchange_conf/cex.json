@@ -23,13 +23,15 @@
         "inf_eth",
         "cdt_eth",
         "ae_eth",
+        "wkc_eth",
 
         "btc_usdt",
         "eth_usdt",
         "bcc_usdt",
         "etc_usdt",
         "ltc_usdt",
-        "ae_usdt"
+        "ae_usdt",
+        "wkc_usdt"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -42,6 +44,7 @@
         "OMG":  "OmiseGO",
         "INF":  "InfChain",
         "CDT":  "CoinDash",
-        "AE":   "Aeternity"
+        "AE":   "Aeternity",
+        "WKC":  "WKC"
     }
 }
