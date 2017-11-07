@@ -13,7 +13,8 @@
         "etc_usdt",
         "knc_btc",
         "zrx_btc",
-        "ast_btc"
+        "ast_btc",
+        "rcn_btc"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -22,6 +23,11 @@
         "ETH":  "Ethereum",
         "LTC":  "Litecoin",
         "BT1":  "CST-BT1",
-        "BT2":  "CST-BT2"
+        "BT2":  "CST-BT2",
+        "RCN":  "Ripio Credit Network",
+        "AST":  "AirSwap",
+        "KNC":  "Kyber Network",
+        "RCN":  "Ripio Credit Network",
+        "ZRX":  "0x" 
     }
 }
