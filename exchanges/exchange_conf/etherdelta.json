@@ -4,7 +4,7 @@
     "name_symbol": {
           "AMB": "Amber",
           "ALCO":   "Alaricoin",
-          "POWR": "PowerLedger",
+          "POWR": "Power Ledger",
           "10MT":   "10M Token",
           "1LIFE":  "LIFECREDIT",
           "1ST":    "FirstBlood",
@@ -260,6 +260,7 @@
           "XAI":    "xai",
           "XHY":    "xhy",
           "XNN":    "Xenon",
+          "ZCG":    "ZCashGOLD",
           "XRL":    "Rialto",
           "ZRX":    "0x"
     }
