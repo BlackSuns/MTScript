@@ -20,12 +20,12 @@
         "ETH":  "Ethereum",
         "LTC":  "Litecoin",
         "ZEC":  "Zcash",
-        "BCH":  "",
-        "ETC":  "",
-        "QTUM": "",
-        "NEO":  "",
-        "OMG":  "",
-        "GXS":  "",
-        "DGD":  ""
+        "BCH":  "Bitcoin Cash",
+        "ETC":  "Ethereum Classic",
+        "QTUM": "Qtum",
+        "NEO":  "NEO",
+        "OMG":  "OmiseGO",
+        "GXS":  "GXShares",
+        "DGD":  "DigixDAO"
     }
 }

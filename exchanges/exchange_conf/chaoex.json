@@ -21,6 +21,8 @@
         "ZRX":  "0x",
         "BAT":  "Basic Attention Token",
         "CVC":  "Civic",
-        "DNT":  "district0x"
+        "DNT":  "district0x",
+        "COIN": "Coin",
+        "BXB":  "BixingCoin"
     }
 }
