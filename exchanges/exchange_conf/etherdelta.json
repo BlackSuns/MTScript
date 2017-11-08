@@ -1,9 +1,7 @@
 {
     "sc_whitelist": [
-          "0x255a",
     ],
     "name_symbol": {
-          "0x255a": "Raiden Network",
           "10MT":   "10M Token",
           "1LIFE":  "LIFECREDIT",
           "1ST":    "FirstBlood",
@@ -217,6 +215,7 @@
           "R":      "Revain",
           "RCC":    "Reality Clash Coin",
           "RCN":    "Ripio Credit Network",
+          "RDN":    "Raiden Network",
           "REAL":   "REAL",
           "REQ":    "Request Network",
           "REX":    "REX",
