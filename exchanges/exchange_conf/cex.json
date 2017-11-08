@@ -53,6 +53,10 @@
         "INF":  "InfChain",
         "CDT":  "CoinDash",
         "AE":   "Aeternity",
-        "WKC":  "WKC"
+        "WKC":  "WKC",
+        "rcn":  "Ripio Credit Network",
+        "data": "Streamr DATAcoin",
+        "etp":  "Metaverse ETP",
+        "btm":  "Bytom"
     }
 }
