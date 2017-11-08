@@ -15,6 +15,9 @@
         "omg_btc",
         "inf_btc",
         "cdt_btc",
+        "rcn_btc",
+        "data_btc",
+        "etp_btc",
 
         "bcc_eth",
         "qtum_eth",
@@ -24,6 +27,10 @@
         "cdt_eth",
         "ae_eth",
         "wkc_eth",
+        "rcn_eth",
+        "data_eth",
+        "etp_eth",
+        "btm_eth",
 
         "btc_usdt",
         "eth_usdt",
@@ -31,7 +38,8 @@
         "etc_usdt",
         "ltc_usdt",
         "ae_usdt",
-        "wkc_usdt"
+        "wkc_usdt",
+        "btm_usdt"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
