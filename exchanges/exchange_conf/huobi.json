@@ -14,7 +14,8 @@
         "knc_btc",
         "zrx_btc",
         "ast_btc",
-        "rcn_btc"
+        "rcn_btc",
+        "rcn_eth"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
