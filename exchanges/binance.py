@@ -33,7 +33,7 @@ class BinanceExchange(BaseExchange):
             return_data.append({
                 'pair': pair,
                 'price': i['close'],
-                'volume_anchor': float(i['quoteVolume']),
+                'volume_anchor': float(i['tradedMoney']),
                 'volume': float(i['volume']),
             })
 
