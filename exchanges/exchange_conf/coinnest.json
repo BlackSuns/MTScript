@@ -1,7 +1,7 @@
 {
     "pairs": [
         "btc_krw",
-        "bcc_krw",
+        "bch_krw",
         "eth_krw",
         "etc_krw",
         "qtum_krw",
@@ -13,7 +13,7 @@
         "btg_krw"
     ],
     "name_symbol": {
-        "BCC":  "Bitcoin Cash",
+        "BCH":  "Bitcoin Cash",
         "BTC":  "Bitcoin",
         "ETC":  "Ethereum Classic",
         "ETH":  "Ethereum",

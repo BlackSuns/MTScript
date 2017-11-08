@@ -8,7 +8,7 @@ class CmcExchange(BaseExchange):
         self.exchange_id = 1303
         self.base_url = 'https://api.coinmarketcap.com/v1'
 
-        self.ticker_url = '/ticker/?convert=CNY'
+        self.ticker_url = '/ticker/?convert=CNY&limit=3000'
 
         self.alias = 'CoinMarketCap'
         self.with_name = True
