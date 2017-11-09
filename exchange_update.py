@@ -6,6 +6,7 @@ from exchanges.poloniex import PoloniexExchange
 from exchanges.bitz import BitzExchange
 from exchanges.bitstamp import BitstampExchange
 from exchanges.bigone import BigoneExchange
+from exchanges.gdax import GdaxExchange
 
 
 if __name__ == '__main__':
@@ -38,5 +39,9 @@ if __name__ == '__main__':
     bo = BigoneExchange()
     bo.post_result_batch()
     print_log('Bigone done...')
+
+    gdax = GdaxExchange()
+    gdax.post_result_batch()
+    print_log('GDAX done...')
 
     print_log("all exchanges synced...")
