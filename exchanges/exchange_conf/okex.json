@@ -12,7 +12,8 @@
         "ltc_usdt",
         "etc_usdt",
         "bcc_usdt",
-        "etc_eth"
+        "etc_eth",
+        "qtum_btc"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -22,6 +23,7 @@
         "LTC":  "Litecoin",
         "BT1":  "CST-BT1",
         "BT2":  "CST-BT2",
-        "BTG":  "Bitcoin Gold"
+        "BTG":  "Bitcoin Gold",
+        "QTUM": "Qtum"
     }
 }

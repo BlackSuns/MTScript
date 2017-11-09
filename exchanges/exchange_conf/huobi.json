@@ -15,7 +15,9 @@
         "zrx_btc",
         "ast_btc",
         "rcn_btc",
-        "rcn_eth"
+        "rcn_eth",
+        "dash_btc",
+        "dash_usdt"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -29,6 +31,7 @@
         "AST":  "AirSwap",
         "KNC":  "Kyber Network",
         "RCN":  "Ripio Credit Network",
-        "ZRX":  "0x" 
+        "ZRX":  "0x",
+        "DASH": "Dash"
     }
 }

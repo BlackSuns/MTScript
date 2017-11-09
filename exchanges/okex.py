@@ -34,16 +34,20 @@ class OkexExchange(BaseExchange):
                 self.ticker_url,
                 p)
             print(url)
-            r = self.get_json_request(url)
-            (symbol, anchor) = p.split('_')
-            price = float(r['ticker']['last'])
-            volume = float(r['ticker']['vol'])
-            return_data.append(
-                {
-                    'pair': '{}/{}'.format(symbol.upper(), anchor.upper()),
-                    'price': price,
-                    'volume': volume,
-                    'volume_anchor': price * volume,
-                })
+
+            try:
+                r = self.get_json_request(url)
+                (symbol, anchor) = p.split('_')
+                price = float(r['ticker']['last'])
+                volume = float(r['ticker']['vol'])
+                return_data.append(
+                    {
+                        'pair': '{}/{}'.format(symbol.upper(), anchor.upper()),
+                        'price': price,
+                        'volume': volume,
+                        'volume_anchor': price * volume,
+                    })
+            except Exception as e:
+                print(e)
 
         return return_data

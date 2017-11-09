@@ -36,13 +36,17 @@ class HuobiExchange(BaseExchange):
                 symbol,
                 anchor)
             print(url)
-            r = self.get_json_request(url)
-            return_data.append(
-                {
-                    'pair': '{}/{}'.format(symbol.upper(), anchor.upper()),
-                    'price': r['tick']['close'],
-                    'volume': r['tick']['amount'],
-                    'volume_anchor': r['tick']['vol'],
-                })
+
+            try:
+                r = self.get_json_request(url)
+                return_data.append(
+                    {
+                        'pair': '{}/{}'.format(symbol.upper(), anchor.upper()),
+                        'price': r['tick']['close'],
+                        'volume': r['tick']['amount'],
+                        'volume_anchor': r['tick']['vol'],
+                    })
+            except Exception as e:
+                print(e)
 
         return return_data
