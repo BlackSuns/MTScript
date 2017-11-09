@@ -31,6 +31,7 @@
         "data_eth",
         "etp_eth",
         "btm_eth",
+        "rdn_eth",
 
         "btc_usdt",
         "eth_usdt",
@@ -39,7 +40,8 @@
         "ltc_usdt",
         "ae_usdt",
         "wkc_usdt",
-        "btm_usdt"
+        "btm_usdt",
+        "rdn_usdt"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -57,6 +59,7 @@
         "RCN":  "Ripio Credit Network",
         "DATA": "Streamr DATAcoin",
         "ETP":  "Metaverse ETP",
-        "BTM":  "Bytom"
+        "BTM":  "Bytom",
+        "RDN":  "Raiden Network Token"
     }
 }
