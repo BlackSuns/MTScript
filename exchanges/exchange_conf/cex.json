@@ -54,9 +54,9 @@
         "CDT":  "CoinDash",
         "AE":   "Aeternity",
         "WKC":  "WKC",
-        "rcn":  "Ripio Credit Network",
-        "data": "Streamr DATAcoin",
-        "etp":  "Metaverse ETP",
-        "btm":  "Bytom"
+        "RCN":  "Ripio Credit Network",
+        "DATA": "Streamr DATAcoin",
+        "ETP":  "Metaverse ETP",
+        "BTM":  "Bytom"
     }
 }
