@@ -1,0 +1,7 @@
+{
+    "name_symbol": {
+        "BTC":  "Bitcoin",
+        "ETH":  "Ethereum",
+        "BCH":  "Bitcoin Cash"
+    }
+}

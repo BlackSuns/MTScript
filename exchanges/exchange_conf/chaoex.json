@@ -23,6 +23,7 @@
         "CVC":  "Civic",
         "DNT":  "district0x",
         "COIN": "Coin",
-        "BXB":  "BixingCoin"
+        "BXB":  "BixingCoin",
+        "EOS":  "EOS"
     }
 }

@@ -1,0 +1,20 @@
+{
+    "pairs": [
+        "btc_jpy",
+        "xem_jpy",
+        "mona_jpy",
+        "bch_jpy",
+        "eth_jpy",
+        "xem_btc",
+        "mona_btc",
+        "bch_btc",
+        "eth_btc"
+    ],
+    "name_symbol": {
+        "BTC":  "Bitcoin",
+        "XEM":  "NEM",
+        "MONA":  "MonaCoin",
+        "ETH":  "Ethereum",
+        "BCH":  "Bitcoin Cash"
+    }
+}

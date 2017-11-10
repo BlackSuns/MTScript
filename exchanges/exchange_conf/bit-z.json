@@ -19,6 +19,8 @@
         "PAY":  "TenX",
         "EOS":  "EOS",
         "OMG":  "OmiseGO",
-        "VOISE":    "Voise"
+        "VOISE": "Voise",
+        "GAME": "GameCredits",
+        "BCH":  "Bitcoin Cash"
     }
 }
