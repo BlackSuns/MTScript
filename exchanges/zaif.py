@@ -28,7 +28,7 @@ class ZaifExchange(BaseExchange):
         return_data = []
         pairs = self.get_available_pairs()
         for i, p in enumerate(pairs, 1):
-            print('dealing {}/{} pair: {}'.format(i, len(pairs), p))
+            # print('dealing {}/{} pair: {}'.format(i, len(pairs), p))
             try:
                 (symbol, anchor) = p.split('_')
                 url = '{}{}/{}'.format(self.base_url,
