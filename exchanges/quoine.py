@@ -27,19 +27,20 @@ class QuoineExchange(BaseExchange):
 
         for t in result:
             try:
-                symbol = t['base_currency']
-                anchor = t['quoted_currency']
-                price = float(t['last_traded_price'])
-                volume = float(t['volume_24h'])
-                avg_price = float(t['last_price_24h'])
+                if not t['disabled']:
+                    symbol = t['base_currency']
+                    anchor = t['quoted_currency']
+                    price = float(t['last_traded_price'])
+                    volume = float(t['volume_24h'])
+                    avg_price = float(t['last_price_24h'])
 
-                pair = '{}/{}'.format(symbol.upper(), anchor.upper())
-                return_data.append({
-                    'pair': pair,
-                    'price': price,
-                    'volume_anchor': avg_price * volume,
-                    'volume': volume,
-                })
+                    pair = '{}/{}'.format(symbol.upper(), anchor.upper())
+                    return_data.append({
+                        'pair': pair,
+                        'price': price,
+                        'volume_anchor': avg_price * volume,
+                        'volume': volume,
+                    })
             except Exception as e:
                 print(e)
 
