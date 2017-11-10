@@ -2,6 +2,9 @@
     "name_symbol": {
         "BTC":  "Bitcoin",
         "ETH":  "Ethereum",
-        "BCH":  "Bitcoin Cash"
+        "BCH":  "Bitcoin Cash",
+        "DASH": "DASH",
+        "QASH": "QASH",
+        "QTUM": "Qtum"
     }
 }
