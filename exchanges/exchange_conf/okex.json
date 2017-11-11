@@ -13,7 +13,16 @@
         "etc_usdt",
         "bcc_usdt",
         "etc_eth",
-        "qtum_btc"
+        "qtum_btc",
+        "neo_btc",
+        "gas_btc",
+        "hsr_btc",
+        "neo_usdt",
+        "gas_usdt",
+        "hsr_usdt",
+        "neo_eth",
+        "gas_eth",
+        "hsr_eth"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -24,6 +33,9 @@
         "BT1":  "CST-BT1",
         "BT2":  "CST-BT2",
         "BTG":  "Bitcoin Gold",
-        "QTUM": "Qtum"
+        "QTUM": "Qtum",
+        "NEO":  "NEO",
+        "GAS":  "GAS",
+        "HSR":  "Hshare"
     }
 }
