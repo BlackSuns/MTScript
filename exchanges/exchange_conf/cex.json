@@ -33,6 +33,9 @@
         "btm_eth",
         "rdn_eth",
         "amb_eth",
+        "stx_eth",
+        "mana_eth",
+        "tnt_eth",
 
         "btc_usdt",
         "eth_usdt",
@@ -62,6 +65,9 @@
         "ETP":  "Metaverse ETP",
         "BTM":  "Bytom",
         "RDN":  "Raiden Network Token",
-        "AMB":  "Amber"
+        "AMB":  "Amber",
+        "STX":  "Stox",
+        "MANA": "Decentraland",
+        "TNT":  "Tierion"
     }
 }
