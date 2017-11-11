@@ -32,6 +32,7 @@
         "etp_eth",
         "btm_eth",
         "rdn_eth",
+        "amb_eth",
 
         "btc_usdt",
         "eth_usdt",
@@ -60,6 +61,7 @@
         "DATA": "Streamr DATAcoin",
         "ETP":  "Metaverse ETP",
         "BTM":  "Bytom",
-        "RDN":  "Raiden Network Token"
+        "RDN":  "Raiden Network Token",
+        "AMB":  "Amber"
     }
 }
