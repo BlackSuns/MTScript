@@ -1,5 +1,6 @@
 {
     "name_symbol": {
+        "AE":   "Aeternity",
         "BAT":  "Basic Attention Token",
         "BCC":  "Bitcoin Cash",
         "BCDN": "BlockCDN",
@@ -7,6 +8,7 @@
         "BTM":  "Bytom",
         "BTG":  "Bitcoin Gold",
         "BTS":  "BitShares",
+        "CDT":  "CoinDash",
         "CVC":  "Civic",
         "DASH": "Dash",
         "DNT":  "district0x",
