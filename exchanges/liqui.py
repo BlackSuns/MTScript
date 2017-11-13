@@ -26,7 +26,7 @@ class LiquiExchange(BaseExchange):
         self.pair_callback(self.get_json_request(url))
 
     def pair_callback(self, result):
-        self.update_time = result['server_time']
+        # self.update_time = result['server_time']
         self.support_pairs = []
         for r in result['pairs'].keys():
             if result['pairs'][r]['hidden'] == 0:
