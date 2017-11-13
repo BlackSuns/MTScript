@@ -5,9 +5,9 @@ import arrow
 import requests
 from google.cloud import translate
 
-from social_models.social import (SocialContent,
-                                  SocialCurrency,
-                                  local_session)
+from models.social import (SocialContent,
+                           SocialCurrency,
+                           local_session)
 from utils import get_config, print_log
 
 CONFIG_PATH = os.path.abspath(os.path.dirname(__file__)) + '/script.conf'

@@ -69,7 +69,8 @@ def deal_k_data(cnx, cnx_tmp):
                     batch_value.append(
                         "('{}', '{}', '{}', {}, "
                         "{}, {}, {}, {}, {}, {}, {}, {})".format(
-                            currency, symbol, d.format('YYYY-MM-DD'), d.timestamp,
+                            currency, symbol, d.format('YYYY-MM-DD'),
+                            d.timestamp,
                             get_float(kdate[1]),
                             get_float(kdate[2]),
                             get_float(kdate[3]),

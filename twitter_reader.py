@@ -9,7 +9,7 @@ from twitter import Twitter, OAuth
 import requests
 
 from utils import get_config, print_log
-from social_models.social import SocialContent, Media, local_session
+from models.social import SocialContent, Media, local_session
 
 
 def get_settings():
