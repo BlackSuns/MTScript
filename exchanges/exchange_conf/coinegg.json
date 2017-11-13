@@ -41,6 +41,8 @@
         "MRYC": "MermaidCoin",
         "MTC":  "MonkeyTreasureCoin",
         "KTC":  "KentCoin",
-        "TGC":  "Tigercoin"
+        "TGC":  "Tigercoin",
+        "XLM":  "Stellar Lumens",
+        "INT":  "Internet Node Token"
     }
 }
