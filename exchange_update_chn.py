@@ -4,6 +4,7 @@ from exchanges.gateio import GateioExchange
 from exchanges.kucoin import KucoinExchange
 from exchanges.aex import AexExchange
 from exchanges.ceo import CeoExchange
+from exchanges.coinegg import CoineggExchange
 
 
 if __name__ == '__main__':
@@ -28,5 +29,9 @@ if __name__ == '__main__':
     ceo = CeoExchange()
     ceo.post_result_batch()
     print_log("CEO done...")
+
+    egg = CoineggExchange()
+    egg.post_result_batch()
+    print_log("Coinegg done...")
 
     print_log("all exchanges synced...")
