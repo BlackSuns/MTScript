@@ -1,5 +1,6 @@
 {
     "name_symbol": {
+        "BCPT": "BlockMason Credit Protocol",
         "BHC":  "Black Hole Coin",
         "BTC":  "Bitcoin",
         "BTM":  "Bytom",
@@ -20,6 +21,7 @@
         "NEO":  "NEO",
         "OMG":  "OmiseGO",
         "PAY":  "TenX",
+        "PPT":  "Populous",
         "QTUM": "Qtum",
         "RDN":  "Raiden Network Token",
         "SNT":  "Status",
