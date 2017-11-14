@@ -17,7 +17,9 @@
         "rcn_btc",
         "rcn_eth",
         "dash_btc",
-        "dash_usdt"
+        "dash_usdt",
+        "rdn_btc",
+        "rdn_eth"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -32,6 +34,7 @@
         "KNC":  "Kyber Network",
         "RCN":  "Ripio Credit Network",
         "ZRX":  "0x",
-        "DASH": "Dash"
+        "DASH": "Dash",
+        "RDN":  "Raiden Network Token"
     }
 }
