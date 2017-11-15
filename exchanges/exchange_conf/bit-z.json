@@ -24,6 +24,7 @@
         "VOISE": "Voise",
         "GAME": "GameCredits",
         "BCH":  "Bitcoin Cash",
-        "SSS":  "Sharechain"
+        "SSS":  "Sharechain",
+        "PART": "Particl"
     }
 }
