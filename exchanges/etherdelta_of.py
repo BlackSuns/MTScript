@@ -48,7 +48,7 @@ class EtherdeltaExchange(BaseExchange):
                     percentChange = result[k]['percentChange']
                     rate = round(last/ask, 2) if ask else 0
                     print('{}/{} {}: rate is {}, last: {} ask: {} perc: {}'.format(curr, total, k, rate, last, ask, percentChange))
-                    if anchor and symbol:
+                    if anchor and symbol and rate < 2:
                         pair = '{}/{}'.format(symbol.upper(), anchor.upper())
                         return_data.append({
                             'pair': pair,
