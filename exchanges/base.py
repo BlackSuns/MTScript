@@ -78,6 +78,9 @@ class BaseExchange(object):
         if url.startswith("https://api.etherdelta.com"):
             headers['cookie'] = '__cfduid=d42b240e518dad58587086f22eab9d7f11505272987; _ga=GA1.2.40686394.1505272998; _TRAEFIK_BACKEND=http://10.0.0.13:8001'
 
+        if url.startswith("http://api.aex.com/"):
+            headers['cookie'] = '__jsluid=e7a59ff5ec105f4c03270f09b016f417; Hm_lvt_b966404757d44f9bbf3630a34be95645=1509259508'
+
         if url.startswith("https://www.bite.ceo"):
             r = requests.get(url, headers=headers, timeout=30, verify=False)
         else:
