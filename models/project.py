@@ -77,6 +77,7 @@ class ProjectRater(LocalBase):
     project_id = Column(Integer, ForeignKey('project.id'), primary_key=True)
     rater_id = Column(Integer, ForeignKey('rater.id'), primary_key=True)
     grade = Column(String(100))
+    report_url = Column(String(255))
     created_at = Column(Integer)
     updated_at = Column(Integer)
     project = relationship("Project", back_populates="raters")
@@ -88,6 +89,7 @@ class Project(LocalBase):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(100), nullable=False)
     symbol = Column(String(10))
+    country = Column(String(50))
     info_source = Column(String(255))
     logo = Column(String(255))
     funded = Column(String(20))
@@ -106,10 +108,13 @@ class Project(LocalBase):
     detail_intro = Column(Text)
     opening_date = Column(String(20))
     close_date = Column(String(20))
+    opening_date_standard = Column(Integer)
+    close_date_standard = Column(Integer)
     token_distribution = Column(Text)
+    team = Column(Text)
     hardcap = Column(String(50))
     accepts = Column(String(20))
-    sync_status = Column(Boolean)
+    sync_status = Column(Integer)
     created_at = Column(Integer)
     updated_at = Column(Integer)
     tags = relationship("Tag",
@@ -117,16 +122,25 @@ class Project(LocalBase):
                         backref="projects")
     raters = relationship("ProjectRater", back_populates="project")
 
+    def __repr__(self):
+        return self.name
+
 
 class Tag(LocalBase):
     __tablename__ = 'tag'
     id = Column(Integer, primary_key=True, autoincrement=True)
     tag = Column(String(50), nullable=False)
 
+    def __repr__(self):
+        return self.tag
+
 
 class Rater(LocalBase):
     __tablename__ = 'rater'
     id = Column(Integer, primary_key=True, autoincrement=True)
-    rater = Column(String(20), nullable=False)
+    name = Column(String(20), nullable=False)
     url = Column(String(255))
     projects = relationship("ProjectRater", back_populates="rater")
+
+    def __repr__(self):
+        return self.name
