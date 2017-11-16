@@ -24,6 +24,7 @@
         "DNT":  "district0x",
         "COIN": "Coin",
         "BXB":  "BixingCoin",
-        "EOS":  "EOS"
+        "EOS":  "EOS",
+        "ELT":  "ELT"
     }
 }
