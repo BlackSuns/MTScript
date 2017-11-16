@@ -19,7 +19,8 @@
         "dash_btc",
         "dash_usdt",
         "rdn_btc",
-        "rdn_eth"
+        "rdn_eth",
+        "mtl_btc"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -35,6 +36,7 @@
         "RCN":  "Ripio Credit Network",
         "ZRX":  "0x",
         "DASH": "Dash",
-        "RDN":  "Raiden Network Token"
+        "RDN":  "Raiden Network Token",
+        "MTL": "Metal"
     }
 }
