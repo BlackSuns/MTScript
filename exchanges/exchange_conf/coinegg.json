@@ -42,6 +42,7 @@
         "MTC":  "MonkeyTreasureCoin",
         "KTC":  "KentCoin",
         "TGC":  "Tigercoin",
+        "TRX":  "TRON",
         "XLM":  "Stellar Lumens",
         "INT":  "Internet Node Token"
     }
