@@ -30,7 +30,10 @@
         "zec_usdt",
         "dash_btc",
         "dash_eth",
-        "dash_usdt"
+        "dash_usdt",
+        "xuc_usdt",
+        "xuc_btc",
+        "xuc_eth"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -46,6 +49,7 @@
         "GAS":  "GAS",
         "HSR":  "Hshare",
         "DASH": "Dash",
-        "ZEC":  "Zcash"
+        "ZEC":  "Zcash",
+        "XUC":  "Exchange Union"
     }
 }
