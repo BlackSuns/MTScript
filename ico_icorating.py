@@ -88,7 +88,7 @@ def get_timestamp(date):
         return 0
 
 
-def analyze_project(cnx, taskid, item):
+def analyze_project(cnx, taskid, source_url, item):
     rater_id = 1
     opening_date = ''
     close_date = ''
@@ -127,6 +127,7 @@ def analyze_project(cnx, taskid, item):
     project = {
         'task_id': taskid,
         'info_source': INFOSOURCE,
+        'info_source_url': source_url,
         'name': item['name'],
         'project_id': item['name'],
         'logo': item.get('logo', ''),
@@ -211,7 +212,7 @@ def deal_projects(cnx_raw, cnx_tmp):
         if data[0] not in exist_taskids:
             project = json.loads(data[2])
             print('dealing {}/{}: {}'.format(i, count, project['name']))
-            analyze_project(cnx_tmp, data[0], project)
+            analyze_project(cnx_tmp, data[0], data[1], project)
 
 
 def get_current_taskids(cnx_tmp):

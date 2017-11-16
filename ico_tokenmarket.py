@@ -36,7 +36,7 @@ def escape_text(txt):
     return txt
 
 
-def analyze_project(cnx, taskid, item):
+def analyze_project(cnx, taskid, source_url, item):
     opening_date_standard = 0
     close_date_standard = 0
 
@@ -62,6 +62,7 @@ def analyze_project(cnx, taskid, item):
     project = {
         'task_id': taskid,
         'info_source': INFOSOURCE,
+        'info_source_url': source_url,
         'name': item['name'],
         'logo': item.get('logo', ''),
         'symbol': symbol,
@@ -112,7 +113,7 @@ def analyze_project(cnx, taskid, item):
 
 def deal_projects(cnx_raw, cnx_tmp):
     sql = '''
-        select taskid, result from tokenmarket_init
+        select taskid, url, result from tokenmarket_init
     '''
 
     with cnx_raw.cursor() as cursor:
@@ -123,9 +124,9 @@ def deal_projects(cnx_raw, cnx_tmp):
     exist_taskids = get_current_taskids(cnx_tmp)
     for i, data in enumerate(result, 1):
         if data[0] not in exist_taskids:
-            project = json.loads(data[1])
+            project = json.loads(data[2])
             print('dealing {}/{}: {}'.format(i, count, project['name']))
-            analyze_project(cnx_tmp, data[0], project)
+            analyze_project(cnx_tmp, data[0], data[1], project)
 
 
 def get_current_taskids(cnx_tmp):
