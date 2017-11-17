@@ -34,7 +34,7 @@ if __name__ == '__main__':
     for i, p in enumerate(projects, 1):
         print_log('start dealing {}/{}: {}'.format(i, count, p.name))
         data = {}
-        data['name'] = p.name
+        data['name'] = p.project_id
         data['currency_symbol'] = p.symbol
         data['brief_intro'] = p.brief_intro
         data['description'] = p.detail_intro.decode('utf-8') if p.detail_intro else ''
@@ -62,6 +62,7 @@ if __name__ == '__main__':
         data['ico_ended_at'] = p.close_date_standard
         data['team'] = p.team.decode('utf-8') if p.team else ''
         data['source'] = p.info_source
+
         tags = []
         for t in p.tags:
             tags.append(t.tag)
