@@ -129,7 +129,7 @@ def analyze_project(cnx, taskid, source_url, item):
         'info_source': INFOSOURCE,
         'info_source_url': source_url,
         'name': item['name'],
-        'project_id': item['name'],
+        'project_id': '',
         'logo': item.get('logo', ''),
         'website':  item.get('Website', ''),
         'twitter': item['Social'].get('twitter', '') if 'Social' in item.keys() else '',
