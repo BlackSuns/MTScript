@@ -40,17 +40,17 @@ def analyze_project(cnx, taskid, source_url, item):
     opening_date_standard = 0
     close_date_standard = 0
 
-    if 'Crowdsale opening date' in item.keys():
+    if 'Token sale opening date' in item.keys():
         try:
-            opening_date_standard = arrow.get(item['Crowdsale opening date'], 'D. MMM YYYY').timestamp
+            opening_date_standard = arrow.get(item['Token sale opening date'], 'D. MMM YYYY').timestamp
             if opening_date_standard < 0:
                 opening_date_standard = 0
         except Exception as e:
             print(e)
 
-    if 'Crowdsale closing date' in item.keys():
+    if 'Token sale closing date' in item.keys():
         try:
-            close_date_standard = arrow.get(item['Crowdsale closing date'], 'D. MMM YYYY').timestamp
+            close_date_standard = arrow.get(item['Token sale closing date'], 'D. MMM YYYY').timestamp
             if close_date_standard < 0:
                 close_date_standard = 0
         except Exception as e:
@@ -83,7 +83,7 @@ def analyze_project(cnx, taskid, source_url, item):
         'team': escape_text(item.get('Members', '')),
 
         'opening_date': item.get('Token sale opening date', ''),
-        'close_date': item.get('Token sale opening date', ''),
+        'close_date': item.get('Token sale closing date', ''),
     }
 
     keys = []
