@@ -33,7 +33,13 @@
         "dash_usdt",
         "xuc_usdt",
         "xuc_btc",
-        "xuc_eth"
+        "xuc_eth",
+        "eos_usdt",
+        "eos_btc",
+        "eos_eth",
+        "omg_usdt",
+        "omg_btc",
+        "omg_eth"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -50,6 +56,8 @@
         "HSR":  "Hshare",
         "DASH": "Dash",
         "ZEC":  "Zcash",
-        "XUC":  "Exchange Union"
+        "XUC":  "Exchange Union",
+        "EOS":  "EOS",
+        "OMG":  "OmiseGO"
     }
 }
