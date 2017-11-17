@@ -28,6 +28,7 @@
         "BCH":  "Bitcoin Cash",
         "SSS":  "Sharechain",
         "PART": "Particl",
-        "ZSC":  "Zeusshield"
+        "ZSC":  "Zeusshield",
+        "OTN":  "Open Trading Network"
     }
 }
