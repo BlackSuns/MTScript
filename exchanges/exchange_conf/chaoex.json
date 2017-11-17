@@ -25,6 +25,7 @@
         "COIN": "Coin",
         "BXB":  "BixingCoin",
         "EOS":  "EOS",
-        "ELT":  "ELT"
+        "ELT":  "ELT",
+        "CAN":  "Can"
     }
 }

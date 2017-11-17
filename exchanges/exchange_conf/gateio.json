@@ -1,17 +1,21 @@
 {
     "name_symbol": {
         "AE":   "Aeternity",
+        "ARN":  "Aeron",
         "BAT":  "Basic Attention Token",
         "BCH":  "Bitcoin Cash",
         "BCDN": "BlockCDN",
+        "BNT":  "Bancor",
         "BOT":  "Bodhi",
         "BTC":  "Bitcoin",
         "BTM":  "Bytom",
         "BTG":  "Bitcoin Gold",
         "BTS":  "BitShares",
         "CDT":  "CoinDash",
+        "CTR":  "Centra",
         "CVC":  "Civic",
         "DASH": "Dash",
+        "DATA": "Streamr DATAcoin",
         "DNT":  "district0x",
         "DOGE": "Dogecoin",
         "DPY":  "Delphy",
@@ -40,10 +44,12 @@
         "STORJ":    "Storj",
         "STX":  "Stox",
         "TNT":  "Tierion",
+        "VEN":  "VeChain",
         "XCN":  "Cryptonite",
         "XMR":  "Monero",
         "XRP":  "Ripple",
         "ZEC":  "Zcash",
+        "ZSC":  "Zeusshield",
         "ZRX":  "0x"
     }
 }
