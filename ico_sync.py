@@ -12,7 +12,7 @@ BASE_URL = get_config(
 
 
 def post(data):
-    endpoint = '/ico/addico?source=script'
+    endpoint = '/ico/mergeico?source=script'
 
     request_url = '{host}{endpoint}'.format(
         host=BASE_URL, endpoint=endpoint)
@@ -20,7 +20,7 @@ def post(data):
     data = {'ico_json': json.dumps(data)}
 
     # print(request_url)
-    print(data)
+    # print(data)
     r = requests.post(request_url, data=data)
     # print(r.text)
     return r
@@ -80,11 +80,11 @@ if __name__ == '__main__':
         res = post(data)
 
         try:
-            if res.json()['message'] == 'success' and 'project_id' in dict(res.json()['data']).keys():
-                p.sync_status = int(res.json()['data']['project_id'])
+            if res.json()['message'] == 'success' and 'result' in dict(res.json()['data']).keys():
+                p.sync_status = int(res.json()['data']['result'])
                 local_session.commit()
                 print_log('{} done'.format(p.name))
             else:
                 print_log('post failed: {}'.format(res.text))
-        except Exception as e:
+        except wException as e:
             print(e)
