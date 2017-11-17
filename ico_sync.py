@@ -23,7 +23,6 @@ def post(data):
     print(data)
     r = requests.post(request_url, data=data)
     # print(r.text)
-
     return r
 
 if __name__ == '__main__':
@@ -52,6 +51,7 @@ if __name__ == '__main__':
         data['blog'] = p.blog
         data['linkedin'] = p.linkedin
         data['bitcointalk'] = p.bitcointalk
+        data['blockchain'] = p.blockchain
         data['ico_hardcap'] = p.hardcap
         data['ico_accepts'] = p.accepts
         data['ico_bounty'] = p.bounty.decode('utf-8') if p.bounty else ''
