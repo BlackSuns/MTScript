@@ -58,8 +58,8 @@ if __name__ == '__main__':
         data['ico_price'] = p.ico_price.decode('utf-8') if p.ico_price else ''
         data['ico_distribution'] = p.token_distribution.decode('utf-8') if p.token_distribution else ''
         data['features'] = p.features.decode('utf-8') if p.features else ''
-        data['ico_started_at'] = p.opening_date_standard
-        data['ico_ended_at'] = p.close_date_standard
+        data['ico_started_at'] = p.opening_date_standard if p.opening_date_standard > 0 else None
+        data['ico_ended_at'] = p.close_date_standard if p.close_date_standard > 0 else None
         data['team'] = p.team.decode('utf-8') if p.team else ''
         data['source'] = p.info_source
 

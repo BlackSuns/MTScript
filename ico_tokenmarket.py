@@ -82,8 +82,8 @@ def analyze_project(cnx, taskid, source_url, item):
         'blockchain': item.get('Blockchain', ''),
         'team': escape_text(item.get('Members', '')),
 
-        'opening_date': item.get('Crowdsale opening date', ''),
-        'close_date': item.get('Crowdsale closing date', ''),
+        'opening_date': item.get('Token sale opening date', ''),
+        'close_date': item.get('Token sale opening date', ''),
     }
 
     keys = []
