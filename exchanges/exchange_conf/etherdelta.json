@@ -291,6 +291,7 @@
           "XNN":    "Xenon",
           "ZCG":    "ZCash Gold",
           "XRL":    "Rialto",
-          "ZRX":    "0x"
+          "ZRX":    "0x",
+          "ZSC":    "Zeusshield"
     }
 }
