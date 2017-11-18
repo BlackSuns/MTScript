@@ -20,7 +20,9 @@
         "dash_usdt",
         "rdn_btc",
         "rdn_eth",
-        "mtl_btc"
+        "mtl_btc",
+        "eos_btc",
+        "eos_eth"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -37,6 +39,7 @@
         "ZRX":  "0x",
         "DASH": "Dash",
         "RDN":  "Raiden Network Token",
-        "MTL": "Metal"
+        "MTL": "Metal",
+        "EOS":  "EOS"
     }
 }
