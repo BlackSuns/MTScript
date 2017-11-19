@@ -1,6 +1,7 @@
 {
     "name_symbol": {
         "BTS": "BitShares",
+        "BCC":  "Bitcoin Cash",
         "EOS": "EOS",
         "ETC": "Ethereum Classic",
         "BTG": "Bitcoin Gold",
