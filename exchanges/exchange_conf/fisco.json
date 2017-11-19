@@ -1,0 +1,11 @@
+{
+    "pairs": [
+        "btc_jpy",
+        "mona_jpy",
+        "mona_btc"
+    ],
+    "name_symbol": {
+        "BTC":  "Bitcoin",
+        "MONA":  "MonaCoin"
+    }
+}

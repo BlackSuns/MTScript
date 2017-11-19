@@ -7,6 +7,7 @@ from exchanges.quoine import QuoineExchange
 from exchanges.coincheck import CoincheckExchange
 from exchanges.zaif import ZaifExchange
 from exchanges.btcbox import BtcboxExchange
+from exchanges.fisco import FiscoExchange
 
 from utils import print_log
 
@@ -49,5 +50,9 @@ if __name__ == '__main__':
     box = BtcboxExchange()
     box.post_result_batch()
     print_log('BTCBOX done...')
+
+    fisco = FiscoExchange()
+    fisco.post_result_batch()
+    print_log('Fisco done...')
 
     print_log("all exchanges synced...")
