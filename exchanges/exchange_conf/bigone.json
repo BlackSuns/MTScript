@@ -12,7 +12,8 @@
         "OMG_BTC",
         "GXS_BTC",
         "DGD_BTC",
-        "ETH_EOS"
+        "ETH_EOS",
+        "BOT_QTUM"
     ],
     "name_symbol": {
         "BTS":  "BitShares",
@@ -26,6 +27,7 @@
         "NEO":  "NEO",
         "OMG":  "OmiseGO",
         "GXS":  "GXShares",
-        "DGD":  "DigixDAO"
+        "DGD":  "DigixDAO",
+        "BOT":  "Bodhi"
     }
 }
