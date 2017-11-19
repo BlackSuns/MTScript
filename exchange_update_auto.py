@@ -1,6 +1,7 @@
 from utils import print_log
 from exchanges.bxinth import BxinthExchange
 from exchanges.gemini import GeminiExchange
+from exchanges.acx import AcxExchange
 
 
 if __name__ == '__main__':
@@ -13,5 +14,9 @@ if __name__ == '__main__':
     gm = GeminiExchange()
     gm.post_result_batch()
     print_log("Gemini Done...")
+
+    acx = AcxExchange()
+    acx.post_result_batch()
+    print_log("ACX Done...")
 
     print_log("all exchanges synced...")
