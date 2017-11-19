@@ -6,6 +6,7 @@ from exchanges.korbit import KorbitExchange
 from exchanges.quoine import QuoineExchange
 from exchanges.coincheck import CoincheckExchange
 from exchanges.zaif import ZaifExchange
+from exchanges.btcbox import BtcboxExchange
 
 from utils import print_log
 
@@ -44,5 +45,9 @@ if __name__ == '__main__':
     zf = ZaifExchange()
     zf.post_result_batch()
     print_log('Zaif done...')
+
+    box = BtcboxExchange()
+    box.post_result_batch()
+    print_log('BTCBOX done...')
 
     print_log("all exchanges synced...")

@@ -19,9 +19,7 @@ class BcexExchange(BaseExchange):
             '/exchange_conf/{}.json'.format(self.exchange)
 
     def get_available_pair(self):
-        conf_path = os.path.abspath(os.path.dirname(__file__)) +\
-                    '/exchange_conf/bcex.json'
-        with open(conf_path, 'r') as f:
+        with open(self.exchange_conf, 'r') as f:
             data = json.load(f)
 
         return data
