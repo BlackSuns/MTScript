@@ -1,0 +1,26 @@
+{
+    "name_symbol": {
+        "BTC": "Bitcoin",
+        "BCH": "Bitcoin Cash",
+        "DAS": "Dash",
+        "DOG": "Dogecoin",
+        "ETH": "Ethereum",
+        "EVX": "Everex",
+        "FTC": "Feathercoin",
+        "GNO": "Gnosis",
+        "HYP": "HyperStake",
+        "LTC": "Litecoin",
+        "NMC": "Namecoin",
+        "OMG": "OmiseGO",
+        "PND": "Pandacoin",
+        "PPC": "Peercoin",
+        "QRK": "Quark",
+        "REP": "Augur",
+        "XCN": "Cryptonite",
+        "XPM": "Primecoin",
+        "XPY": "PayCoin",
+        "XRP": "Ripple",
+        "XZC": "ZCoin",
+        "ZEC": "Zcash"
+    }
+}
