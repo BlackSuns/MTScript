@@ -44,6 +44,7 @@
         "TGC":  "Tigercoin",
         "TRX":  "TRON",
         "XLM":  "Stellar Lumens",
-        "INT":  "Internet Node Token"
+        "INT":  "Internet Node Token",
+        "INK":  "ink"
     }
 }
