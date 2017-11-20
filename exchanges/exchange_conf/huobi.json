@@ -22,7 +22,10 @@
         "rdn_eth",
         "mtl_btc",
         "eos_btc",
-        "eos_eth"
+        "eos_eth",
+        "storj_btc",
+        "omg_btc",
+        "omg_eth"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -40,6 +43,8 @@
         "DASH": "Dash",
         "RDN":  "Raiden Network Token",
         "MTL": "Metal",
-        "EOS":  "EOS"
+        "EOS":  "EOS",
+        "OMG":  "OmiseGO",
+        "STORJ":  "Storj"
     }
 }
