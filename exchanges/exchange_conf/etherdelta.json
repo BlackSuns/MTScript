@@ -148,6 +148,7 @@
           "FUN":    "FunFair",
           "FYN":    "FundYourselfNow",
           "GGS":    "ggs",
+          "GIM":    "Gimli",
           "GNO":    "Gnosis",
           "GOOC":   "Goocoin",
           "GMT":    "Mercury Protocol",
@@ -197,6 +198,7 @@
           "MCO":    "Monaco",
           "MDA":    "Moeda Loyalty Points",
           "MGO":    "MobileGo",
+          "MKR":    "Maker",
           "MOD":    "Modum",
           "MSP":    "Mothership",
           "MTH":    "Monetha",
@@ -283,6 +285,7 @@
           "VERI":   "Veritaseum",
           "VIB":    "Viberate",
           "VIBE":   "VIBE",
+          "VIU":    "Viuly",
           "VOISE":  "Voise",
           "VSM":    "VOISE",
           "WIC":    "Wi Coin",
@@ -297,6 +300,7 @@
           "XNN":    "Xenon",
           "ZCG":    "ZCash Gold",
           "XRL":    "Rialto",
+          "ZAP":    "ZAP",
           "ZRX":    "0x",
           "ZSC":    "Zeusshield"
     }
