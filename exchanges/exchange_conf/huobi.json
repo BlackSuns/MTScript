@@ -25,7 +25,8 @@
         "eos_eth",
         "storj_btc",
         "omg_btc",
-        "omg_eth"
+        "omg_eth",
+        "snt_btc"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -45,6 +46,7 @@
         "MTL": "Metal",
         "EOS":  "EOS",
         "OMG":  "OmiseGO",
-        "STORJ":  "Storj"
+        "STORJ":  "Storj",
+        "SNT":  "Status"
     }
 }
