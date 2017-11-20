@@ -5,6 +5,7 @@
         "BCH":  "Bitcoin Cash",
         "DASH": "DASH",
         "QASH": "QASH",
-        "QTUM": "Qtum"
+        "QTUM": "Qtum",
+        "NEO":  "NEO"
     }
 }
