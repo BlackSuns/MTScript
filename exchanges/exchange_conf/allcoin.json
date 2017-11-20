@@ -48,7 +48,8 @@
         "A0101_CNET",
         "MDA_BTC",
         "YBCT_BTC",
-        "BOT_QTUM"
+        "BOT_QTUM",
+        "INK_QTUM"
     ],
     "name_symbol": {
         "CNET":  "CNET",
@@ -90,6 +91,7 @@
         "BTE":   "BTE",
         "MDA":   "Moeda Loyalty Points",
         "YBCT":  "YBCT",
-        "BOT":   "Bodhi"
+        "BOT":   "Bodhi",
+        "INK":   "ink"
     }
 }
