@@ -13,7 +13,8 @@
         "GXS_BTC",
         "DGD_BTC",
         "ETH_EOS",
-        "BOT_QTUM"
+        "BOT_QTUM",
+        "INK_QTUM"
     ],
     "name_symbol": {
         "BTS":  "BitShares",
@@ -28,6 +29,7 @@
         "OMG":  "OmiseGO",
         "GXS":  "GXShares",
         "DGD":  "DigixDAO",
-        "BOT":  "Bodhi"
+        "BOT":  "Bodhi",
+        "INK":  "ink"
     }
 }
