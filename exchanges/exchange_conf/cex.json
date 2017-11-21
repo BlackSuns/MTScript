@@ -36,6 +36,8 @@
         "stx_eth",
         "mana_eth",
         "tnt_eth",
+        "tsl_eth",
+        "lrc_eth",
 
         "btc_usdt",
         "eth_usdt",
@@ -45,7 +47,9 @@
         "ae_usdt",
         "wkc_usdt",
         "btm_usdt",
-        "rdn_usdt"
+        "rdn_usdt",
+        "tsl_eth",
+        "lrc_eth"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -68,6 +72,8 @@
         "AMB":  "Amber",
         "STX":  "Stox",
         "MANA": "Decentraland",
-        "TNT":  "Tierion"
+        "TNT":  "Tierion",
+        "LRC":  "Loopring",
+        "TSL":  "Energo"
     }
 }
