@@ -18,6 +18,8 @@
         "rcn_btc",
         "data_btc",
         "etp_btc",
+        "zec_btc",
+        "dash_btc",
 
         "bcc_eth",
         "qtum_eth",
@@ -48,8 +50,9 @@
         "wkc_usdt",
         "btm_usdt",
         "rdn_usdt",
-        "tsl_eth",
-        "lrc_eth"
+        "dash_usdt",
+        "tsl_usdt",
+        "lrc_usdt"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -74,6 +77,8 @@
         "MANA": "Decentraland",
         "TNT":  "Tierion",
         "LRC":  "Loopring",
-        "TSL":  "Energo"
+        "TSL":  "Energo",
+        "ZEC":  "Zcash",
+        "DASH": "Dash"
     }
 }
