@@ -33,7 +33,7 @@ class BitfinexExchange(BaseExchange):
 
     def get_remote_data(self):
         return_data = []
-        anchors = ('USD', 'BTC', 'ETH')
+        anchors = ('USD', 'BTC', 'ETH', 'EUR')
         conf_data = self.get_available_symbol()
         for a in anchors:
             p = conf_data[a]
