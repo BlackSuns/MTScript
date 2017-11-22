@@ -28,7 +28,9 @@
         "omg_eth",
         "snt_btc",
         "qsp_btc",
-        "qsp_eth"
+        "qsp_eth",
+        "tnt_btc",
+        "tnt_eth"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -50,6 +52,7 @@
         "OMG":  "OmiseGO",
         "STORJ":  "Storj",
         "SNT":  "Status",
-        "QSP":  "Quantstamp"
+        "QSP":  "Quantstamp",
+        "TNT":  "Tierion"
     }
 }
