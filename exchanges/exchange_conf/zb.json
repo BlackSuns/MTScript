@@ -8,6 +8,7 @@
         "qtum_btc",
         "eos_btc",
         "hsr_btc",
+        "xrp_btc",
         "btc_usdt",
         "ltc_usdt",
         "eth_usdt",
@@ -16,7 +17,8 @@
         "bcc_usdt",
         "qtum_usdt",
         "eos_usdt",
-        "hsr_usdt"
+        "hsr_usdt",
+        "xrp_usdt"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -27,6 +29,7 @@
         "BTS":  "BitShares",
         "QTUM": "Qtum",
         "EOS":  "EOS",
-        "HSR":  "Hshare"
+        "HSR":  "Hshare",
+        "XRP":  "Ripple"
     }
 }
