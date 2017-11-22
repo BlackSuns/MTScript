@@ -65,6 +65,9 @@
                "BTG",
                "DAT"
     ],
+    "EUR": [
+               "BTC"
+    ],
     "name_symbol": {
           "AVT":  "Aventus",
           "BCC":  "CST-BCC",
