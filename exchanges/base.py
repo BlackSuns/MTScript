@@ -168,10 +168,10 @@ class BaseExchange(object):
             for j in jobs:
                 for data in j:
                     price = data['price']
-                    volume = data['volume']
                     if price and float(price) > 0:
                         (symbol, anchor) = self.part_pair(data['pair'])
                         volume_anchor = data['volume_anchor']
+                        volume = data['volume']
 
                         params = {
                             "symbol": symbol,
@@ -201,7 +201,7 @@ class BaseExchange(object):
                 # print(request_url, {'json': request_data})
                 self.post_json_request(
                     request_url, {'json': json.dumps(request_data)})
-        except Exception as e:
+        except xException as e:
             self.print_log('found error when post: {}'.format(e))
 
     def print_log(self, message, m_type='INFO'):
