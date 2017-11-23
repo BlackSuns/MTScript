@@ -201,7 +201,7 @@ class BaseExchange(object):
                 # print(request_url, {'json': request_data})
                 self.post_json_request(
                     request_url, {'json': json.dumps(request_data)})
-        except xException as e:
+        except Exception as e:
             self.print_log('found error when post: {}'.format(e))
 
     def print_log(self, message, m_type='INFO'):
