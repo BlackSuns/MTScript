@@ -31,7 +31,8 @@
         "qsp_eth",
         "tnt_btc",
         "tnt_eth",
-        "xrp_btc"
+        "xrp_btc",
+        "xrp_usdt"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
