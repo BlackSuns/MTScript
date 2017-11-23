@@ -30,7 +30,8 @@
         "qsp_btc",
         "qsp_eth",
         "tnt_btc",
-        "tnt_eth"
+        "tnt_eth",
+        "xrp_btc"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -53,6 +54,7 @@
         "STORJ":  "Storj",
         "SNT":  "Status",
         "QSP":  "Quantstamp",
-        "TNT":  "Tierion"
+        "TNT":  "Tierion",
+        "xrp":  "Ripple"
     }
 }
