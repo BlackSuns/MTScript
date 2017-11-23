@@ -93,7 +93,7 @@ class BaseExchange(object):
 
     def post_json_request(self, url, params=None):
         # print(url)
-        # print(params)
+        print(params)
         r = requests.post(url, data=params)
 
         # print(r.text)
@@ -169,7 +169,7 @@ class BaseExchange(object):
                 for data in j:
                     price = data['price']
                     volume = data['volume']
-                    if price and float(price) > 0 and volume > 1:
+                    if price and float(price) > 0 and float(volume) > 1:
                         (symbol, anchor) = self.part_pair(data['pair'])
                         volume_anchor = data['volume_anchor']
 
