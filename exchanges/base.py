@@ -169,7 +169,7 @@ class BaseExchange(object):
                 for data in j:
                     price = data['price']
                     volume = data['volume']
-                    if price and float(price) > 0 and float(volume) > 1:
+                    if price and float(price) > 0:
                         (symbol, anchor) = self.part_pair(data['pair'])
                         volume_anchor = data['volume_anchor']
 
