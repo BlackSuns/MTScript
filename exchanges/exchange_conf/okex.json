@@ -61,6 +61,7 @@
         "OMG":  "OmiseGO",
         "ACT":  "Achain",
         "BTM":  "Bytom",
-        "IOTA": "iota"
+        "IOTA": "iota",
+        "XRP":  "Ripple"
     }
 }
