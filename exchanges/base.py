@@ -168,10 +168,10 @@ class BaseExchange(object):
             for j in jobs:
                 for data in j:
                     price = data['price']
-                    if price and float(price) > 0:
+                    volume = data['volume']
+                    if price and float(price) > 0 and volume > 1:
                         (symbol, anchor) = self.part_pair(data['pair'])
                         volume_anchor = data['volume_anchor']
-                        volume = data['volume']
 
                         params = {
                             "symbol": symbol,
