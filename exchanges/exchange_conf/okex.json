@@ -42,7 +42,7 @@
         "omg_eth"
     ],
     "name_symbol": {
-        "BCC":  "Bitcoin Cash",
+        "BCH":  "Bitcoin Cash",
         "BTC":  "Bitcoin",
         "ETC":  "Ethereum Classic",
         "ETH":  "Ethereum",
@@ -58,6 +58,9 @@
         "ZEC":  "Zcash",
         "XUC":  "Exchange Union",
         "EOS":  "EOS",
-        "OMG":  "OmiseGO"
+        "OMG":  "OmiseGO",
+        "ACT":  "Achain",
+        "BTM":  "Bytom",
+        "IOTA": "iota"
     }
 }
