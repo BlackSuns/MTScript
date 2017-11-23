@@ -12,17 +12,26 @@ class OkexExchange(BaseExchange):
         self.base_url = 'https://www.okex.com/api/v1'
 
         self.ticker_url = '/ticker.do'
+        self.pair_url = 'https://www.okex.com/v2/markets/products'
 
         self.alias = 'okex'
         self.with_name = False
         self.exchange_conf = os.path.abspath(os.path.dirname(__file__)) +\
             '/exchange_conf/{}.json'.format(self.exchange)
 
-    def get_available_pair(self):
-        with open(self.exchange_conf, 'r') as f:
-            data = json.load(f)
+    # def get_available_pair(self):
+    #     with open(self.exchange_conf, 'r') as f:
+    #         data = json.load(f)
 
-        return list(data['pairs'])
+    #     return list(data['pairs'])
+    def get_available_pair(self):
+        pairs = []
+        r = self.get_json_request(self.pair_url)
+        for p in r['data']:
+            pairs.append(p['symbol'])
+
+        return pairs
+
 
     def get_remote_data(self):
         return_data = []
