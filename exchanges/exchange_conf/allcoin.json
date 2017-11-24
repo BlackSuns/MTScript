@@ -49,7 +49,9 @@
         "MDA_BTC",
         "YBCT_BTC",
         "BOT_QTUM",
-        "INK_QTUM"
+        "INK_QTUM",
+        "BTM_BTC",
+        "BTM_ETH"
     ],
     "name_symbol": {
         "CNET":  "CNET",
@@ -92,6 +94,7 @@
         "MDA":   "Moeda Loyalty Points",
         "YBCT":  "YBCT",
         "BOT":   "Bodhi",
-        "INK":   "ink"
+        "INK":   "ink",
+        "BTM":   "Bytom"
     }
 }
