@@ -1,5 +1,3 @@
-import json
-import re
 import os
 
 from .base import BaseExchange
@@ -10,65 +8,49 @@ class BitfinexExchange(BaseExchange):
         super().__init__()
         self.exchange = 'bitfinex'
         self.exchange_id = 126
-        self.base_url = 'https://min-api.cryptocompare.com'
+        self.base_url = 'https://api.bitfinex.com/v2'
 
-        self.ticker_url = '/data/pricemultifull'
+        self.pair_url = 'https://api.bitfinex.com/v1/symbols_details'
+        self.ticker_url = '/tickers'
 
         self.alias = 'bitfinex'
         self.with_name = False
         self.exchange_conf = os.path.abspath(os.path.dirname(__file__)) +\
             '/exchange_conf/{}.json'.format(self.exchange)
 
-    def get_available_symbol(self):
-        with open(self.exchange_conf, 'r') as f:
-            data = json.load(f)
+    # get all available_pairs
+    # update result to self.support_pairs
+    # self.support_pairs is a list
+    def get_available_pair(self):
+        self.pair_callback(self.get_json_request(self.pair_url))
 
-        return data
-
-    def chunks(self, l, n):
-        """Yield successive n-sized chunks from l.
-        """
-        for i in range(0, len(l), n):
-            yield l[i:i + n]
+    def pair_callback(self, result):
+        self.support_pairs = []
+        for r in result:
+            self.support_pairs.append('t{}'.format(r['pair'].upper()))
 
     def get_remote_data(self):
+        self.get_available_pair()
+        request_url = '{}{}?symbols={}'.format(self.base_url, self.ticker_url, ','.join(self.support_pairs))
+        return self.ticker_callback(self.get_json_request(request_url))
+
+    def ticker_callback(self, result):
         return_data = []
         anchors = ('USD', 'BTC', 'ETH', 'EUR')
-        conf_data = self.get_available_symbol()
-        for a in anchors:
-            p = conf_data[a]
-            fsyms = ','.join(p)
-            url = '{}{}'.format(self.base_url, self.ticker_url)
-            url = '{}?fsyms={}&tsyms={}&e=Bitfinex'.format(url, fsyms, a)
-            # print(url)
-            r = self.get_json_request(url)
-            if 'Response' in r.keys() and r['Response'] == 'Error':
-                try:
-                    pattern = re.compile(r'(\w*-\w*)')
-                    m = pattern.search(r['Message'])
-                    if m:
-                        symbol = m.group().split('-')[0]
-                        p.remove(symbol)
-                        print('removed symbol: {}'.format(symbol))
-                except Exception as e:
-                    print(e)
-            else:
-                return_data += self.ticker_callback(r['RAW'], a)
-        return return_data
 
-    def ticker_callback(self, result, anchor):
-        return_data = []
+        for r in result:
+            pair = r[0][1:]
+            for anchor in anchors:
+                if str(pair).endswith(anchor):
+                    symbol = pair[:-len(anchor)]
+                    price = r[7]
+                    volume = r[8]
+                    return_data.append({
+                        'pair': '{}/{}'.format(symbol, anchor),
+                        'price':    price,
+                        'volume':   volume,
+                        "volume_anchor":    price * volume
+                        })
+                    break
 
-        for i in result.keys():
-            symbol = i
-
-            pair = '{}/{}'.format(symbol.upper(), anchor.upper())
-            return_data.append({
-                'pair': pair,
-                'price': result[i][anchor]['PRICE'],
-                'volume_anchor': result[i][anchor]['VOLUME24HOURTO'],
-                'volume': result[i][anchor]['VOLUME24HOUR'],
-            })
-
-        # print(return_data)
         return return_data
