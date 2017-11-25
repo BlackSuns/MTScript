@@ -1,6 +1,7 @@
 {
     "name_symbol": {
         "BCH":  "Bitcoin Cash",
+        "BCD":  "Bitcoin Diamond",
         "LTC":  "Litecoin",
         "ETH":  "Ethereum",
         "ETC":  "Ethereum Classic",
