@@ -1,6 +1,7 @@
 {
     "name_symbol": {
         "BTC":  "Bitcoin",
+        "BTG":  "Bitcoin Gold",
         "ETH":  "Ethereum",
         "ETC":  "Ethereum Classic",
         "BCH":  "Bitcoin Cash",
