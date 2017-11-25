@@ -45,6 +45,7 @@
         "TRX":  "TRON",
         "XLM":  "Stellar Lumens",
         "INT":  "Internet Node Token",
-        "INK":  "ink"
+        "INK":  "ink",
+        "TSL":  "Energo"
     }
 }

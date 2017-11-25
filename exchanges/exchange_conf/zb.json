@@ -30,6 +30,7 @@
         "QTUM": "Qtum",
         "EOS":  "EOS",
         "HSR":  "Hshare",
-        "XRP":  "Ripple"
+        "XRP":  "Ripple",
+        "BCD":  "Bitcoin Diamond"
     }
 }
