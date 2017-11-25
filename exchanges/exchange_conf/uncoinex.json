@@ -1,0 +1,18 @@
+{
+    "name_symbol": {
+        "BTC":  "Bitcoin",
+        "EDU":  "EduChain",
+        "BXB":  "BixingCoin",
+        "HCC":  "Health Care Chain",
+        "SIX":  "SIX",
+        "ITS":  "Intelligent Transportation System",
+        "UBC":  "uBitcoin",
+        "EFC":  "ExchangeFollowChain",
+        "ACT":  "Achain",
+        "HCASH":  "Hshare",
+        "MVC":  "Maverick Chain",
+        "SANC":  "SanChain",
+        "ETP":  "Metaverse ETP",
+        "TBC":  "Triple Chain"
+    }
+}
