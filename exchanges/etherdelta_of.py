@@ -42,13 +42,16 @@ class EtherdeltaExchange(BaseExchange):
                 (anchor, symbol) = str(k).split('_')
                 if not (str(symbol).startswith('0x') or
                         str(symbol).startswith('0X')) or\
-                   symbol in whitelist:
+                   symbol in whitelist.keys():
                     ask = result[k]['ask']
                     last = result[k]['last']
                     percentChange = result[k]['percentChange']
                     rate = round(last/ask, 2) if ask else 0
                     print('{}/{} {}: rate is {}, last: {} ask: {} perc: {}'.format(curr, total, k, rate, last, ask, percentChange))
                     if anchor and symbol and rate < 2:
+                        if symbol in whitelist.keys():
+                            symbol = whitelist[symbol]
+
                         pair = '{}/{}'.format(symbol.upper(), anchor.upper())
                         return_data.append({
                             'pair': pair,

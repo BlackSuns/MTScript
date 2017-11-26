@@ -1,6 +1,7 @@
 {
-    "sc_whitelist": [
-    ],
+    "sc_whitelist": {
+          "0x1b22": "WISH"
+    },
     "name_symbol": {
           "10MT":   "10M Token",
           "1LIFE":  "LIFECREDIT",
@@ -302,6 +303,7 @@
           "WIC":    "Wi Coin",
           "WILD":   "Wild Crypto",
           "WINGS":  "Wings",
+          "WISH":   "MyWish",
           "WOLK":   "wolk",
           "WRC":    "Worldcore",
           "WTC":    "Walton",
