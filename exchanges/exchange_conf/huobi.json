@@ -32,10 +32,14 @@
         "tnt_btc",
         "tnt_eth",
         "xrp_btc",
-        "xrp_usdt"
+        "xrp_usdt",
+        "bcd_btc",
+        "btg_btc"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
+        "BCD":  "Bitcoin Diamond",
+        "BTG":  "Bitcoin Gold",
         "BTC":  "Bitcoin",
         "ETC":  "Ethereum Classic",
         "ETH":  "Ethereum",
