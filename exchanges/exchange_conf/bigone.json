@@ -14,7 +14,8 @@
         "DGD_BTC",
         "ETH_EOS",
         "BOT_QTUM",
-        "INK_QTUM"
+        "INK_QTUM",
+        "TNB_BTC"
     ],
     "name_symbol": {
         "BTS":  "BitShares",
@@ -30,6 +31,7 @@
         "GXS":  "GXShares",
         "DGD":  "DigixDAO",
         "BOT":  "Bodhi",
-        "INK":  "ink"
+        "INK":  "ink",
+        "TNB":  "M.I.T"
     }
 }
