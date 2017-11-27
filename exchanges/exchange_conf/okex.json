@@ -63,6 +63,8 @@
         "BTM":  "Bytom",
         "IOTA": "iota",
         "XRP":  "Ripple",
-        "BCD":  "Bitcoin Diamond"
+        "BCD":  "Bitcoin Diamond",
+        "SNT":  "Status",
+        "STORJ":    "Storj"
     }
 }

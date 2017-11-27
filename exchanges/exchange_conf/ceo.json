@@ -9,6 +9,8 @@
         "HPY":  "Hyperpay",
         "HCC":  "Health Care Chain",
         "BHC":  "Black Hole Coin",
-        "DASH": "Dash"
+        "DASH": "Dash",
+        "BCH":  "Bitcoin Cash",
+        "DOGE": "Dogecoin"
     }
 }
