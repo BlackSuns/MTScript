@@ -28,16 +28,16 @@ class AexExchange(BaseExchange):
         pairs = []
 
         for k in result.keys():
-            if  '_' not in k:
+            if  '_' not in k and '2' in k:
                 pairs.append(k)
 
         for p in pairs:
             (symbol, anchor) = p.split('2')
             return_data.append({
                 'pair': '{}/{}'.format(symbol.upper(), anchor.upper()),
-                'price': float(pairs[p]),
-                'volume': float(pairs['{}_amo'.format(p)]),
-                'volume_anchor': float(pairs['{}_vol'.format(p)])
+                'price': float(result[p]),
+                'volume': float(result['{}_amo'.format(p)]),
+                'volume_anchor': float(result['{}_vol'.format(p)])
             })
 
 

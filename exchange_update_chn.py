@@ -12,17 +12,17 @@ from exchanges.uncoinex import UncoinexExchange
 if __name__ == '__main__':
     print_log("start sync exchanges...")
 
-    bn = BinanceExchange()
-    bn.post_result_batch()
-    print_log("Binance done...")
+    # bn = BinanceExchange()
+    # bn.post_result_batch()
+    # print_log("Binance done...")
 
-    gt = GateioExchange()
-    gt.post_result_batch()
-    print_log("Gate.io done...")
+    # gt = GateioExchange()
+    # gt.post_result_batch()
+    # print_log("Gate.io done...")
 
-    kc = KucoinExchange()
-    kc.post_result_batch()
-    print_log("Kucoin done...")
+    # kc = KucoinExchange()
+    # kc.post_result_batch()
+    # print_log("Kucoin done...")
 
     aex = AexExchange()
     aex.post_result_batch()
