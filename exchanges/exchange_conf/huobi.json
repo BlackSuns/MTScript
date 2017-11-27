@@ -34,7 +34,9 @@
         "xrp_btc",
         "xrp_usdt",
         "bcd_btc",
-        "btg_btc"
+        "btg_btc",
+        "tnb_btc",
+        "tnb_eth"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -60,6 +62,7 @@
         "SNT":  "Status",
         "QSP":  "Quantstamp",
         "TNT":  "Tierion",
-        "xrp":  "Ripple"
+        "XRP":  "Ripple",
+        "TNB":  "M.I.T"
     }
 }
