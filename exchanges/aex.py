@@ -11,7 +11,7 @@ class AexExchange(BaseExchange):
         self.base_url = 'http://api.aex.com'
         # https://coding.net/u/byoneself/p/cex_api/git/blob/master/cex_api.md
 
-        self.ticker_url = '/ticker.php?c=all&mk_type=btc'
+        self.ticker_url = '/httpAPIv2.php'
 
         self.alias = 'aex'
         self.with_name = False
@@ -21,25 +21,25 @@ class AexExchange(BaseExchange):
     def get_remote_data(self):
         url = '{}{}'.format(
             self.base_url, self.ticker_url)
-        return self.ticker_callback(self.get_json_request(url), 'BTC')
+        return self.ticker_callback(self.get_json_request(url))
 
-    def ticker_callback(self, result, anchor):
+    def ticker_callback(self, result):
         return_data = []
+        pairs = []
 
-        for i in result.keys():
-            if result[i]['ticker']:
-                symbol = i
-                if anchor and symbol:
-                    pair = '{}/{}'.format(symbol.upper(), anchor.upper())
-                    price = result[i]['ticker']['last']
-                    vol = result[i]['ticker']['vol']
+        for k in result.keys():
+            if  '_' not in k:
+                pairs.append(k)
 
-                    return_data.append({
-                        'pair': pair,
-                        'price': price,
-                        'volume_anchor': price * vol,
-                        'volume': vol,
-                    })
+        for p in pairs:
+            (symbol, anchor) = p.split('2')
+            return_data.append({
+                'pair': '{}/{}'.format(symbol.upper(), anchor.upper()),
+                'price': float(pairs[p]),
+                'volume': float(pairs['{}_amo'.format(p)]),
+                'volume_anchor': float(pairs['{}_vol'.format(p)])
+            })
+
 
         # print(return_data)
         return return_data
