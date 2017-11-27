@@ -27,7 +27,7 @@ class HuobiExchange(BaseExchange):
     #     return list(data['pairs'])
     def get_available_pair(self):
         url = '{}{}'.format(self.base_url, self.pair_url)
-        print(url)
+        # print(url)
         r = self.get_json_request(url)
         pairs = []
 
@@ -40,7 +40,7 @@ class HuobiExchange(BaseExchange):
     def get_remote_data(self):
         return_data = []
         pairs = self.get_available_pair()
-        print(pairs)
+        # print(pairs)
         for p in pairs:
             (symbol, anchor) = str(p).split('_')
             url = '{}{}?symbol={}{}'.format(

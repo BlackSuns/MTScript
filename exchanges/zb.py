@@ -11,21 +11,33 @@ class ZbExchange(BaseExchange):
         self.base_url = 'http://api.zb.com/data/v1'
 
         self.ticker_url = '/ticker'
+        self.pair_url = '/markets'
 
         self.alias = 'zb'
         self.with_name = False
         self.exchange_conf = os.path.abspath(os.path.dirname(__file__)) +\
             '/exchange_conf/{}.json'.format(self.exchange)
 
-    def get_available_pair(self):
-        with open(self.exchange_conf, 'r') as f:
-            data = json.load(f)
+    # def get_available_pair(self):
+    #     with open(self.exchange_conf, 'r') as f:
+    #         data = json.load(f)
 
-        return data
+    #     return data
+    def get_available_pair(self):
+        url = '{}{}'.format(self.base_url, self.pair_url)
+        r = self.get_json_request(url)
+
+        pairs = []
+        for k in r.keys():
+            pairs.append(k)
+
+        return pairs
+
 
     def get_remote_data(self):
         return_data = []
-        pairs = self.get_available_pair()['pairs']
+        pairs = self.get_available_pair()
+        # print(pairs)
         for i, p in enumerate(pairs, 1):
             print('dealing {}/{} pair: {}'.format(i, len(pairs), p))
             try:
