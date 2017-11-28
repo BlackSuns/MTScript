@@ -7,6 +7,7 @@ from exchanges.ceo import CeoExchange
 from exchanges.coinegg import CoineggExchange
 from exchanges.exx import ExxExchange
 from exchanges.uncoinex import UncoinexExchange
+from exchanges.ucx import UcxExchange
 
 
 if __name__ == '__main__':
@@ -43,5 +44,9 @@ if __name__ == '__main__':
     uc = UncoinexExchange()
     uc.post_result_batch()
     print_log("Uncoinex done...")
+
+    ucx = UcxExchange()
+    ucx.post_result_batch()
+    print_log("UCX done...")
 
     print_log("all exchanges synced...")
