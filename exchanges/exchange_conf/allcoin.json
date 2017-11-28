@@ -95,6 +95,8 @@
         "YBCT":  "YBCT",
         "BOT":   "Bodhi",
         "INK":   "ink",
-        "BTM":   "Bytom"
+        "BTM":   "Bytom",
+        "BCD":   "Bitcoin Diamond",
+        "BTG":   "Bitcoin Gold"
     }
 }

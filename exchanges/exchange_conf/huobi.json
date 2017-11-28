@@ -24,6 +24,7 @@
         "QSP":  "Quantstamp",
         "TNT":  "Tierion",
         "XRP":  "Ripple",
-        "TNB":  "Time New Bank"
+        "TNB":  "Time New Bank",
+        "PAY":  "TenX"
     }
 }

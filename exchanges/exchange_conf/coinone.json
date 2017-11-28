@@ -6,6 +6,7 @@
         "ETH":  "Ethereum",
         "LTC":  "Litecoin",
         "QTUM": "Qtum",
-        "XRP":  "Ripple"
+        "XRP":  "Ripple",
+        "IOTA": "IOTA"
     }
 }
