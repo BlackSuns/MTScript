@@ -4,6 +4,7 @@
         "ETH":  "Ethereum",
         "LTC":  "Litecoin",
         "NULS":  "Nuls",
-        "UCX":  "UCX"
+        "UCX":  "UCX",
+        "WKC":  "WKC"
     }
 }
