@@ -33,6 +33,8 @@
         "BOT":  "Bodhi",
         "INK":  "ink",
         "TNB":  "Time New Bank",
-        "XIN":  "Mixin"
+        "XIN":  "Mixin",
+        "OCT":  "OracleChain",
+        "UIP":  "UnlimitedIP"
     }
 }
