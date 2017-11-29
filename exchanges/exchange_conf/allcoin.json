@@ -97,6 +97,7 @@
         "INK":   "ink",
         "BTM":   "Bytom",
         "BCD":   "Bitcoin Diamond",
-        "BTG":   "Bitcoin Gold"
+        "BTG":   "Bitcoin Gold",
+        "BCH":   "Bitcoin Cash"
     }
 }
