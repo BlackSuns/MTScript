@@ -1,0 +1,10 @@
+{
+    "pairs": [
+        "XBT_USD",
+        "XBT_EUR",
+        "XBT_SGD"
+    ],
+    "name_symbol": {
+        "XBT":  "Bitcoin"
+    }
+}

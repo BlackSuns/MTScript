@@ -3,6 +3,7 @@ from exchanges.bxinth import BxinthExchange
 from exchanges.gemini import GeminiExchange
 from exchanges.acx import AcxExchange
 from exchanges.livecoin import LivecoinExchange
+from exchanges.itbit import ItbitExchange
 
 
 if __name__ == '__main__':
@@ -11,6 +12,10 @@ if __name__ == '__main__':
     lc = LivecoinExchange()
     lc.post_result_batch()
     print_log("livecoin Done...")
+
+    it = ItbitExchange()
+    it.post_result_batch()
+    print_log("Itbit Done...")
 
     bx = BxinthExchange()
     bx.post_result_batch()

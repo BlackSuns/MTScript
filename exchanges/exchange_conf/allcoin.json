@@ -98,6 +98,7 @@
         "BTM":   "Bytom",
         "BCD":   "Bitcoin Diamond",
         "BTG":   "Bitcoin Gold",
-        "BCH":   "Bitcoin Cash"
+        "BCH":   "Bitcoin Cash",
+        "INT":   "Internet Node Token"
     }
 }
