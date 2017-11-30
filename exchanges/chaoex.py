@@ -10,7 +10,7 @@ class ChaoexExchange(BaseExchange):
         self.exchange_id = 1338
         self.base_url = 'https://www.chaoex.com/12lian'
 
-        self.ticker_url = '/quote/realTime'
+        self.ticker_url = '/quote/v2/realTime'
         self.pair_url = '/coin/allCurrencyRelations'
 
         self.alias = '12链 Chaoex'
@@ -25,9 +25,7 @@ class ChaoexExchange(BaseExchange):
         for pair in pairs:
             self.available_pairs.append({
                 'symbol': pair['tradeCurrencyNameEn'],
-                'symbol_id': pair['tradeCurrencyId'],
                 'anchor': pair['baseCurrencyNameEn'],
-                'anchor_id': pair['baseCurrencyId'],
             })
 
     def get_remote_data(self):
@@ -35,11 +33,11 @@ class ChaoexExchange(BaseExchange):
         self.get_available_pairs()
         for p in self.available_pairs:
             try:
-                url = '{}{}?tradeCurrencyId={}&baseCurrencyId={}'.format(
+                url = '{}{}?coins={}_{}'.format(
                     self.base_url, self.ticker_url,
-                    p['symbol_id'],
-                    p['anchor_id'])
-                print(url)
+                    p['anchor'].lower(),
+                    p['symbol'].lower())
+                # print(url)
                 data = self.ticker_callback(self.get_json_request(url))
                 data['pair'] = '{}/{}'.format(p['symbol'].upper(), p['anchor'].upper())
                 return_data.append(data)
