@@ -26,6 +26,7 @@
         "BXB":  "BixingCoin",
         "EOS":  "EOS",
         "ELT":  "ELT",
-        "CAN":  "Can"
+        "CAN":  "Can",
+        "BCD":  "Bitcoin Diamond"
     }
 }
