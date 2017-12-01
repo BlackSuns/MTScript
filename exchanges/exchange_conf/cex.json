@@ -20,6 +20,11 @@
         "etp_btc",
         "zec_btc",
         "dash_btc",
+        "tnb_btc",
+        "bcd_btc",
+        "llt_btc",
+        "pay_btc",
+        "snt_btc",
 
         "bcc_eth",
         "qtum_eth",
@@ -40,6 +45,11 @@
         "tnt_eth",
         "tsl_eth",
         "lrc_eth",
+        "pay_eth",
+        "tnb_eth",
+        "etp_eth",
+        "llt_eth",
+        "cex_eth",
 
         "btc_usdt",
         "eth_usdt",
@@ -52,7 +62,11 @@
         "rdn_usdt",
         "dash_usdt",
         "tsl_usdt",
-        "lrc_usdt"
+        "lrc_usdt",
+        "cex_usdt",
+        "llt_usdt",
+        "pay_usdt",
+        "snt_usdt"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -79,6 +93,12 @@
         "LRC":  "Loopring",
         "TSL":  "Energo",
         "ZEC":  "Zcash",
-        "DASH": "Dash"
+        "DASH": "Dash",
+        "TNB":  "Time New Bank",
+        "BCD":  "Bitcoin Diamond",
+        "LLT":  "LLToken",
+        "PAY":  "TenX",
+        "SNT":  "Status",
+        "CEX":  "CEXCoin"
     }
 }
