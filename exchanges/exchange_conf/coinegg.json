@@ -47,6 +47,7 @@
         "XLM":  "Stellar Lumens",
         "INT":  "Internet Node Token",
         "INK":  "ink",
-        "TSL":  "Energo"
+        "TSL":  "Energo",
+        "IPC":  "IPC"
     }
 }

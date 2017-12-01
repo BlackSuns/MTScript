@@ -28,6 +28,7 @@
         "TNB":  "Time New Bank",
         "PAY":  "TenX",
         "QASH": "QASH",
-        "ITC":  "IoT Chain"
+        "ITC":  "IoT Chain",
+        "GNT": "Golem"
     }
 }
