@@ -37,6 +37,8 @@
         "RPX":  "Red Pulse",
         "XAS":  "Asch",
         "MOD":  "Modum",
-        "HST":  "Decision Token"
+        "HST":  "Decision Token",
+        "POWR": "Power Ledger",
+        "FLIXX": "Flixxo"
     }
 }
