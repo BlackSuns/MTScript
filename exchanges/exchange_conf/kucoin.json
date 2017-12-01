@@ -40,6 +40,7 @@
         "MOD":  "Modum",
         "HST":  "Decision Token",
         "POWR": "Power Ledger",
-        "FLIXX": "Flixxo"
+        "FLIXX": "Flixxo",
+        "DASH": "Dash"
     }
 }
