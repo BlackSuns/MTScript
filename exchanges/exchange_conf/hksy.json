@@ -13,7 +13,18 @@
         "GEC_HKD",
         "STX_HKD",
         "STC_HKD",
-        "TKC_HKD"
+        "TKC_HKD",
+        "USDT_HKD",
+        "LTC_HKD",
+        "BCH_HKD",
+        "BCD_HKD",
+        "QTUM_HKD",
+        "TCC_HKD",
+        "ACTC_HKD",
+        "INK_HKD",
+        "LKH_HKD",
+        "CTC_HKD",
+        "ZSC_HKD"
     ],
     "name_symbol": {
         "ETH": "Ethereum",
@@ -29,6 +40,17 @@
         "GEC": "Ge-Chain",
         "STX": "Stox",
         "STC": "Swastikacoin",
-        "TKC": "TKC"
+        "TKC": "TKC",
+        "USDT": "Tether",
+        "LTC":  "Litecoin",
+        "BCH":  "Bitcoin Cash",
+        "BCD":  "Bitcoin Diamond",
+        "QTUM": "Qtum",
+        "TCC":  "The ChampCoin",
+        "ACTC": "ACTC",
+        "INK":  "Ink",
+        "LKH":  "LinkChain",
+        "CTC":  "ConstantChain",
+        "ZSC":  "Zeusshield"
     }
 }
