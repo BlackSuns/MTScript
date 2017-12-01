@@ -10,6 +10,7 @@
         "EOS":  "EOS",
         "HSR":  "Hshare",
         "XRP":  "Ripple",
-        "BCD":  "Bitcoin Diamond"
+        "BCD":  "Bitcoin Diamond",
+        "DASH": "Dash"
     }
 }
