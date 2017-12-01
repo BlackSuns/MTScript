@@ -27,6 +27,7 @@
         "XRP":  "Ripple",
         "TNB":  "Time New Bank",
         "PAY":  "TenX",
-        "QASH": "QASH"
+        "QASH": "QASH",
+        "ITC":  "IoT Chain"
     }
 }
