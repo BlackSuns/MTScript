@@ -23,6 +23,9 @@
         "XRP":  "Ripple",
         "BCD":  "Bitcoin Diamond",
         "SNT":  "Status",
-        "STORJ":    "Storj"
+        "STORJ": "Storj",
+        "GNT":  "Golem",
+        "PAY":  "TenX",
+        "DGD":  "DigixDAO"
     }
 }
