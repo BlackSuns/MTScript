@@ -6,7 +6,7 @@ from .base import BaseExchange
 class BiboxExchange(BaseExchange):
     def __init__(self):
         super().__init__()
-        self.exchange = 'Bibox'
+        self.exchange = 'bibox'
         self.exchange_id = 1370
         self.base_url = 'https://api.bibox.com/v1'
 
