@@ -25,6 +25,8 @@
         "llt_btc",
         "pay_btc",
         "snt_btc",
+        "itc_btc",
+        "lend_btc",
 
         "bcc_eth",
         "qtum_eth",
@@ -50,6 +52,8 @@
         "etp_eth",
         "llt_eth",
         "cex_eth",
+        "itc_eth",
+        "lend_eth"
 
         "btc_usdt",
         "eth_usdt",
@@ -66,7 +70,9 @@
         "cex_usdt",
         "llt_usdt",
         "pay_usdt",
-        "snt_usdt"
+        "snt_usdt",
+        "itc_usdt",
+        "lend_usdt"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -99,6 +105,8 @@
         "LLT":  "LLToken",
         "PAY":  "TenX",
         "SNT":  "Status",
-        "CEX":  "CEXCoin"
+        "CEX":  "CEXCoin",
+        "ITC":  "IoT Chain",
+        "LEND": "ETHLend"
     }
 }
