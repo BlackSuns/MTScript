@@ -8,10 +8,15 @@ from exchanges.coinegg import CoineggExchange
 from exchanges.exx import ExxExchange
 from exchanges.uncoinex import UncoinexExchange
 from exchanges.ucx import UcxExchange
+from exchanges.bibox import BiboxExchange
 
 
 if __name__ == '__main__':
     print_log("start sync exchanges...")
+
+    bx = BiboxExchange()
+    bx.post_result_batch()
+    print_log("Bibox done...")
 
     bn = BinanceExchange()
     bn.post_result_batch()

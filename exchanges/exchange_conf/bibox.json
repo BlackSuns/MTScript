@@ -1,0 +1,11 @@
+{
+    "name_symbol": {
+        "BIX":  "Bibox",
+        "BTC":  "Bitcoin",
+        "ETH":  "Ethereum",
+        "LTC":  "Litecoin",
+        "BCH":  "Bitcoin Cash",
+        "ETC":  "Ethereum Classic",
+        "TNB":  "Time New Bank"
+    }
+}
