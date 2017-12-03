@@ -1,6 +1,7 @@
 {
     "sc_whitelist": {
-          "0x1b22": "WISH"
+          "0x1b22": "WISH",
+          "0xf833": "CMS"
     },
     "name_symbol": {
           "10MT":   "10M Token",
@@ -81,6 +82,7 @@
           "CLASH":  "Clashcoin",
           "CLD":    "Cloud",
           "CM":     "CoinsMet",
+          "CMS":    "COMSA",
           "CNX":    "Cryptonex",
           "COB":    "Cobinhood",
           "CODE":   "BiCode",
