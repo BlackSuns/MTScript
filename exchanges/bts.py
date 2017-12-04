@@ -26,7 +26,7 @@ class BtsExchange(BaseExchange):
 
         return data
 
-    def ticker_callback(self, result):
+    def get_remote_data(self):
         return_data = []
         data = self.get_available_pair()
 
