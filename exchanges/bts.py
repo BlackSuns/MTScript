@@ -10,10 +10,7 @@ class BtsExchange(BaseExchange):
     def __init__(self):
         super().__init__()
         self.exchange = 'bts'
-        self.exchange_id = 1371
-        self.base_url = 'https://www.bite.ceo'
-
-        self.ticker_url = '/market/ticker'
+        self.exchange_id = 61
 
         self.alias = ''
         self.with_name = True
@@ -56,12 +53,12 @@ class BtsExchange(BaseExchange):
                             'volume_anchor': ticker['baseVolume'].amount
                         }
 
-                        print(symbol_ticker)
+                        # print(symbol_ticker)
 
                         if symbol_ticker['price'] > 0 and symbol_ticker['volume'] > 0:
                             return_data.append(symbol_ticker)
                 except Exception as e:
                     print(e)
 
-        print(return_data)
-        # return return_data
+        # print(return_data)
+        return return_data
