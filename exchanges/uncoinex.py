@@ -8,7 +8,7 @@ class UncoinexExchange(BaseExchange):
         super().__init__()
         self.exchange = 'uncoinex'
         self.exchange_id = 1367
-        self.base_url = 'http://open.uncoinex.com/api/v1'
+        self.base_url = 'http://open.uncoinex.cc/api/v1'
 
         self.ticker_url = '/ticker'
 
