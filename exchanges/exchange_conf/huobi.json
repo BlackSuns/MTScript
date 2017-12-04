@@ -29,6 +29,7 @@
         "PAY":  "TenX",
         "QASH": "QASH",
         "ITC":  "IoT Chain",
-        "GNT": "Golem"
+        "GNT": "Golem",
+        "MCO":  "Monaco"
     }
 }

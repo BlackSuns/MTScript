@@ -26,6 +26,9 @@
         "STORJ": "Storj",
         "GNT":  "Golem",
         "PAY":  "TenX",
-        "DGD":  "DigixDAO"
+        "DGD":  "DigixDAO",
+        "LRC":  "Loopring",
+        "MCO":  "Monaco",
+        "NULS": "Nuls"
     }
 }
