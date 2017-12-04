@@ -26,27 +26,42 @@ class BtsExchange(BaseExchange):
 
         return data
 
+    def get_float(self, string):
+        try:
+            num = string.split(' ')[0]
+            num.replace(',', '')
+            num = float(num)
+        except:
+            num = 0
+
+        return num
+
     def get_remote_data(self):
         return_data = []
         data = self.get_available_pair()
 
         for symbol in data['symbols'].keys():
             for anchor in data['anchors'].keys():
-                if symbol != anchor:
-                    print('dealing {} : {}'.format(symbol, anchor))
-                    market = Market('{}:{}'.format(symbol, anchor))
-                    ticker = market.ticker()
+                try:
+                    if symbol != anchor:
+                        print('dealing {} : {}'.format(symbol, anchor))
+                        market = Market('{}:{}'.format(symbol, anchor))
+                        ticker = market.ticker()
 
-                    symbol_ticker = {
-                        'name': data['symbols'][symbol]['name'],
-                        'pair': '{}/{}'.format(symbol, anchor),
-                        'price': ticker['latest'],
-                        'volume': ticker['quoteVolume'],
-                        'volume_anchor': ticker['baseVolume']
-                    }
+                        symbol_ticker = {
+                            'name': data['symbols'][symbol]['name'],
+                            'pair': '{}/{}'.format(symbol, anchor),
+                            'price': self.get_float(ticker['latest']),
+                            'volume': self.get_float(ticker['quoteVolume']),
+                            'volume_anchor': self.get_float(ticker['baseVolume'])
+                        }
 
-                    print(symbol_ticker)
-                    return_data.append(symbol_ticker)
+                        print(symbol_ticker)
+
+                        if symbol_ticker['price'] > 0 and symbol_ticker['volume'] > 0:
+                            return_data.append(symbol_ticker)
+                except Exception as e:
+                    print(e)
 
         print(return_data)
         # return return_data
