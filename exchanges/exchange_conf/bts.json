@@ -1,5 +1,5 @@
 {
-    "sybols": {
+    "symbols": {
         "BTS": {"name": "BitShares", "symbol": "BTS"},
         "CNY": {"name": "bitCNY", "symbol": "bitCNY"},
         "USD": {"name": "bitUSD", "symbol": "bitUSD"},
