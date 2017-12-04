@@ -31,7 +31,6 @@ class ZaifExchange(BaseExchange):
                 symbol = 'BCY'
 
             pair = '{}/{}'.format(symbol.upper(), anchor.upper())
-            print(symbol, anchor, pair)
             support_pairs[pair] = r['currency_pair']
 
         return support_pairs
@@ -39,7 +38,7 @@ class ZaifExchange(BaseExchange):
     def get_remote_data(self):
         return_data = []
         pairs = self.get_available_pairs()
-        print(pairs)
+
         for i, p in enumerate(pairs.keys(), 1):
             # print('dealing {}/{} pair: {}'.format(i, len(pairs), p))
             try:
