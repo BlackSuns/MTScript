@@ -1,0 +1,30 @@
+{
+    "sybols": {
+        "BTS": {"name": "BitShares", "symbol": "BTS"},
+        "CNY": {"name": "bitCNY", "symbol": "bitCNY"},
+        "USD": {"name": "bitUSD", "symbol": "bitUSD"},
+        "EUR": {"name": "bitEUR", "symbol": "bitEUR"},
+        "BTC": {"name": "bitBTC", "symbol": "bitBTC"},
+        "OPEN.BTC": {"name": "Bitcoin", "symbol": "BTC"},
+        "OPEN.ETH": {"name": "Ethereum", "symbol": "ETH"},
+        "OPEN.DASH": {"name": "Dash", "symbol": "DASH"},
+        "OPEN.USDT": {"name": "Tether", "symbol": "USDT"},
+        "OPEN.STEEM": {"name": "Steem", "symbol": "STEEM"},
+        "OPEN.LISK": {"name": "Steem", "symbol": "LISK"},
+        "OPEN.DASH": {"name": "Steem", "symbol": "DASH"},
+        "OBITS": {"name": "OBITS", "symbol": "OBITS"},
+        "BTSR": {"name": "BTSR", "symbol": "BTSR"},
+        "BTWTY": {"name": "BTWTY", "symbol": "BTWTY"},
+        "INCNT": {"name": "INCNT", "symbol": "INCNT"},
+        "ICOO": {"name": "ICOO", "symbol": "ICOO"},
+        "GOLD": {"name": "bitGOLD", "symbol": "bitGOLD"},
+        "SILVER": {"name": "bitSILVER", "symbol": "bitSILVER"}
+    },
+    "anchors": {
+        "USD": {"name": "bitUSD", "symbol": "bitUSD"},
+        "OPEN.BTC": {"name": "Bitcoin", "symbol": "BTC"},
+        "CNY": {"name": "bitCNY", "symbol": "bitCNY"},
+        "BTS": {"name": "BitShares", "symbol": "BTS"},
+        "BTC": {"name": "bitBTC", "symbol": "bitBTC"}
+    }
+}
