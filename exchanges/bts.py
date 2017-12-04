@@ -51,9 +51,9 @@ class BtsExchange(BaseExchange):
                         symbol_ticker = {
                             'name': data['symbols'][symbol]['name'],
                             'pair': '{}/{}'.format(symbol, anchor),
-                            'price': self.get_float(ticker['latest']),
-                            'volume': self.get_float(ticker['quoteVolume']),
-                            'volume_anchor': self.get_float(ticker['baseVolume'])
+                            'price': ticker['latest'].amount,
+                            'volume': ticker['quoteVolume'].amount,
+                            'volume_anchor': ticker['baseVolume'].amount
                         }
 
                         print(symbol_ticker)
