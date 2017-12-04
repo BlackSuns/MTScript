@@ -32,18 +32,21 @@ class BtsExchange(BaseExchange):
 
         for symbol in data['symbols'].keys():
             for anchor in data['anchors'].keys():
-                print('dealing {} : {}'.format(symbol, anchor))
-                market = Market('{}:{}'.format(symbol, anchor))
-                ticker = market.ticker()
-                symbol_ticker = {
-                    'name': data['symbols'][symbol]['name'],
-                    'pair': '{}/{}'.format(symbol, anchor),
-                    'price': ticker['latest'],
-                    'volume': ticker['quoteVolume'],
-                    'volume_anchor': ticker['baseVolume']
-                }
+                if symbol != anchor:
+                    print('dealing {} : {}'.format(symbol, anchor))
+                    market = Market('{}:{}'.format(symbol, anchor))
+                    ticker = market.ticker()
 
-                return_data.append(symbol_ticker)
+                    symbol_ticker = {
+                        'name': data['symbols'][symbol]['name'],
+                        'pair': '{}/{}'.format(symbol, anchor),
+                        'price': ticker['latest'],
+                        'volume': ticker['quoteVolume'],
+                        'volume_anchor': ticker['baseVolume']
+                    }
+
+                    print(symbol_ticker)
+                    return_data.append(symbol_ticker)
 
         print(return_data)
         # return return_data
