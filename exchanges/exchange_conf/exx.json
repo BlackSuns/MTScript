@@ -18,6 +18,7 @@
         "LTC": "Litecoin",
         "BTM":  "Bytom",
         "QASH": "QASH",
-        "INK":  "ink"
+        "INK":  "ink",
+        "MCO":  "Monaco"
     }
 }
