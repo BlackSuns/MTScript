@@ -30,7 +30,7 @@ class BtsExchange(BaseExchange):
         return_data = []
         data = self.get_available_pair()
 
-        for symbol in data['sybols'].keys():
+        for symbol in data['symbols'].keys():
             for anchor in data['anchors'].keys():
                 print('dealing {} : {}'.format(symbol, anchor))
                 market = Market('{}:{}'.format(symbol, anchor))
