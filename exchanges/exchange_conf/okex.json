@@ -29,6 +29,7 @@
         "DGD":  "DigixDAO",
         "LRC":  "Loopring",
         "MCO":  "Monaco",
-        "NULS": "Nuls"
+        "NULS": "Nuls",
+        "CMT":  "CyberMiles",
     }
 }
