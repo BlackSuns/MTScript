@@ -27,6 +27,7 @@
         "EOS":  "EOS",
         "ELT":  "ELT",
         "CAN":  "Can",
-        "BCD":  "Bitcoin Diamond"
+        "BCD":  "Bitcoin Diamond",
+        "MGE":  "Merge"
     }
 }
