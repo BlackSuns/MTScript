@@ -7,6 +7,7 @@
         "BCH":  "Bitcoin Cash",
         "ETC":  "Ethereum Classic",
         "TNB":  "Time New Bank",
-        "EOS":  "EOS"
+        "EOS":  "EOS",
+        "CMT":  "CyberMiles"
     }
 }
