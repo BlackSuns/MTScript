@@ -1,0 +1,24 @@
+{
+    "name_symbol": {
+        "ETC":  "Ethereum Classic",
+        "ETH":  "Ethereum",
+        "ZEC":  "Zcash",
+        "BCC":  "Bitcoin Cash",
+        "VEN":  "VeChain",
+        "QTUM": "Qtum",
+        "SC":  "Siacoin",
+        "BTS":  "BitShares",
+        "FIL6":  "IPFS",
+        "FIL12": "IPFS",
+        "FIL36":  "IPFS",
+        "XWC":  "WhiteCoin",
+        "YOYOW": "YOYOW",
+        "INK":  "ink",
+        "BOT":  "Bodhi",
+        "BTG":  "Bitcoin Gold",
+        "TGC":  "Time Game Chain",
+        "UIP":  "UnlimitedIP",
+        "BCD":  "Bitcoin Diamond",
+        "NEO":  "NEO"
+    }
+}

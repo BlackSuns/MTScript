@@ -9,6 +9,7 @@ from exchanges.exx import ExxExchange
 from exchanges.uncoinex import UncoinexExchange
 from exchanges.ucx import UcxExchange
 from exchanges.bibox import BiboxExchange
+from exchanges.coin900 import Coin900Exchange
 
 
 if __name__ == '__main__':
@@ -53,5 +54,9 @@ if __name__ == '__main__':
     ucx = UcxExchange()
     ucx.post_result_batch()
     print_log("UCX done...")
+
+    ce = Coin900Exchange()
+    ce.post_result_batch()
+    print_log("Coin900 done...")
 
     print_log("all exchanges synced...")
