@@ -9,6 +9,7 @@
         "SILVER": {"name": "bitSILVER", "symbol": "bitSILVER"},
         "OPEN.BTC": {"name": "Bitcoin", "symbol": "BTC"},
         "OPEN.ETH": {"name": "Ethereum", "symbol": "ETH"},
+        "OPEN.LTC": {"name": "Litecoin", "symbol": "LTC"},
         "OPEN.EOS": {"name": "EOS", "symbol": "EOS"},
         "OPEN.DOGE": {"name": "Dogecoin", "symbol": "DOGE"},
         "OPEN.DASH": {"name": "Dash", "symbol": "DASH"},
