@@ -53,7 +53,7 @@ class ZaifExchange(BaseExchange):
                     'pair': p,
                     'price': r['last'],
                     'volume': r['volume'],
-                    'volume_anchor': r['last'] * r['vwap']
+                    'volume_anchor': r['volume'] * r['vwap']
                 }
 
                 return_data.append(data)
