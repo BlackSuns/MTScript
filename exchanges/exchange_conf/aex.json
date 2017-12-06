@@ -35,6 +35,7 @@
         "INF":  "InfChain",
         "TMC":  "TimesCoin",
         "VASH": "VPNCoin",
-        "OMG":  "OmiseGO"
+        "OMG":  "OmiseGO",
+        "SNT":  "Status"
     }
 }
