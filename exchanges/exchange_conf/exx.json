@@ -19,6 +19,7 @@
         "BTM":  "Bytom",
         "QASH": "QASH",
         "INK":  "ink",
-        "MCO":  "Monaco"
+        "MCO":  "Monaco",
+        "TV":   "TV"
     }
 }
