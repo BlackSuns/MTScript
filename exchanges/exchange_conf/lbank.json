@@ -21,6 +21,7 @@
         "BCD":  "Bitcoin Diamond",
         "NEO":  "NEO",
         "BTM":  "Bytom",
-        "PCASH": "PlayCash"
+        "PCASH": "PlayCash",
+        "CMT":  "CyberMiles"
     }
 }
