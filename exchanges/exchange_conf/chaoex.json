@@ -28,6 +28,7 @@
         "ELT":  "ELT",
         "CAN":  "Can",
         "BCD":  "Bitcoin Diamond",
-        "MGE":  "Merge"
+        "MGE":  "Merge",
+        "ETC":  "Ethereum Classic"
     }
 }
