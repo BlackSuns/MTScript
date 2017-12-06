@@ -1,5 +1,6 @@
 {
     "name_symbol": {
+        "AMB":  "Ambrosus",
         "BCD":  "Bitcoin Diamond",
         "BCH":  "Bitcoin Cash",
         "BCPT": "BlockMason Credit Protocol",
@@ -11,6 +12,7 @@
         "CFD":  "Confido",
         "CVC":  "Civic",
         "DGB":  "DigiByte",
+        "ELIX": "Elixir",
         "EOS":  "EOS",
         "ETH":  "Ethereum",
         "EVX":  "Everex",
@@ -31,6 +33,7 @@
         "QTUM": "Qtum",
         "QSP":  "Quantstamp",
         "RDN":  "Raiden Network Token",
+        "SNM":  "SONM",
         "SNT":  "Status",
         "STX":  "Stox",
         "WTC":  "Walton",
