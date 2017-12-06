@@ -1,0 +1,14 @@
+{
+    "name_symbol": {
+        "BCD":  "Bitcoin Diamond",
+        "BCH":  "Bitcoin Cash",
+        "ETH":  "Ethereum",
+        "ETC":  "Ethereum Classic",
+        "LTC":  "Litecoin",
+        "DOGE": "Dogecoin",
+        "YBCT":  "YBCT",
+        "BT1":  "CST-BT1",
+        "BT2":  "CST-BT2",
+        "BTC": "Bitcoin"
+    }
+}
