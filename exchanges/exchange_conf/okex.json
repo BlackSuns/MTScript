@@ -30,6 +30,7 @@
         "LRC":  "Loopring",
         "MCO":  "Monaco",
         "NULS": "Nuls",
-        "CMT":  "CyberMiles"
+        "CMT":  "CyberMiles",
+        "ITC":  "IoT Chain"
     }
 }
