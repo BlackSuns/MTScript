@@ -34,6 +34,8 @@
         "ZSC":  "Zeusshield",
         "OTN":  "Open Trading Network",
         "VIU":  "Viuly",
-        "TRX":  "TRON"
+        "TRX":  "TRON",
+        "NULS": "Nuls",
+        "ARN":  "Aeron"
     }
 }
