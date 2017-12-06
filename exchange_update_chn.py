@@ -10,6 +10,7 @@ from exchanges.uncoinex import UncoinexExchange
 from exchanges.ucx import UcxExchange
 from exchanges.bibox import BiboxExchange
 from exchanges.coin900 import Coin900Exchange
+from exchanges.lbank import LbankExchange
 
 
 if __name__ == '__main__':
@@ -58,5 +59,9 @@ if __name__ == '__main__':
     ce = Coin900Exchange()
     ce.post_result_batch()
     print_log("Coin900 done...")
+
+    lb = LbankExchange()
+    lb.post_result_batch()
+    print_log("Lbank done...")
 
     print_log("all exchanges synced...")
