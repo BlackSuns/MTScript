@@ -1,7 +1,8 @@
 {
     "sc_whitelist": {
           "0x1b22": "WISH",
-          "0xf833": "CMS"
+          "0xf833": "CMS",
+          "0xff60": "RNT"
     },
     "name_symbol": {
           "10MT":   "10M Token",
@@ -268,6 +269,7 @@
           "REX":    "REX",
           "RHOC":   "RChain",
           "RLC":    "iExec RLC",
+          "RNT":    "OneRoot",
           "ROC":    "Rasputin Online Coin",
           "RPL":    "rpl",
           "RSPR":   "rspr",
