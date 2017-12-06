@@ -8,6 +8,7 @@
         "ETC":  "Ethereum Classic",
         "TNB":  "Time New Bank",
         "EOS":  "EOS",
-        "CMT":  "CyberMiles"
+        "CMT":  "CyberMiles",
+        "BTM":  "Bytom"
     }
 }
