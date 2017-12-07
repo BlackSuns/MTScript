@@ -36,6 +36,7 @@
         "TMC":  "TimesCoin",
         "VASH": "VPNCoin",
         "OMG":  "OmiseGO",
-        "SNT":  "Status"
+        "SNT":  "Status",
+        "XYT": "XCoinPay"
     }
 }
