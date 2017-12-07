@@ -31,6 +31,7 @@
         "MCO":  "Monaco",
         "NULS": "Nuls",
         "CMT":  "CyberMiles",
-        "ITC":  "IoT Chain"
+        "ITC":  "IoT Chain",
+        "SBTC": "Super Bitcoin"
     }
 }

@@ -107,6 +107,7 @@
         "SNT":  "Status",
         "CEX":  "CEXCoin",
         "ITC":  "IoT Chain",
-        "LEND": "ETHLend"
+        "LEND": "ETHLend",
+        "YOYOW":  "YOYOW"
     }
 }
