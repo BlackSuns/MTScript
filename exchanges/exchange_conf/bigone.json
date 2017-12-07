@@ -1,22 +1,4 @@
 {
-    "pairs": [
-        "BTS_BTC",
-        "EOS_BTC",
-        "ETH_BTC",
-        "LTC_BTC",
-        "ZEC_BTC",
-        "BCH_BTC",
-        "ETC_BTC",
-        "QtUM_BTC",
-        "NEO_BTC",
-        "OMG_BTC",
-        "GXS_BTC",
-        "DGD_BTC",
-        "ETH_EOS",
-        "BOT_QTUM",
-        "INK_QTUM",
-        "TNB_BTC"
-    ],
     "name_symbol": {
         "BTS":  "BitShares",
         "EOS":  "EOS",
@@ -36,6 +18,7 @@
         "XIN":  "Mixin",
         "OCT":  "OracleChain",
         "MCO":  "Monaco",
-        "UIP":  "UnlimitedIP"
+        "UIP":  "UnlimitedIP",
+        "MANA": "Decentraland"
     }
 }
