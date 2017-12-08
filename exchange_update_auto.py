@@ -9,13 +9,13 @@ from exchanges.itbit import ItbitExchange
 if __name__ == '__main__':
     print_log("start sync exchanges...")
 
-    lc = LivecoinExchange()
-    lc.post_result_batch()
-    print_log("livecoin Done...")
+    # lc = LivecoinExchange()
+    # lc.post_result_batch()
+    # print_log("livecoin Done...")
 
-    it = ItbitExchange()
-    it.post_result_batch()
-    print_log("Itbit Done...")
+    # it = ItbitExchange()
+    # it.post_result_batch()
+    # print_log("Itbit Done...")
 
     bx = BxinthExchange()
     bx.post_result_batch()

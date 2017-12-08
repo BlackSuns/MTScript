@@ -23,6 +23,7 @@ class CeoExchange(BaseExchange):
         return self.ticker_callback(self.get_json_request(url))
 
     def ticker_callback(self, result):
+        # print(result)
         return_data = []
 
         for k in result.keys():
