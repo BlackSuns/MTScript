@@ -27,6 +27,7 @@
         "snt_btc",
         "itc_btc",
         "lend_btc",
+        "yoyow_btc",
 
         "bcc_eth",
         "qtum_eth",
@@ -54,6 +55,7 @@
         "cex_eth",
         "itc_eth",
         "lend_eth",
+        "yoyow_eth",
 
         "btc_usdt",
         "eth_usdt",
