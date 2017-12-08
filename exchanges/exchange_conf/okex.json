@@ -32,6 +32,9 @@
         "NULS": "Nuls",
         "CMT":  "CyberMiles",
         "ITC":  "IoT Chain",
-        "SBTC": "Super Bitcoin"
+        "SBTC": "Super Bitcoin",
+        "SAN":  "Santiment Network Token",
+        "EDO":  "Eidoo",
+        "AVT":  "Aventus"
     }
 }
