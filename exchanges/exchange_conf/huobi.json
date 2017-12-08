@@ -32,6 +32,7 @@
         "GNT": "Golem",
         "MCO":  "Monaco",
         "CMT":  "CyberMiles",
-        "ZEC":  "Zcash"
+        "ZEC":  "Zcash",
+        "QTUM": "Qtum"
     }
 }

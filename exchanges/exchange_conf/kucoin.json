@@ -44,6 +44,7 @@
         "HST":  "Decision Token",
         "POWR": "Power Ledger",
         "FLIXX": "Flixxo",
-        "DASH": "Dash"
+        "DASH": "Dash",
+        "PBL":  "Publica"
     }
 }
