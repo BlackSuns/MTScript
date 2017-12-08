@@ -183,7 +183,8 @@ class BaseExchange(object):
                         }
 
                         opt_params = ('name', 'percent_change_24h',
-                                      'rank', 'market_cap_usd')
+                                      'rank', 'market_cap_usd', 'available_supply',
+                                      'total_supply', 'max_supply')
 
                         for p in opt_params:
                             if p in data.keys():
