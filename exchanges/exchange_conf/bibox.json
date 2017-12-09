@@ -9,6 +9,7 @@
         "TNB":  "Time New Bank",
         "EOS":  "EOS",
         "CMT":  "CyberMiles",
-        "BTM":  "Bytom"
+        "BTM":  "Bytom",
+        "PRO":  "ProChain"
     }
 }
