@@ -81,6 +81,8 @@
         "BTC": "Bitcoin",
         "AXF": "AxFunds",
         "GAME": "GameCredits",
-        "LSK": "Lisk"
+        "LSK": "Lisk",
+        "LLT":  "LLToken",
+        "CMT":  "CyberMiles"
     }
 }
