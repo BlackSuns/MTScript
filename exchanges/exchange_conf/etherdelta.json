@@ -2,7 +2,8 @@
     "sc_whitelist": {
           "0x1b22": "WISH",
           "0xf833": "CMS",
-          "0xff60": "RNT"
+          "0xff60": "RNT",
+          "0x286b": "WABI"
     },
     "name_symbol": {
           "10MT":   "10M Token",
@@ -320,6 +321,7 @@
           "VIU":    "Viuly",
           "VOISE":  "Voise",
           "VSM":    "VOISE",
+          "WABI":   "Wabi",
           "WIC":    "Wi Coin",
           "WILD":   "Wild Crypto",
           "WINGS":  "Wings",
