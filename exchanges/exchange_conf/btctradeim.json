@@ -9,6 +9,7 @@
         "YBCT":  "YBCT",
         "BT1":  "CST-BT1",
         "BT2":  "CST-BT2",
-        "BTC": "Bitcoin"
+        "BTC": "Bitcoin",
+        "LBTC": "Lightning Bitcoin"
     }
 }

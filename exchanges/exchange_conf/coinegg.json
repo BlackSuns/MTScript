@@ -48,6 +48,7 @@
         "INT":  "Internet Node Token",
         "INK":  "ink",
         "TSL":  "Energo",
-        "IPC":  "IPC"
+        "IPC":  "IPC",
+        "LBTC": "Lightning Bitcoin"
     }
 }
