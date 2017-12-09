@@ -31,6 +31,8 @@
         "MGE":  "Merge",
         "ETC":  "Ethereum Classic",
         "PAY":  "TenX",
-        "BAT":  "Basic Attention Token"
+        "BAT":  "Basic Attention Token",
+        "DCT":  "DECENT",
+        "IOTA": "IOTA"
     }
 }
