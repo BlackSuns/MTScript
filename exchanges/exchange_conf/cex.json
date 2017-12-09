@@ -28,6 +28,8 @@
         "itc_btc",
         "lend_btc",
         "yoyow_btc",
+        "bcx_btc",
+        "sbtc_btc",
 
         "bcc_eth",
         "qtum_eth",
@@ -110,6 +112,8 @@
         "CEX":  "CEXCoin",
         "ITC":  "IoT Chain",
         "LEND": "ETHLend",
-        "YOYOW":  "YOYOW"
+        "YOYOW":  "YOYOW",
+        "BCX":  "BitcoinX",
+        "SBTC": "Super Bitcoin"
     }
 }

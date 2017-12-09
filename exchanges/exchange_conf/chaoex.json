@@ -29,6 +29,8 @@
         "CAN":  "Can",
         "BCD":  "Bitcoin Diamond",
         "MGE":  "Merge",
-        "ETC":  "Ethereum Classic"
+        "ETC":  "Ethereum Classic",
+        "PAY":  "TenX",
+        "BAT":  "Basic Attention Token"
     }
 }
