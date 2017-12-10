@@ -5,6 +5,8 @@
         "LTC":  "Litecoin",
         "NULS":  "Nuls",
         "UCX":  "UCX",
-        "WKC":  "WKC"
+        "WKC":  "WKC",
+        "LLT":  "LLToken",
+        "BTS":  "BitShares"
     }
 }
