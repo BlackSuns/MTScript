@@ -10,6 +10,7 @@
         "EOS":  "EOS",
         "CMT":  "CyberMiles",
         "BTM":  "Bytom",
-        "PRO":  "ProChain"
+        "PRO":  "ProChain",
+        "LEND": "ETHLend"
     }
 }
