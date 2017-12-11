@@ -33,6 +33,8 @@
         "PAY":  "TenX",
         "BAT":  "Basic Attention Token",
         "DCT":  "DECENT",
-        "IOTA": "IOTA"
+        "IOTA": "IOTA",
+        "BTH":  "Bitcoin Hot",
+        "SPF":  "SportyFi"
     }
 }
