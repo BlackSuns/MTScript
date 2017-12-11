@@ -37,6 +37,16 @@
         "EDO":  "Eidoo",
         "AVT":  "Aventus",
         "PRO":  "ProChain",
-        "LEND": "ETHLend"
+        "LEND": "ETHLend",
+        "CTR":  "Centra",
+        "LINK": "ChainLink",
+        "SALT": "SALT",
+        "1ST":  "FirstBlood",
+        "WTC":  "Walton",
+        "SNGLS":    "SingularDTV",
+        "SNM":  "SONM",
+        "ZRX":  "0x",
+        "BNT":  "Bancor",
+        "CVC":  "Civic"
     }
 }

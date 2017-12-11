@@ -34,6 +34,7 @@
         "CMT":  "CyberMiles",
         "ZEC":  "Zcash",
         "QTUM": "Qtum",
-        "LEND": "ETHLend"
+        "LEND": "ETHLend",
+        "BAT":  "Basic Attention Token"
     }
 }
