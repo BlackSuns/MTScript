@@ -11,6 +11,7 @@
         "CMT":  "CyberMiles",
         "BTM":  "Bytom",
         "PRO":  "ProChain",
-        "LEND": "ETHLend"
+        "LEND": "ETHLend",
+        "RDN":  "Raiden Network Token"
     }
 }
