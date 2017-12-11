@@ -11,6 +11,7 @@
         "HSR":  "Hshare",
         "XRP":  "Ripple",
         "BCD":  "Bitcoin Diamond",
-        "DASH": "Dash"
+        "DASH": "Dash",
+        "SBTC": "Super Bitcoin"
     }
 }
