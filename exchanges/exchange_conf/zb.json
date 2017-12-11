@@ -12,6 +12,7 @@
         "XRP":  "Ripple",
         "BCD":  "Bitcoin Diamond",
         "DASH": "Dash",
-        "SBTC": "Super Bitcoin"
+        "SBTC": "Super Bitcoin",
+        "UBTC": "UnitedBitcoin"
     }
 }

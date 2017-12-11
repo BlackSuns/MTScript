@@ -58,6 +58,7 @@
         "itc_eth",
         "lend_eth",
         "yoyow_eth",
+        "mds_eth",
 
         "btc_usdt",
         "eth_usdt",
@@ -76,7 +77,8 @@
         "pay_usdt",
         "snt_usdt",
         "itc_usdt",
-        "lend_usdt"
+        "lend_usdt",
+        "mds_usdt"
     ],
     "name_symbol": {
         "BCC":  "Bitcoin Cash",
@@ -114,6 +116,7 @@
         "LEND": "ETHLend",
         "YOYOW":  "YOYOW",
         "BCX":  "BitcoinX",
-        "SBTC": "Super Bitcoin"
+        "SBTC": "Super Bitcoin",
+        "MDS":  "MediShares"
     }
 }
