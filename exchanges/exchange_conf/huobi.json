@@ -33,6 +33,7 @@
         "MCO":  "Monaco",
         "CMT":  "CyberMiles",
         "ZEC":  "Zcash",
-        "QTUM": "Qtum"
+        "QTUM": "Qtum",
+        "LEND": "ETHLend"
     }
 }

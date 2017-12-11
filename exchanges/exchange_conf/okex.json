@@ -36,6 +36,7 @@
         "SAN":  "Santiment Network Token",
         "EDO":  "Eidoo",
         "AVT":  "Aventus",
-        "PRO":  "ProChain"
+        "PRO":  "ProChain",
+        "LEND": "ETHLend"
     }
 }
