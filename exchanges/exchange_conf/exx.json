@@ -21,6 +21,8 @@
         "INK":  "ink",
         "MCO":  "Monaco",
         "TV":   "Ti-Value",
-        "CAN":  "Content and AD Network"
+        "CAN":  "Content and AD Network",
+        "UBTC": "UnitedBitcoin",
+        "SBTC": "Super Bitcoin"
     }
 }
