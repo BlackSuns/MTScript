@@ -37,6 +37,7 @@
         "TRX":  "TRON",
         "NULS": "Nuls",
         "ARN":  "Aeron",
-        "OXY":  "Oxycoin"
+        "OXY":  "Oxycoin",
+        "UNIT": "Universal Currency"
     }
 }
