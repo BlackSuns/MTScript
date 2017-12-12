@@ -10,6 +10,7 @@
         "BT1":  "CST-BT1",
         "BT2":  "CST-BT2",
         "BTC": "Bitcoin",
-        "LBTC": "Lightning Bitcoin"
+        "LBTC": "Lightning Bitcoin",
+        "ETF":  "Ethereum Fog"
     }
 }
