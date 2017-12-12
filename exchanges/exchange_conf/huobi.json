@@ -35,6 +35,7 @@
         "ZEC":  "Zcash",
         "QTUM": "Qtum",
         "LEND": "ETHLend",
-        "BAT":  "Basic Attention Token"
+        "BAT":  "Basic Attention Token",
+        "BCX":  "BitcoinX"
     }
 }
