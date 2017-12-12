@@ -10,7 +10,10 @@
         "knc_krw",
         "tsl_krw",
         "omg_krw",
-        "btg_krw"
+        "btg_krw",
+        "ada_krw",
+        "tron_krw",
+        "wtc_krw"
     ],
     "name_symbol": {
         "BCH":  "Bitcoin Cash",
@@ -23,6 +26,10 @@
         "TSL":  "Energo",
         "GAS":  "GAS",
         "BTG":  "Bitcoin Gold",
-        "OMG":  "OmiseGO"
+        "OMG":  "OmiseGO",
+        "ADA":  "Cardano",
+        "TRON": "TRON",
+        "WTC":  "Walton"
+
     }
 }
