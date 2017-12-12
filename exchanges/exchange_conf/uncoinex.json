@@ -18,6 +18,7 @@
         "IPT":  "IPTChain",
         "NULS": "Nuls",
         "XAS":  "Asch",
-        "PRL":  "Oyster Pearl"
+        "PRL":  "Oyster Pearl",
+        "ETF":  "Ethereum Fog"
     }
 }
