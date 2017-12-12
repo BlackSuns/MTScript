@@ -12,6 +12,7 @@
         "BTM":  "Bytom",
         "PRO":  "ProChain",
         "LEND": "ETHLend",
-        "RDN":  "Raiden Network Token"
+        "RDN":  "Raiden Network Token",
+        "MANA": "Decentraland"
     }
 }

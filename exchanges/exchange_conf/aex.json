@@ -37,6 +37,8 @@
         "VASH": "VPNCoin",
         "OMG":  "OmiseGO",
         "SNT":  "Status",
-        "XYT": "XCoinPay"
+        "XYT": "XCoinPay",
+        "SBTC": "Super Bitcoin",
+        "BCX":  "BitcoinX"
     }
 }
