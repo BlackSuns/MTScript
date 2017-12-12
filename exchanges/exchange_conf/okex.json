@@ -47,6 +47,8 @@
         "SNM":  "SONM",
         "ZRX":  "0x",
         "BNT":  "Bancor",
-        "CVC":  "Civic"
+        "CVC":  "Civic",
+        "SBTC": "Super Bitcoin",
+        "BCX":  "BitcoinX"
     }
 }
