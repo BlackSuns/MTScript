@@ -13,6 +13,7 @@
         "BCD":  "Bitcoin Diamond",
         "DASH": "Dash",
         "SBTC": "Super Bitcoin",
-        "UBTC": "UnitedBitcoin"
+        "UBTC": "UnitedBitcoin",
+        "TV":   "Ti-Value"
     }
 }

@@ -49,6 +49,8 @@
         "BNT":  "Bancor",
         "CVC":  "Civic",
         "SBTC": "Super Bitcoin",
-        "BCX":  "BitcoinX"
+        "BCX":  "BitcoinX",
+        "MANA": "Decentraland",
+        "VEE":  "BLOCKv"
     }
 }

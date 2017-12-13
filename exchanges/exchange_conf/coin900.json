@@ -2,6 +2,10 @@
     "name_symbol": {
         "ETH":  "Ethereum",
         "CXC":  "CXC",
-        "SBTC":  "Super Bitcoin"
+        "SBTC":  "Super Bitcoin",
+        "ETF":  "Ethereum Fog",
+        "BCH":  "Bitcoin Cash",
+        "LTC":  "Litecoin",
+        "EOS":  "EOS"
     }
 }
