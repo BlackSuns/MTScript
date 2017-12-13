@@ -24,6 +24,7 @@
         "PCASH": "PlayCash",
         "CMT":  "CyberMiles",
         "ETF":  "Ethereum Fog",
-        "SBTC": "Super Bitcoin"
+        "SBTC": "Super Bitcoin",
+        "ZSC":  "Zeusshield"
     }
 }

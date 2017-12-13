@@ -11,6 +11,7 @@
         "BHC":  "Black Hole Coin",
         "DASH": "Dash",
         "BCH":  "Bitcoin Cash",
-        "DOGE": "Dogecoin"
+        "DOGE": "Dogecoin",
+        "SBTC": "Super Bitcoin"
     }
 }
