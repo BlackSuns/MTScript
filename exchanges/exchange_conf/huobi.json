@@ -36,6 +36,7 @@
         "QTUM": "Qtum",
         "LEND": "ETHLend",
         "BAT":  "Basic Attention Token",
-        "BCX":  "BitcoinX"
+        "BCX":  "BitcoinX",
+        "SMT":  "SmartMesh"
     }
 }

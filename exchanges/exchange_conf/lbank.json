@@ -23,6 +23,7 @@
         "BTM":  "Bytom",
         "PCASH": "PlayCash",
         "CMT":  "CyberMiles",
-        "ETF":  "Ethereum Fog"
+        "ETF":  "Ethereum Fog",
+        "SBTC": "Super Bitcoin"
     }
 }
