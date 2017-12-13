@@ -37,6 +37,7 @@
         "LEND": "ETHLend",
         "BAT":  "Basic Attention Token",
         "BCX":  "BitcoinX",
-        "SMT":  "SmartMesh"
+        "SMT":  "SmartMesh",
+        "SBTC": "Super Bitcoin"
     }
 }
