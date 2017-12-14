@@ -23,6 +23,7 @@
         "TV":   "Ti-Value",
         "CAN":  "Content and AD Network",
         "UBTC": "UnitedBitcoin",
-        "SBTC": "Super Bitcoin"
+        "SBTC": "Super Bitcoin",
+        "CHAT": "Chatcoin"
     }
 }
