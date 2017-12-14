@@ -12,6 +12,7 @@
         "DASH": "Dash",
         "BCH":  "Bitcoin Cash",
         "DOGE": "Dogecoin",
-        "SBTC": "Super Bitcoin"
+        "SBTC": "Super Bitcoin",
+        "ETF":  "Ethereum Fog"
     }
 }
