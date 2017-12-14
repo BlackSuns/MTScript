@@ -37,7 +37,8 @@
         "FUNC": {"name": "FUNCoin", "symbol": "FUNC"},
         "ZEPH": {"name": "Zephyr", "symbol": "ZEPH"},
         "FIMK": {"name": "FIMKrypto", "symbol": "FIMK"},
-        "QORA": {"name": "Qora", "symbol": "QORA"}
+        "QORA": {"name": "Qora", "symbol": "QORA"},
+        "NINJASOUL": {"name": "NINJASOUL", "symbol": "NINJASOUL"}
     },
     "anchors": {
         "USD": {"name": "bitUSD", "symbol": "bitUSD"},
