@@ -26,13 +26,13 @@ class Coin900Exchange(BaseExchange):
         return_data = []
         anchors = ('btc', 'eth', 'cxc', 'usdt')
 
-        for k in result.keys():
+        for k in result:
             for anchor in anchors:
-                if str(k).endswith(anchor):
-                    symbol = str(k)[:-len(anchor)]
+                if k['code'].endswith(anchor):
+                    symbol = k['code'][:-len(anchor)]
                     pair = '{}/{}'.format(symbol.upper(), anchor.upper())
-                    price = float(result[k]['last'])
-                    volume = float(result[k]['volume'])
+                    price = float(k['last'])
+                    volume = float(k['volume'])
 
                     return_data.append({
                         'pair': pair,
