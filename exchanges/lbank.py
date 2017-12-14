@@ -26,16 +26,17 @@ class LbankExchange(BaseExchange):
         return_data = []
 
         for t in result['dataWrapper']['data']:
-            pair = t['symbol']
-            price = float(t['lastPrice'])
-            volume = float(t['vol'])
-            volume_anchor = price * volume
-            return_data.append({
-                'pair': pair,
-                'price': price,
-                'volume_anchor': volume_anchor,
-                'volume': volume,
-            })
+            if 'symbol' in t.keys():
+                pair = t['symbol']
+                price = float(t['lastPrice'])
+                volume = float(t['vol'])
+                volume_anchor = price * volume
+                return_data.append({
+                    'pair': pair,
+                    'price': price,
+                    'volume_anchor': volume_anchor,
+                    'volume': volume,
+                })
 
         # print(return_data)
         return return_data
