@@ -6,6 +6,7 @@
         "ETF":  "Ethereum Fog",
         "BCH":  "Bitcoin Cash",
         "LTC":  "Litecoin",
-        "EOS":  "EOS"
+        "EOS":  "EOS",
+        "BTC":  "Bitcoin"
     }
 }
