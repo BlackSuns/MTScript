@@ -11,7 +11,7 @@
         "HSR":   "Hshare",
         "SIGMA": "SIGMAcoin",
         "FID":   "BITFID",
-        "UGT":   "UG Token",
+        "UGC":   "UG Token",
         "IQT":   "iQuant",
         "GXS":   "GXShares",
         "LMC":   "LoMoCoin",
@@ -47,6 +47,7 @@
         "BCH":   "Bitcoin Cash",
         "INT":   "Internet Node Token",
         "PCASH": "PlayCash",
-        "UIP":   "UnlimitedIP"
+        "UIP":   "UnlimitedIP",
+        "GNX":  "Genaro"
     }
 }

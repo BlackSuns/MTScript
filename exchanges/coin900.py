@@ -24,7 +24,7 @@ class Coin900Exchange(BaseExchange):
 
     def ticker_callback(self, result):
         return_data = []
-        anchors = ('btc', 'eth', 'cxc')
+        anchors = ('btc', 'eth', 'cxc', 'usdt')
 
         for k in result.keys():
             for anchor in anchors:

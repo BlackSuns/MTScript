@@ -39,6 +39,9 @@
         "ARN":  "Aeron",
         "OXY":  "Oxycoin",
         "UNIT": "Universal Currency",
-        "HWC":  "HOLLYWOOD COIN"
+        "HWC":  "HOLLYWOOD COIN",
+        "MCO":  "Monaco",
+        "SBTC": "Super Bitcoin",
+        "BCX":  "BitcoinX"
     }
 }

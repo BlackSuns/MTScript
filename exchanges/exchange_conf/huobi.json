@@ -39,6 +39,7 @@
         "BCX":  "BitcoinX",
         "SMT":  "SmartMesh",
         "SBTC": "Super Bitcoin",
-        "MANA": "Decentraland"
+        "MANA": "Decentraland",
+        "CVC":  "Civic"
     }
 }
