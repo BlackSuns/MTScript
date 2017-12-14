@@ -38,6 +38,7 @@
         "BAT":  "Basic Attention Token",
         "BCX":  "BitcoinX",
         "SMT":  "SmartMesh",
-        "SBTC": "Super Bitcoin"
+        "SBTC": "Super Bitcoin",
+        "MANA": "Decentraland"
     }
 }

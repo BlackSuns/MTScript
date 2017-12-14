@@ -11,6 +11,7 @@
         "QTUM": "Qtum",
         "XMR":  "Monero",
         "XRP":  "Ripple",
-        "ZEC":  "Zcash"
+        "ZEC":  "Zcash",
+        "EOS":  "EOS"
     }
 }

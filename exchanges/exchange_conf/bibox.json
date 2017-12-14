@@ -13,6 +13,7 @@
         "PRO":  "ProChain",
         "LEND": "ETHLend",
         "RDN":  "Raiden Network Token",
-        "MANA": "Decentraland"
+        "MANA": "Decentraland",
+        "HPB":  "High Performance Blockchain"
     }
 }

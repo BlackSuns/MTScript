@@ -78,6 +78,9 @@ class BaseExchange(object):
         if url.startswith("https://api.etherdelta.com"):
             headers['cookie'] = '__cfduid=d42b240e518dad58587086f22eab9d7f11505272987; _ga=GA1.2.40686394.1505272998; _TRAEFIK_BACKEND=http://10.0.0.13:8001'
 
+        if url.startswith("https://www.coinnest.co.kr"):
+            headers['cookie'] = '__cfduid=d3f5ff140e5fb02acecf507bdb8325e3e1513102214; USER_SIGN=462e12fafe87f9f8ba27a1f7c383e26f; PHPSESSID=8ad7e7a17f5601b4b94ef86bc6a9d5bd; __cfruid=dccb6ff84a39ebf1ca15e6e7331dcf830292e7b7-1513227210; cf_clearance=f06dd5b3fd15c25d3fa5bf881f297d550729a8d8-1513230324-1800; lang=en_US; _ga=GA1.3.1761506000.1513184856; _gid=GA1.3.740503054.1513184856'    
+
         if url.startswith("https://www.bite.ceo"):
             r = requests.get(url, headers=headers, timeout=30, verify=False)
         else:
