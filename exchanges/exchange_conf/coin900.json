@@ -3,10 +3,13 @@
         "ETH":  "Ethereum",
         "CXC":  "CXC",
         "SBTC":  "Super Bitcoin",
+        "BCX":  "BitcoinX",
+        "EMO":  "Ethereum Modification",
         "ETF":  "Ethereum Fog",
         "BCH":  "Bitcoin Cash",
         "LTC":  "Litecoin",
         "EOS":  "EOS",
-        "BTC":  "Bitcoin"
+        "BTC":  "Bitcoin",
+        "DRGN": "Dragonchain"
     }
 }

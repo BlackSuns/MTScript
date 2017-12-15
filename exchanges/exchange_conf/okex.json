@@ -54,6 +54,7 @@
         "VEE":  "BLOCKv",
         "DAT":  "Datum",
         "AMM":  "MicroMoney",
-        "KNC":  "Kyber Network"
+        "KNC":  "Kyber Network",
+        "TNB":  "Time New Bank"
     }
 }

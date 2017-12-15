@@ -25,7 +25,9 @@
         "CMT":  "CyberMiles",
         "ETF":  "Ethereum Fog",
         "SBTC": "Super Bitcoin",
+        "BTF":  "Bitcoin Faith",
         "ZSC":  "Zeusshield",
-        "ENT":  "Eternity"
+        "ENT":  "Eternity",
+        "NAS":  "Nebulas Token"
     }
 }

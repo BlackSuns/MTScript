@@ -37,6 +37,7 @@
         "BTH":  "Bitcoin Hot",
         "SPF":  "SportyFi",
         "ETF":  "Ethereum Fog",
-        "EMO":  "Ethereum Modification"
+        "EMO":  "Ethereum Modification",
+        "DNC":  "DarkNetCoin"
     }
 }
