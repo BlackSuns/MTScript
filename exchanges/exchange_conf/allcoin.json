@@ -48,6 +48,7 @@
         "INT":   "Internet Node Token",
         "PCASH": "PlayCash",
         "UIP":   "UnlimitedIP",
-        "GNX":  "Genaro"
+        "GNX":  "Genaro",
+        "ENT":  "Eternity"
     }
 }
