@@ -8,9 +8,9 @@ class BinanceExchange(BaseExchange):
         super().__init__()
         self.exchange = 'binance'
         self.exchange_id = 338
-        self.base_url = 'https://www.binance.com/exchange'
+        self.base_url = 'https://api.binance.com/api/v1'
 
-        self.ticker_url = '/public/product'
+        self.ticker_url = '/ticker/24hr'
 
         self.alias = '币安'
         self.with_name = False
@@ -24,18 +24,21 @@ class BinanceExchange(BaseExchange):
 
     def ticker_callback(self, result):
         return_data = []
+        anchors = ('BTC', 'ETH', 'USDT', 'BNB')
 
-        for i in result['data']:
-            symbol = i['baseAsset']
-            anchor = i['quoteAsset']
-            pair = '{}/{}'.format(symbol.upper(), anchor.upper())
+        for i in result:
+            pair = i['symbol']
+            for anchor in anchors:
+                if str(pair).endswith(anchor):
+                    symbol = pair[:- len(anchor)]
+                    pair = '{}/{}'.format(symbol.upper(), anchor.upper())
 
-            return_data.append({
-                'pair': pair,
-                'price': i['close'],
-                'volume_anchor': float(i['tradedMoney']),
-                'volume': float(i['volume']),
-            })
+                    return_data.append({
+                        'pair': pair,
+                        'price': float(i['lastPrice']),
+                        'volume_anchor': float(i['quoteVolume']),
+                        'volume': float(i['volume']),
+                    })
 
         # print(return_data)
         return return_data
