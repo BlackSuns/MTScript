@@ -28,6 +28,8 @@
         "BTF":  "Bitcoin Faith",
         "ZSC":  "Zeusshield",
         "ENT":  "Eternity",
-        "NAS":  "Nebulas Token"
+        "NAS":  "Nebulas Token",
+        "CHAT": "Chatcoin",
+        "PST":  "Primas"
     }
 }
