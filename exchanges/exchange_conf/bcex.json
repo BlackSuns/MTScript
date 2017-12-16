@@ -83,6 +83,7 @@
         "GAME": "GameCredits",
         "LSK": "Lisk",
         "LLT":  "LLToken",
-        "CMT":  "CyberMiles"
+        "CMT":  "CyberMiles",
+        "ETF":  "Ethereum Fog"
     }
 }

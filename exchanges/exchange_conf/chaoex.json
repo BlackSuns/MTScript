@@ -38,6 +38,7 @@
         "SPF":  "SportyFi",
         "ETF":  "Ethereum Fog",
         "EMO":  "Ethereum Modification",
-        "DNC":  "DarkNetCoin"
+        "DNC":  "DarkNetCoin",
+        "BCX":  "BitcoinX"
     }
 }

@@ -55,6 +55,7 @@
         "DAT":  "Datum",
         "AMM":  "MicroMoney",
         "KNC":  "Kyber Network",
-        "TNB":  "Time New Bank"
+        "TNB":  "Time New Bank",
+        "ICX":  "ICON"
     }
 }
