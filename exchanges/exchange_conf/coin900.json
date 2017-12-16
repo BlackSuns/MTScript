@@ -10,6 +10,7 @@
         "LTC":  "Litecoin",
         "EOS":  "EOS",
         "BTC":  "Bitcoin",
-        "DRGN": "Dragonchain"
+        "DRGN": "Dragonchain",
+        "BTF":  "Bitcoin Faith"
     }
 }

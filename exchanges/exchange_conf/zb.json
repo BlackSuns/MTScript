@@ -15,6 +15,9 @@
         "SBTC": "Super Bitcoin",
         "UBTC": "UnitedBitcoin",
         "TV":   "Ti-Value",
-        "INK":  "ink"
+        "INK":  "ink",
+        "BCX":  "BitcoinX",
+        "BTH":  "Bitcoin Hot",
+        "LBTC": "Lightning Bitcoin"
     }
 }
