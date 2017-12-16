@@ -17,7 +17,6 @@
         "GOOC": "Goocoin",
         "NXT":  "Nxt",
         "IFC":  "Infinitecoin",
-        "DNC":  "SafeNetSpace",
         "BLK":  "BlackCoin",
         "VRC":  "VeriCoin",
         "XPM":  "Primecoin",
@@ -52,6 +51,7 @@
         "IPC":  "IPC",
         "LBTC": "Lightning Bitcoin",
         "ETF":  "Ethereum Fog",
-        "BTP":  "Bitcoin Pay"
+        "BTP":  "Bitcoin Pay",
+        "DNC":  "DarkNetCoin"
     }
 }
