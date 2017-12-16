@@ -25,6 +25,7 @@
         "UBTC": "UnitedBitcoin",
         "SBTC": "Super Bitcoin",
         "CHAT": "Chatcoin",
-        "TSL":  "Energo"
+        "TSL":  "Energo",
+        "XWC":  "WhiteCoin",
     }
 }

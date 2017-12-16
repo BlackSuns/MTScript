@@ -51,6 +51,7 @@
         "TSL":  "Energo",
         "IPC":  "IPC",
         "LBTC": "Lightning Bitcoin",
-        "ETF":  "Ethereum Fog"
+        "ETF":  "Ethereum Fog",
+        "BTP":  "Bitcoin Pay"
     }
 }
