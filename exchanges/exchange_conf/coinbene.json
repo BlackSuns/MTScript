@@ -1,0 +1,21 @@
+{
+    "name_symbol": {
+        "BTC":  "Bitcoin",
+        "ETH":  "Ethereum",
+        "LTC":  "Litecoin",
+        "BCH":  "Bitcoin Cash",
+        "BCD":  "Bitcoin Diamond",
+        "XRP":  "Ripple",
+        "TNB":  "Time New Bank",
+        "NULS": "Nuls",
+        "SWTC": "Jingtum",
+        "MOAC": "MoacChain",
+        "CMT":  "CyberMiles",
+        "ZIBER":    "ZIBER",
+        "MDA":  "Moeda Loyalty Points",
+        "AE":   "Aeternity",
+        "OMG":  "OmiseGO",
+        "BTM":  "Bytom",
+        "USDT": "Tether"
+    }
+}

@@ -4,6 +4,7 @@ from exchanges.gemini import GeminiExchange
 from exchanges.acx import AcxExchange
 from exchanges.livecoin import LivecoinExchange
 from exchanges.itbit import ItbitExchange
+from exchanges.coinbene import CoinbeneExchange
 
 
 if __name__ == '__main__':
@@ -28,5 +29,9 @@ if __name__ == '__main__':
     acx = AcxExchange()
     acx.post_result_batch()
     print_log("ACX Done...")
+
+    cb = CoinbeneExchange()
+    cb.post_result_batch()
+    print_log("Coinbene done...")
 
     print_log("all exchanges synced...")
