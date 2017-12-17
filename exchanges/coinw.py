@@ -8,7 +8,7 @@ class CoinwExchange(BaseExchange):
     def __init__(self):
         super().__init__()
         self.exchange = 'coinw'
-        self.exchange_id = 1355
+        self.exchange_id = 1376
         self.base_url = 'https://www.coinw.com/appApi.html'
 
         self.ticker_url = '?action=market&symbol=18'
