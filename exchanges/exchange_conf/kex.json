@@ -1,0 +1,23 @@
+{
+    "name_symbol": {
+        "PRO":  "ProChain",
+        "XEM":  "NEM",
+        "HSR":  "Hshare",
+        "XAS":  "Asch",
+        "BTM":  "Bytom",
+        "IPC":  "IPC",
+        "TNB":  "Time New Bank",
+        "BCX":  "BitcoinX",
+        "BTC":  "Bitcoin",
+        "LTC":  "Litecoin",
+        "ETH":  "Ethereum",
+        "TV":  "Ti-Value",
+        "INF":  "InfChain",
+        "ACT":  "Achain",
+        "BCD":  "Bitcoin Diamond",
+        "BCC":  "Bitcoin Cash",
+        "ETC":  "Ethereum Classic",
+        "ELT":  "ELT",
+        "MVC":  "Maverick Chain"
+    }
+}

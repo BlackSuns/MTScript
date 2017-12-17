@@ -13,6 +13,7 @@ from exchanges.coin900 import Coin900Exchange
 from exchanges.lbank import LbankExchange
 from exchanges.hib8 import Hib8Exchange
 from exchanges.coinw import CoinwExchange
+from exchanges.kex import KexExchange
 
 
 if __name__ == '__main__':
@@ -73,5 +74,9 @@ if __name__ == '__main__':
     cw = CoinwExchange()
     cw.post_result_batch()
     print_log("Coinw done...")
+
+    kex = KexExchange()
+    kex.post_result_batch()
+    print_log("KEX done")
 
     print_log("all exchanges synced...")
