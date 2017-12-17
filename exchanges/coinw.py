@@ -11,7 +11,7 @@ class CoinwExchange(BaseExchange):
         self.exchange_id = 1376
         self.base_url = 'https://www.coinw.com/appApi.html'
 
-        self.ticker_url = '?action=market&symbol=18'
+        self.ticker_url = '?action=market'
 
         self.alias = ''
         self.with_name = True
