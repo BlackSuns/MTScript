@@ -11,6 +11,7 @@ from exchanges.ucx import UcxExchange
 from exchanges.bibox import BiboxExchange
 from exchanges.coin900 import Coin900Exchange
 from exchanges.lbank import LbankExchange
+from exchanges.hib8 import Hib8Exchange
 
 
 if __name__ == '__main__':
@@ -63,5 +64,9 @@ if __name__ == '__main__':
     lb = LbankExchange()
     lb.post_result_batch()
     print_log("Lbank done...")
+
+    h8 = Hib8Exchange()
+    h8.post_result_batch()
+    print_log("Hib8 done...")
 
     print_log("all exchanges synced...")
