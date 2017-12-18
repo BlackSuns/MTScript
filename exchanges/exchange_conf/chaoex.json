@@ -40,9 +40,10 @@
         "EMO":  "Ethereum Modification",
         "DNC":  "DarkNetCoin",
         "BCX":  "BitcoinX",
-        "XMR":  "",
+        "XMR":  "Monero",
         "NEO":  "NEO",
         "ZEC":  "Zcash",
-        "QTUM": "Qtum"
+        "QTUM": "Qtum",
+        "DASH": "Dash"
     }
 }

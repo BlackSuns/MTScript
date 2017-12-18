@@ -9,6 +9,7 @@
         "RSS":  "Red Sea Shells",
         "SNT":  "Status",
         "EOS":  "EOS",
-        "KNC":  "Kyber Network"
+        "KNC":  "Kyber Network",
+        "LLT":  "LLToken"
     }
 }
