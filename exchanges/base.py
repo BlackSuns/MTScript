@@ -93,7 +93,7 @@ class BaseExchange(object):
 
     def post_json_request(self, url, params=None):
         # print(url)
-        print(params)
+        # print(params)
         r = requests.post(url, data=params)
 
         # print(r.text)
@@ -167,7 +167,7 @@ class BaseExchange(object):
             jobs = self.chunks(remote_data, page_size)
             for j in jobs:
                 for data in j:
-
+                    # print(data)
 
                     (symbol, anchor) = self.part_pair(data['pair'])
                     volume_anchor = data['volume_anchor']
