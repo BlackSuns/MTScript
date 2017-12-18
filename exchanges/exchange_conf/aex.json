@@ -40,6 +40,7 @@
         "XYT": "XCoinPay",
         "SBTC": "Super Bitcoin",
         "BCX":  "BitcoinX",
-        "ATN":  "AI Technology Network"
+        "ATN":  "AI Technology Network",
+        "QASH": "QASH"
     }
 }
