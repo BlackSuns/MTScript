@@ -30,6 +30,7 @@
         "ENT":  "ENTCash",
         "NAS":  "Nebulas Token",
         "CHAT": "Chatcoin",
-        "PST":  "Primas"
+        "PST":  "Primas",
+        "BTCS": "BitcoinStake"
     }
 }

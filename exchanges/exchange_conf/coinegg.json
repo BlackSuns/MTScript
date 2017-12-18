@@ -52,6 +52,7 @@
         "LBTC": "Lightning Bitcoin",
         "ETF":  "Ethereum Fog",
         "BTP":  "Bitcoin Pay",
-        "DNC":  "DarkNetCoin"
+        "DNC":  "DarkNetCoin",
+        "EOS":  "EOS"
     }
 }
