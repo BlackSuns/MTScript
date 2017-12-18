@@ -40,6 +40,8 @@
         "SMT":  "SmartMesh",
         "SBTC": "Super Bitcoin",
         "MANA": "Decentraland",
-        "CVC":  "Civic"
+        "CVC":  "Civic",
+        "VEN":  "VeChain",
+        "SALT": "SALT"
     }
 }
