@@ -3,6 +3,7 @@
         "BTC":  "Bitcoin",
         "ETH":  "Ethereum",
         "HSR":  "Hshare",
-        "BCH":  "Bitcoin Cash"
+        "BCH":  "Bitcoin Cash",
+        "FUEL": "Etherparty"
     }
 }
