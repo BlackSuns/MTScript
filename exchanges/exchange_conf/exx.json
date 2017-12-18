@@ -27,6 +27,9 @@
         "CHAT": "Chatcoin",
         "TSL":  "Energo",
         "XWC":  "WhiteCoin",
-        "CFUN": "CFun"
+        "CFUN": "CFun",
+        "LBTC": "Lightning Bitcoin",
+        "DASH": "Dash",
+        "BTW":  "BitcoinWorld"
     }
 }
