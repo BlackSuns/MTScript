@@ -13,6 +13,7 @@
         "BCH":  "Bitcoin Cash",
         "DOGE": "Dogecoin",
         "SBTC": "Super Bitcoin",
-        "ETF":  "Ethereum Fog"
+        "ETF":  "Ethereum Fog",
+        "UBTC": "UnitedBitcoin"
     }
 }

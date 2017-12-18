@@ -39,6 +39,10 @@
         "ETF":  "Ethereum Fog",
         "EMO":  "Ethereum Modification",
         "DNC":  "DarkNetCoin",
-        "BCX":  "BitcoinX"
+        "BCX":  "BitcoinX",
+        "XMR":  "",
+        "NEO":  "NEO",
+        "ZEC":  "Zcash",
+        "QTUM": "Qtum"
     }
 }
