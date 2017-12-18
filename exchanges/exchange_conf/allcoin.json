@@ -51,6 +51,8 @@
         "PCASH": "PlayCash",
         "UIP":   "UnlimitedIP",
         "GNX":  "Genaro",
-        "ENT":  "ENTCash"
+        "ENT":  "ENTCash",
+        "QBT":  "Qbao",
+        "HLC":  "Halal Chain"
     }
 }
