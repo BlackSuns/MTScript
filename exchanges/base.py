@@ -93,7 +93,7 @@ class BaseExchange(object):
 
     def post_json_request(self, url, params=None):
         # print(url)
-        # print(params)
+        print(params)
         r = requests.post(url, data=params)
 
         # print(r.text)
@@ -167,30 +167,32 @@ class BaseExchange(object):
             jobs = self.chunks(remote_data, page_size)
             for j in jobs:
                 for data in j:
-                    price = data['price']
-                    if price and float(price) > 0:
-                        (symbol, anchor) = self.part_pair(data['pair'])
-                        volume_anchor = data['volume_anchor']
-                        volume = data['volume']
 
-                        params = {
-                            "symbol": symbol,
-                            "market_id": self.exchange_id,
-                            "anchor": anchor,
-                            "price": price,
-                            "volume_24h": volume_anchor,
-                            "volume_24h_symbol": volume,
-                        }
 
-                        opt_params = ('name', 'percent_change_24h',
-                                      'rank', 'market_cap_usd', 'available_supply',
-                                      'total_supply', 'max_supply')
+                    (symbol, anchor) = self.part_pair(data['pair'])
+                    volume_anchor = data['volume_anchor']
+                    volume = data['volume']
 
-                        for p in opt_params:
-                            if p in data.keys():
-                                params[p] = data[p]
+                    params = {
+                        "symbol": symbol,
+                        "market_id": self.exchange_id,
+                        "anchor": anchor,
+                        "volume_24h": volume_anchor,
+                        "volume_24h_symbol": volume,
+                    }
 
-                        request_data.append(params)
+                    if 'price' in data.keys():
+                        params['price'] = data['price']
+
+                    opt_params = ('name', 'percent_change_24h',
+                                  'rank', 'market_cap_usd', 'available_supply',
+                                  'total_supply', 'max_supply')
+
+                    for p in opt_params:
+                        if p in data.keys():
+                            params[p] = data[p]
+
+                    request_data.append(params)
 
                 if not self.with_name:
                     with open(self.exchange_conf, 'r') as f:
