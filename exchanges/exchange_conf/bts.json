@@ -38,7 +38,10 @@
         "ZEPH": {"name": "Zephyr", "symbol": "ZEPH"},
         "FIMK": {"name": "FIMKrypto", "symbol": "FIMK"},
         "QORA": {"name": "Qora", "symbol": "QORA"},
-        "NINJASOUL": {"name": "NINJASOUL", "symbol": "NINJASOUL"}
+        "NINJASOUL": {"name": "NINJASOUL", "symbol": "NINJASOUL"},
+        "IPFS": {"name": "IPFS", "symbol": "IPFS"},
+        "STATER": {"name": "STATER", "symbol": "STATER"},
+        "BZBJB": {"name": "BZBJB", "symbol": "BZBJB"}
     },
     "anchors": {
         "USD": {"name": "bitUSD", "symbol": "bitUSD"},
