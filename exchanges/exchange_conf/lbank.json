@@ -31,6 +31,10 @@
         "NAS":  "Nebulas Token",
         "CHAT": "Chatcoin",
         "PST":  "Primas",
-        "BTCS": "BitcoinStake"
+        "BTCS": "BitcoinStake",
+        "LTC":  "Litecoin",
+        "DASH": "Dash",
+        "QBT":  "Qbao",
+        "EOS":  "EOS"
     }
 }

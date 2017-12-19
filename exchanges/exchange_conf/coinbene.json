@@ -20,6 +20,7 @@
         "LEND": "ETHLend",
         "SWFTC":  "SwftCoin",
         "PLAY": "HERO",
-        "ITC":  "IoT Chain"
+        "ITC":  "IoT Chain",
+        "LEEK": "LeekICO"
     }
 }
