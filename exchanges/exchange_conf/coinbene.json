@@ -16,6 +16,10 @@
         "AE":   "Aeternity",
         "OMG":  "OmiseGO",
         "BTM":  "Bytom",
-        "USDT": "Tether"
+        "USDT": "Tether",
+        "LENT": "ETHLend",
+        "SWFTC":  "SwftCoin",
+        "PLAY": "HERO",
+        "ITC":  "IoT Chain"
     }
 }
