@@ -7,6 +7,7 @@
         "UCX":  "UCX",
         "WKC":  "WKC",
         "LLT":  "LLToken",
-        "BTS":  "BitShares"
+        "BTS":  "BitShares",
+        "LCC":  "LCC"
     }
 }

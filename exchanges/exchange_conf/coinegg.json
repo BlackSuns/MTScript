@@ -53,6 +53,9 @@
         "ETF":  "Ethereum Fog",
         "BTP":  "Bitcoin Pay",
         "DNC":  "DarkNetCoin",
-        "EOS":  "EOS"
+        "EOS":  "EOS",
+        "QBT":  "Qbao",
+        "BTW":  "BitcoinWorld",
+        "SBTC": "Super Bitcoin"
     }
 }
