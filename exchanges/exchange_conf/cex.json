@@ -4,12 +4,12 @@
         "eth_usd",
         "etc_usd",
         "ltc_usd",
-        "bcc_usd",
+        "bch_usd",
 
         "eth_btc",
         "etc_btc",
         "ltc_btc",
-        "bcc_btc",
+        "bch_btc",
         "qtum_btc",
         "eos_btc",
         "omg_btc",
@@ -31,7 +31,7 @@
         "bcx_btc",
         "sbtc_btc",
 
-        "bcc_eth",
+        "bch_eth",
         "qtum_eth",
         "eos_eth",
         "omg_eth",
@@ -62,7 +62,7 @@
 
         "btc_usdt",
         "eth_usdt",
-        "bcc_usdt",
+        "bch_usdt",
         "etc_usdt",
         "ltc_usdt",
         "ae_usdt",
@@ -81,7 +81,7 @@
         "mds_usdt"
     ],
     "name_symbol": {
-        "BCC":  "Bitcoin Cash",
+        "BCH":  "Bitcoin Cash",
         "BTC":  "Bitcoin",
         "ETC":  "Ethereum Classic",
         "ETH":  "Ethereum",
