@@ -30,6 +30,7 @@
         "CFUN": "CFun",
         "LBTC": "Lightning Bitcoin",
         "DASH": "Dash",
-        "BTW":  "BitcoinWorld"
+        "BTW":  "BitcoinWorld",
+        "CFun": "CFUN"
     }
 }
