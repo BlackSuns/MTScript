@@ -42,6 +42,7 @@
         "BCX":  "BitcoinX",
         "ATN":  "AI Technology Network",
         "QASH": "QASH",
-        "LBTC": "Lightning Bitcoin"
+        "LBTC": "Lightning Bitcoin",
+        "LEND": "ETHLend"
     }
 }

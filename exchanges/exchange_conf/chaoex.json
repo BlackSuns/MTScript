@@ -44,6 +44,7 @@
         "NEO":  "NEO",
         "ZEC":  "Zcash",
         "QTUM": "Qtum",
-        "DASH": "Dash"
+        "DASH": "Dash",
+        "DCT":  "DECENT"
     }
 }
