@@ -41,6 +41,7 @@
         "SBTC": "Super Bitcoin",
         "BCX":  "BitcoinX",
         "ATN":  "AI Technology Network",
-        "QASH": "QASH"
+        "QASH": "QASH",
+        "LBTC": "Lightning Bitcoin"
     }
 }
