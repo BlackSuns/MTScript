@@ -13,6 +13,7 @@
         "LBTC": "Lightning Bitcoin",
         "ETF":  "Ethereum Fog",
         "BCX":  "BitcoinX",
-        "BTP":  "Bitcoin Pay"
+        "BTP":  "Bitcoin Pay",
+        "EOS":  "EOS"
     }
 }
