@@ -17,7 +17,7 @@
         "ZZM":  "ZZM",
         "IPT":  "IPTChain",
         "NULS": "Nuls",
-        "XAS":  "Asch",
+        "ASCH":  "Asch",
         "PRL":  "Oyster Pearl",
         "ETF":  "Ethereum Fog",
         "YOYOW":    "YOYOW",
@@ -36,6 +36,8 @@
         "FUC":  "FUC",
         "FVS":  "Free Value Security",
         "GEC":  "Ge-Chain",
-        "LDC":  "LaiDe Coin"
+        "LDC":  "LaiDe Coin",
+        "ETH":  "Ethereum",
+        "MAC":  "MAC"
     }
 }
