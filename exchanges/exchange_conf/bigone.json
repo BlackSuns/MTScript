@@ -24,6 +24,7 @@
         "SBTC": "Super Bitcoin",
         "CHAT": "Chatcoin",
         "MAG":  "Maggie",
-        "DEW":  "Decentralized Exchange of the World"
+        "DEW":  "Decentralized Exchange of the World",
+        "BTC":  "Bitcoin"
     }
 }
