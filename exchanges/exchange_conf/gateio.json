@@ -1,5 +1,6 @@
 {
     "name_symbol": {
+        "ADA":  "Cardano",
         "AE":   "Aeternity",
         "ARN":  "Aeron",
         "BAT":  "Basic Attention Token",
@@ -40,6 +41,7 @@
         "LINK": "ChainLink",
         "LLT":  "LLToken",
         "LRC":  "Loopring",
+        "LSK":  "Lisk",
         "LTC":  "Litecoin",
         "MANA": "Decentraland",
         "MCO":  "Monaco",
@@ -73,6 +75,7 @@
         "TRX":  "TRON",
         "VEN":  "VeChain",
         "VERI": "Veritaseum",
+        "WAVES":  "Waves",
         "WINGS": "Wings",
         "WTC":  "Walton",
         "XCN":  "Cryptonite",
