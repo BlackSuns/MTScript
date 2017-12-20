@@ -8,6 +8,7 @@
         "WKC":  "WKC",
         "LLT":  "LLToken",
         "BTS":  "BitShares",
-        "LCC":  "LCC"
+        "LCC":  "LCC",
+        "UTK":  "UToken"
     }
 }
