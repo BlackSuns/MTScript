@@ -44,6 +44,7 @@
         "VEN":  "VeChain",
         "SALT": "SALT",
         "HSR":  "Hshare",
-        "WAX":  "WAX"
+        "WAX":  "WAX",
+        "BTM":  "Bytom"
     }
 }
