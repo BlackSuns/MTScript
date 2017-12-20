@@ -2,6 +2,7 @@
     "name_symbol": {
         "BTC":  "Bitcoin",
         "ETH":  "Ethereum",
-        "LTC":  "Litecoin"
+        "LTC":  "Litecoin",
+        "BCH":  "Bitcoin Cash"
     }
 }
