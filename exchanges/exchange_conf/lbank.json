@@ -35,6 +35,7 @@
         "LTC":  "Litecoin",
         "DASH": "Dash",
         "QBT":  "Qbao",
-        "EOS":  "EOS"
+        "EOS":  "EOS",
+        "MDA":  "Moeda Loyalty Points"
     }
 }

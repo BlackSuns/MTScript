@@ -31,6 +31,8 @@
         "LBTC": "Lightning Bitcoin",
         "DASH": "Dash",
         "BTW":  "BitcoinWorld",
-        "CFun": "CFUN"
+        "CFun": "CFUN",
+        "ETF":  "Ethereum Fog",
+        "QBT":  "Qbao"
     }
 }

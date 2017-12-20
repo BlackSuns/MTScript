@@ -54,6 +54,7 @@
         "ENT":  "ENTCash",
         "QBT":  "Qbao",
         "HLC":  "Halal Chain",
-        "DBC":  "DeepBrainChain"
+        "DBC":  "DeepBrainChain",
+        "BTF":  "Bitcoin Faith"
     }
 }
