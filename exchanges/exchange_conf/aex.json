@@ -43,6 +43,10 @@
         "ATN":  "AI Technology Network",
         "QASH": "QASH",
         "LBTC": "Lightning Bitcoin",
-        "LEND": "ETHLend"
+        "LEND": "ETHLend",
+        "AE": "Aeternity",
+        "CVC":  "Civic",
+        "BNT":  "Bancor",
+        "KNC":  "Kyber Network"
     }
 }
