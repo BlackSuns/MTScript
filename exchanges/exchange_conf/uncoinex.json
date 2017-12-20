@@ -22,6 +22,20 @@
         "ETF":  "Ethereum Fog",
         "YOYOW":    "YOYOW",
         "BTS":  "BitShares",
-        "HIC":  "HIC"
+        "HIC":  "HIC",
+        "GCS":  "GCS",
+        "LRC":  "Loopring",
+        "BTF":  "Bitcoin Faith",
+        "CPL":  "CPL",
+        "LEEK":  "LeekICO",
+        "MOAC":  "MoacChain",
+        "SWTC":  "Jingtum",
+        "SIC":  "Swisscoin",
+        "MBC":  "Music Block Chain",
+        "DABT":  "DABT",
+        "FUC":  "FUC",
+        "FVS":  "Free Value Security",
+        "GEC":  "Ge-Chain",
+        "LDC":  "LaiDe Coin"
     }
 }
