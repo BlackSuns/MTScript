@@ -14,6 +14,8 @@
         "ETF":  "Ethereum Fog",
         "BCX":  "BitcoinX",
         "BTP":  "Bitcoin Pay",
-        "EOS":  "EOS"
+        "EOS":  "EOS",
+        "BTW":  "BitcoinWorld",
+        "SBTC": "Super Bitcoin"
     }
 }
