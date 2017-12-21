@@ -65,6 +65,12 @@
         "SUB":  "Substratum",
         "FUN":  "FunFair",
         "DNT":  "district0x",
-        "AST":  "AirSwap"
+        "AST":  "AirSwap",
+        "ACE":  "TokenStars",
+        "TRX":  "TRON",
+        "EVX":  "Everex",
+        "MTH":  "Monetha",
+        "MDA":  "Moeda Loyalty Points",
+        "MTL":  "Metal"
     }
 }
