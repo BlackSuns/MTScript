@@ -8,9 +8,9 @@ class LbankExchange(BaseExchange):
         super().__init__()
         self.exchange = 'lbank'
         self.exchange_id = 1369
-        self.base_url = 'https://www.lbank.info'
+        self.base_url = 'http://api.lbank.info/v1'
 
-        self.ticker_url = '/request/tickers?assetCode='
+        self.ticker_url = '/ticker.do?symbol=all'
 
         self.alias = ''
         self.with_name = False
@@ -25,12 +25,13 @@ class LbankExchange(BaseExchange):
     def ticker_callback(self, result):
         return_data = []
 
-        for t in result['dataWrapper']['data']:
-            if 'symbol' in t.keys():
-                pair = t['symbol']
-                price = float(t['lastPrice'])
-                volume = float(t['vol'])
-                volume_anchor = price * volume
+        for i in result:
+            (symbol, anchor) = i['symbol'].split('_')
+            if symbol and anchor:
+                pair = '{}/{}'.format(symbol.upper(), anchor.upper())
+                price = float(i['ticker']['latest'])
+                volume = float(i['ticker']['vol'])
+                volume_anchor = float(i['ticker']['turnover'])
                 return_data.append({
                     'pair': pair,
                     'price': price,
