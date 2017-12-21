@@ -56,6 +56,8 @@
         "EOS":  "EOS",
         "QBT":  "Qbao",
         "BTW":  "BitcoinWorld",
-        "SBTC": "Super Bitcoin"
+        "SBTC": "Super Bitcoin",
+        "KMC":  "Koumei Cottage",
+        "IPT":  "IPTChain"
     }
 }

@@ -61,6 +61,8 @@
         "yoyow_eth",
         "mds_eth",
         "elf_eth",
+        "xuc_eth",
+        "mkr_eth",
 
         "btc_usdt",
         "eth_usdt",
@@ -80,7 +82,9 @@
         "snt_usdt",
         "itc_usdt",
         "lend_usdt",
-        "mds_usdt"
+        "mds_usdt",
+        "xuc_usdt",
+        "mkr_usdt"
     ],
     "name_symbol": {
         "BCH":  "Bitcoin Cash",
@@ -120,6 +124,8 @@
         "BCX":  "BitcoinX",
         "SBTC": "Super Bitcoin",
         "MDS":  "MediShares",
-        "ELF":  "aelf"
+        "ELF":  "aelf",
+        "XUC":  "Exchange Union",
+        "MKR":  "Maker"
     }
 }

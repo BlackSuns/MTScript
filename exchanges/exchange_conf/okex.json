@@ -61,6 +61,10 @@
         "GNX":  "Genaro",
         "QVT": "Qvolta",
         "YOYO": "YOYOW",
-        "ELF":  "aelf"
+        "ELF":  "aelf",
+        "SUB":  "Substratum",
+        "FUN":  "FunFair",
+        "DNT":  "district0x",
+        "AST":  "AirSwap"
     }
 }
