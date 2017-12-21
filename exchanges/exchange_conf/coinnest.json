@@ -13,7 +13,8 @@
         "btg_krw",
         "ada_krw",
         "tron_krw",
-        "wtc_krw"
+        "wtc_krw",
+        "bcd_krw"
     ],
     "name_symbol": {
         "BCH":  "Bitcoin Cash",
