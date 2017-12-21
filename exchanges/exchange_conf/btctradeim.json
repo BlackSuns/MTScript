@@ -16,6 +16,7 @@
         "BTP":  "Bitcoin Pay",
         "EOS":  "EOS",
         "BTW":  "BitcoinWorld",
-        "SBTC": "Super Bitcoin"
+        "SBTC": "Super Bitcoin",
+        "ACT":  "Achain"
     }
 }

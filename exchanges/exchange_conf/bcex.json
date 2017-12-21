@@ -14,6 +14,7 @@
         "LTC_BTC",
         "FCT_BTC",
         "ELF_BTC",
+        "BIFI_BTC",
         "YBY_ABC",
         "VPN_ABC",
         "CIC_ABC",
@@ -86,6 +87,7 @@
         "LLT":  "LLToken",
         "CMT":  "CyberMiles",
         "ETF":  "Ethereum Fog",
-        "ELF":  "aelf"
+        "ELF":  "aelf",
+        "BIFI": "Bitcoin File"
     }
 }

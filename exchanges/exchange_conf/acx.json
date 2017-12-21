@@ -4,6 +4,7 @@
         "ETH":  "Ethereum",
         "HSR":  "Hshare",
         "BCH":  "Bitcoin Cash",
-        "FUEL": "Etherparty"
+        "FUEL": "Etherparty",
+        "UBTC": "United Bitcoin"
     }
 }
