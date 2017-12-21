@@ -45,6 +45,7 @@
         "SALT": "SALT",
         "HSR":  "Hshare",
         "WAX":  "WAX",
-        "BTM":  "Bytom"
+        "BTM":  "Bytom",
+        "ELF": "aelf"
     }
 }
