@@ -3,6 +3,7 @@
         "BTC":  "Bitcoin",
         "ETH":  "Ethereum",
         "LTC":  "Litecoin",
-        "XRP":  "Ripple"
+        "XRP":  "Ripple",
+        "BCH":  "Bitcoin Cash"
     }
 }
