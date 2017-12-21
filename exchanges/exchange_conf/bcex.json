@@ -13,6 +13,7 @@
         "ZEC_BTC",
         "LTC_BTC",
         "FCT_BTC",
+        "ELF_BTC",
         "YBY_ABC",
         "VPN_ABC",
         "CIC_ABC",
@@ -84,6 +85,7 @@
         "LSK": "Lisk",
         "LLT":  "LLToken",
         "CMT":  "CyberMiles",
-        "ETF":  "Ethereum Fog"
+        "ETF":  "Ethereum Fog",
+        "ELF":  "aelf"
     }
 }

@@ -30,6 +30,7 @@
         "yoyow_btc",
         "bcx_btc",
         "sbtc_btc",
+        "elf_btc",
 
         "bch_eth",
         "qtum_eth",
@@ -59,6 +60,7 @@
         "lend_eth",
         "yoyow_eth",
         "mds_eth",
+        "elf_eth",
 
         "btc_usdt",
         "eth_usdt",
@@ -117,6 +119,7 @@
         "YOYOW":  "YOYOW",
         "BCX":  "BitcoinX",
         "SBTC": "Super Bitcoin",
-        "MDS":  "MediShares"
+        "MDS":  "MediShares",
+        "ELF":  "aelf"
     }
 }
