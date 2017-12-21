@@ -29,7 +29,7 @@
         "OMG":  "OmiseGO",
         "ADA":  "Cardano",
         "TRON": "TRON",
-        "WTC":  "Walton"
-
+        "WTC":  "Walton",
+        "BCD":  "Bitcoin Diamond"
     }
 }
