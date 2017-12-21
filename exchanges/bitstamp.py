@@ -33,6 +33,9 @@ class BitstampExchange(BaseExchange):
             'ethusd',
             'etheur',
             'ethbtc',
+            'bchusd',
+            'bchbtc',
+            'bcheur'
         )
 
     def get_remote_data(self):
