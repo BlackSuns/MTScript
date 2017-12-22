@@ -13,8 +13,6 @@
         "qtum_btc",
         "eos_btc",
         "omg_btc",
-        "inf_btc",
-        "cdt_btc",
         "rcn_btc",
         "data_btc",
         "etp_btc",
@@ -84,7 +82,9 @@
         "lend_usdt",
         "mds_usdt",
         "xuc_usdt",
-        "mkr_usdt"
+        "mkr_usdt",
+        "amb_usdt",
+        "stx_usdt"
     ],
     "name_symbol": {
         "BCH":  "Bitcoin Cash",
