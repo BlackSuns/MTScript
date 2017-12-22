@@ -6,6 +6,7 @@
         "DASH": "DASH",
         "QASH": "QASH",
         "QTUM": "Qtum",
-        "NEO":  "NEO"
+        "NEO":  "NEO",
+        "SPHTX": "SophiaTX"
     }
 }
