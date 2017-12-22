@@ -29,6 +29,10 @@ class ZaifExchange(BaseExchange):
             (symbol, anchor) = r['name'].split('/')
             if symbol == 'BITCRYSTALS':
                 symbol = 'BCY'
+            if symbol == 'ERC20.CMS':
+                symbol = 'CMS.ETH'
+            if symbol == 'MOSAIC.CMS':
+                symbol = 'CMS.XEM'
 
             pair = '{}/{}'.format(symbol.upper(), anchor.upper())
             support_pairs[pair] = r['currency_pair']
