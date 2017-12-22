@@ -47,6 +47,7 @@
         "AE": "Aeternity",
         "CVC":  "Civic",
         "BNT":  "Bancor",
-        "KNC":  "Kyber Network"
+        "KNC":  "Kyber Network",
+        "DAT":  "Datum"
     }
 }
