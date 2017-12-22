@@ -36,6 +36,7 @@
         "DASH": "Dash",
         "QBT":  "Qbao",
         "EOS":  "EOS",
-        "MDA":  "Moeda Loyalty Points"
+        "MDA":  "Moeda Loyalty Points",
+        "DCT":  "DECENT"
     }
 }
