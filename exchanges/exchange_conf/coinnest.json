@@ -14,7 +14,9 @@
         "ada_krw",
         "tron_krw",
         "wtc_krw",
-        "bcd_krw"
+        "bcd_krw",
+        "ink_krw",
+        "mco_krw"
     ],
     "name_symbol": {
         "BCH":  "Bitcoin Cash",
@@ -31,6 +33,8 @@
         "ADA":  "Cardano",
         "TRON": "TRON",
         "WTC":  "Walton",
-        "BCD":  "Bitcoin Diamond"
+        "BCD":  "Bitcoin Diamond",
+        "INK":  "ink",
+        "MCO":  "Monaco"
     }
 }
