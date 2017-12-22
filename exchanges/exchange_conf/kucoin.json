@@ -54,6 +54,7 @@
         "RHOC": "RChain",
         "DENT": "DENT",
         "DRGN": "Dragonchain",
-        "AION": "Aion"
+        "AION": "Aion",
+        "ONION":    "DeepOnion"
     }
 }

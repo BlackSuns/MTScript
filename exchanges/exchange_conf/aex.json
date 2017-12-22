@@ -48,6 +48,7 @@
         "CVC":  "Civic",
         "BNT":  "Bancor",
         "KNC":  "Kyber Network",
-        "DAT":  "Datum"
+        "DAT":  "Datum",
+        "BITE": "BitEthereum"
     }
 }
