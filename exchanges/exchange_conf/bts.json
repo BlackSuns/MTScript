@@ -41,7 +41,8 @@
         "NINJASOUL": {"name": "NINJASOUL", "symbol": "NINJASOUL"},
         "IPFS": {"name": "IPFS", "symbol": "IPFS"},
         "STATER": {"name": "STATER", "symbol": "STATER"},
-        "BZBJB": {"name": "BZBJB", "symbol": "BZBJB"}
+        "BZBJB": {"name": "BZBJB", "symbol": "BZBJB"},
+        "HERO": {"name": "Sovereign Hero", "symbol": "HERO"},
     },
     "anchors": {
         "USD": {"name": "bitUSD", "symbol": "bitUSD"},
