@@ -71,6 +71,8 @@
         "EVX":  "Everex",
         "MTH":  "Monetha",
         "MDA":  "Moeda Loyalty Points",
-        "MTL":  "Metal"
+        "MTL":  "Metal",
+        "XEM":  "NEM",
+        "DGB":  "DigiByte"
     }
 }
