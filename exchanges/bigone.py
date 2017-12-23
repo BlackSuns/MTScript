@@ -29,6 +29,8 @@ class BigoneExchange(BaseExchange):
         for c in result['data']:
             symbol = c['quote']
             anchor = c['base']
+            if anchor == 'BNC':
+                anchor = 'bitCNY'
             if anchor and symbol:
                 pair = '{}/{}'.format(symbol.upper(), anchor.upper())
                 price = float(c['ticker']['price'])
