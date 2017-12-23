@@ -55,6 +55,7 @@
         "DENT": "DENT",
         "DRGN": "Dragonchain",
         "AION": "Aion",
-        "ONION":    "DeepOnion"
+        "ONION":    "DeepOnion",
+        "DBC":  "DeepBrainChain"
     }
 }
