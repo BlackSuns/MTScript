@@ -16,7 +16,8 @@
         "wtc_krw",
         "bcd_krw",
         "ink_krw",
-        "mco_krw"
+        "mco_krw",
+        "hsr_krw"
     ],
     "name_symbol": {
         "BCH":  "Bitcoin Cash",
@@ -35,6 +36,7 @@
         "WTC":  "Walton",
         "BCD":  "Bitcoin Diamond",
         "INK":  "ink",
-        "MCO":  "Monaco"
+        "MCO":  "Monaco",
+        "HSR":  "Hshare"
     }
 }
