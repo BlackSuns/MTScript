@@ -18,6 +18,7 @@
         "INK":  "ink",
         "BCX":  "BitcoinX",
         "BTH":  "Bitcoin Hot",
-        "LBTC": "Lightning Bitcoin"
+        "LBTC": "Lightning Bitcoin",
+        "LCH": "Litecoin Cash"
     }
 }

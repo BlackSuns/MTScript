@@ -33,6 +33,7 @@
         "BTW":  "BitcoinWorld",
         "CFun": "CFUN",
         "ETF":  "Ethereum Fog",
-        "QBT":  "Qbao"
+        "QBT":  "Qbao",
+        "LCH":  "Litecoin Cash"
     }
 }

@@ -37,6 +37,7 @@
         "QBT":  "Qbao",
         "EOS":  "EOS",
         "MDA":  "Moeda Loyalty Points",
-        "DCT":  "DECENT"
+        "DCT":  "DECENT",
+        "LCH":  "Litecoin Cash"
     }
 }
