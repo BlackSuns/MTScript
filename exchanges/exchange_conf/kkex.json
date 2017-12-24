@@ -1,0 +1,11 @@
+{
+    "name_symbol": {
+        "EOS":  "EOS",
+        "BCD":  "Bitcoin Diamond",
+        "ETH":  "Ethereum",
+        "BCH":  "Bitcoin Cash",
+        "BTG":  "Bitcoin Gold",
+        "LBTC":  "Lightning Bitcoin",
+        "SBTC":  "Super Bitcoin"
+    }
+}

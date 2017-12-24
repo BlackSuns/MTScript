@@ -5,6 +5,7 @@ from exchanges.acx import AcxExchange
 from exchanges.livecoin import LivecoinExchange
 from exchanges.itbit import ItbitExchange
 from exchanges.coinbene import CoinbeneExchange
+from exchanges.kkex import KkexExchange
 
 
 if __name__ == '__main__':
@@ -33,5 +34,9 @@ if __name__ == '__main__':
     cb = CoinbeneExchange()
     cb.post_result_batch()
     print_log("Coinbene done...")
+
+    kk = KkexExchange()
+    kk.post_result_batch()
+    print_log("KKEX done")
 
     print_log("all exchanges synced...")
