@@ -17,6 +17,7 @@
         "OMG":  "OmiseGO",
         "SNT":  "Status",
         "LTC":  "Litecoin",
-        "EOS":  "EOS"
+        "EOS":  "EOS",
+        "ZIBER": "ZIBER"
     }
 }
