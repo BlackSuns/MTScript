@@ -4,6 +4,7 @@ from exchanges.nereax import NeraexExchange
 from exchanges.coinone import CoinoneExchange
 from exchanges.korbit import KorbitExchange
 from exchanges.quoine import QuoineExchange
+from exchanges.qryptos import QryptosExchange
 from exchanges.coincheck import CoincheckExchange
 from exchanges.zaif import ZaifExchange
 from exchanges.btcbox import BtcboxExchange
@@ -38,6 +39,10 @@ if __name__ == '__main__':
     qe = QuoineExchange()
     qe.post_result_batch()
     print_log('Quoine done...')
+
+    qp = QryptosExchange()
+    qp.post_result_batch()
+    print_log('Qryptos done...')
 
     cc = CoincheckExchange()
     cc.post_result_batch()

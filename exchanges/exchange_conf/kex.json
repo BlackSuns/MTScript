@@ -18,6 +18,7 @@
         "BCC":  "Bitcoin Cash",
         "ETC":  "Ethereum Classic",
         "ELT":  "ELT",
-        "MVC":  "Maverick Chain"
+        "MVC":  "Maverick Chain",
+        "AAC":  "Acute Angle Coin"
     }
 }

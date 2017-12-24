@@ -1,0 +1,31 @@
+{
+    "name_symbol": {
+        "BTC":  "Bitcoin",
+        "ZEC":  "Zcash",
+        "REP":  "Augur",
+        "XMR":  "Monero",
+        "ETH":  "Ethereum",
+        "ETC":  "Ethereum Classic",
+        "XRP":  "Ripple",
+        "LTC":  "Litecoin",
+        "XEM":  "NEM",
+        "BCH":  "Bitcoin Cash",
+        "XLM":  "Stellar Lumens",
+        "DASH":  "Dash",
+        "TRX":  "TRON",
+        "FCT":  "Factom",
+        "NEO":  "NEO",
+        "IND":  "Indorse Token",
+        "CVC":  "Civic",
+        "OMG":  "OmiseGO",
+        "OAX":  "OAX",
+        "GNT":  "Golem",
+        "STORJ":  "Storj",
+        "QTUM":  "Qtum",
+        "QASH":  "QASH",
+        "STX":  "Stox",
+        "VET":  "VeChain",
+        "MCO":  "Monaco",
+        "SPHTX":  "SophiaTX"
+    }
+}
