@@ -6,6 +6,7 @@ from exchanges.livecoin import LivecoinExchange
 from exchanges.itbit import ItbitExchange
 from exchanges.coinbene import CoinbeneExchange
 from exchanges.kkex import KkexExchange
+from exchanges.rightbtc import RightbtcExchange
 
 
 if __name__ == '__main__':
@@ -37,6 +38,10 @@ if __name__ == '__main__':
 
     kk = KkexExchange()
     kk.post_result_batch()
-    print_log("KKEX done")
+    print_log("KKEX done...")
+
+    rbtc = RightbtcExchange()
+    rbtc.post_result_batch()
+    print_log("Rightbtc done...")
 
     print_log("all exchanges synced...")

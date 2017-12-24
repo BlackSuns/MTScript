@@ -1,0 +1,15 @@
+{
+    "name_symbol": {
+        "MVC":  "Maverick Chain",
+        "IND":  "Indorse Token",
+        "BTM":  "Bytom",
+        "ZDC":  "ZenDao Coin",
+        "LTC":  "Litecoin",
+        "ETP":  "Metaverse ETP",
+        "ETC":  "Ethereum Classic",
+        "ETH":  "Ethereum",
+        "BCC":  "Bitcoin Cash",
+        "ZGC":  "ZenGold",
+        "DLT":  "Agrello"
+    }
+}
