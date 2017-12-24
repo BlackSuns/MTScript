@@ -18,6 +18,7 @@
         "SBTC": "Super Bitcoin",
         "ELF": "aelf",
         "MKR": "Maker",
-        "DAI":  "DAI"
+        "DAI":  "DAI",
+        "ITC":  "IoT Chain"
     }
 }
