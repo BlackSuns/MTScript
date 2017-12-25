@@ -29,6 +29,8 @@ class BcexExchange(BaseExchange):
         for anchor in result['data'].keys():
             for p in result['data'][anchor]:
                 symbol = p['coin_from']
+                if symbol == 'ans':
+                    symbol = 'NEO'
                 if anchor == 'ckusd':
                     anchor = 'CK.USD'
                 pair = '{}/{}'.format(symbol.upper(), anchor.upper())
