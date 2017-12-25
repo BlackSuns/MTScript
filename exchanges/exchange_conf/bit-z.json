@@ -51,6 +51,7 @@
         "HSR":  "Hcash",
         "YBC":  "YbCoin",
         "XAS": "ASCH",
-        "GXS":  "GXShares"
+        "GXS":  "GXShares",
+        "NULS": "Nuls"
     }
 }
