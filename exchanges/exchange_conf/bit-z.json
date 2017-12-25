@@ -45,6 +45,7 @@
         "BCX":  "BitcoinX",
         "MCO":  "Monaco",
         "ATM":  "ATMChain",
-        "TIME": "Chronobank"
+        "TIME": "Chronobank",
+        "PYLNT":  "Pylon"
     }
 }
