@@ -17,7 +17,8 @@
         "bcd_krw",
         "ink_krw",
         "mco_krw",
-        "hsr_krw"
+        "hsr_krw",
+        "ent_krw"
     ],
     "name_symbol": {
         "BCH":  "Bitcoin Cash",
@@ -37,6 +38,7 @@
         "BCD":  "Bitcoin Diamond",
         "INK":  "ink",
         "MCO":  "Monaco",
-        "HSR":  "Hshare"
+        "HSR":  "Hshare",
+        "ENT":  "ENTCash"
     }
 }
