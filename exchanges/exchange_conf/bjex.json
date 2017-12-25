@@ -14,6 +14,7 @@
         "HPS":  "Hyperplay",
         "OMG":  "OmiseGO",
         "DOGE": "Dogecoin",
-        "HLD": "Hyperlending"
+        "HLD": "Hyperlending",
+        "EOS":  "EOS"
     }
 }
