@@ -7,6 +7,7 @@ from exchanges.itbit import ItbitExchange
 from exchanges.coinbene import CoinbeneExchange
 from exchanges.kkex import KkexExchange
 from exchanges.rightbtc import RightbtcExchange
+from exchanges.bjex import BjexExchange
 
 
 if __name__ == '__main__':
@@ -43,5 +44,9 @@ if __name__ == '__main__':
     rbtc = RightbtcExchange()
     rbtc.post_result_batch()
     print_log("Rightbtc done...")
+
+    bj = BjexExchange()
+    bj.post_result_batch()
+    print_log('bjex done...')
 
     print_log("all exchanges synced...")

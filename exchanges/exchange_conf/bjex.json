@@ -1,0 +1,19 @@
+{
+    "name_symbol": {
+        "NEO":  "NEO",
+        "HSR": "Hcash",
+        "QTUM": "Qtum",
+        "LTC":  "Litecoin",
+        "BTC":  "Bitcoin",
+        "ETH":  "Ethereum",
+        "BCH":  "Bitcoin Cash",
+        "NEOGAS": "Gas",
+        "QBT": "Qbao",
+        "LEEK":  "LeekICO",
+        "HPY":  "Hyperpay",
+        "HPS":  "Hyperplay",
+        "OMG":  "OmiseGO",
+        "DOGE": "Dogecoin",
+        "HLD": "Hyperlending"
+    }
+}
