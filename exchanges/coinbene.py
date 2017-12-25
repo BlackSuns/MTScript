@@ -27,8 +27,8 @@ class CoinbeneExchange(BaseExchange):
         return_data = []
 
         for p in result["dayPrices"]:
-            price = float(p['nowPrice']) if p['nowPrice'] else 0
-            volume = float(p['volume24']) if p['volume24'] else 0
+            price = float(p['nowPrice']) if 'nowPrice' in p.keys() and p['nowPrice'] else 0
+            volume = float(p['volume24']) if 'volume24' in p.keys() and p['volume24'] else 0
             pair = p['name']
             if str(pair).endswith('BCNY'):
                 pair = pair[:-4] + 'BitCNY'
