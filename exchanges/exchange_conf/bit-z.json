@@ -53,6 +53,7 @@
         "XAS": "ASCH",
         "GXS":  "GXShares",
         "NULS": "Nuls",
-        "SSS":  "Sharechain"
+        "SSS":  "Sharechain",
+        "ARN":  "Aeron"
     }
 }
