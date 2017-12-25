@@ -90,6 +90,7 @@
         "ETF":  "Ethereum Fog",
         "ELF":  "aelf",
         "BIFI": "Bitcoin File",
-        "LCH":  "Litecoin Cash"
+        "LCH":  "Litecoin Cash",
+        "FBTC": "FastBTC"
     }
 }

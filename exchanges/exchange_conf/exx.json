@@ -34,6 +34,8 @@
         "CFun": "CFUN",
         "ETF":  "Ethereum Fog",
         "QBT":  "Qbao",
-        "LCH":  "Litecoin Cash"
+        "LCH":  "Litecoin Cash",
+        "BCK":  "BTC king",
+        "BCW":  "Bitcoin Wonder"
     }
 }

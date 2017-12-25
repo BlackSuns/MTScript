@@ -46,6 +46,11 @@
         "MCO":  "Monaco",
         "ATM":  "ATMChain",
         "TIME": "Chronobank",
-        "PYLNT":  "Pylon"
+        "PYLNT":  "Pylon",
+        "VTC": "Votecoin",
+        "HSR":  "Hcash",
+        "YBC":  "YbCoin",
+        "XAS": "ASCH",
+        "GXS":  "GXShares"
     }
 }

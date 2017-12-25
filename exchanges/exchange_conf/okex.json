@@ -73,6 +73,11 @@
         "MDA":  "Moeda Loyalty Points",
         "MTL":  "Metal",
         "XEM":  "NEM",
-        "DGB":  "DigiByte"
+        "DGB":  "DigiByte",
+        "PPT":  "Populous",
+        "OAX":  "OAX",
+        "REQ":  "Request Network",
+        "ENG":  "Enigma",
+        "ICN":  "Iconomi"
     }
 }
