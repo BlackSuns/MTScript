@@ -54,6 +54,7 @@
         "BTF":  "Bitcoin Faith",
         "LBTC":  "Lightning Bitcoin",
         "BCD":  "Bitcoin Diamond",
-        "PCASH":  "PlayCash"
+        "PCASH":  "PlayCash",
+        "CNET": "CNET"
     }
 }

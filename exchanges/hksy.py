@@ -28,7 +28,7 @@ class HksyExchange(BaseExchange):
         anchor = "HKD"
 
         for p in result['model']:
-            symbol = p['defaultcnname']
+            symbol = p['defaultenname']
 
             pair = '{}/{}'.format(symbol.upper(), anchor.upper())
             return_data.append({
