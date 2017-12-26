@@ -34,6 +34,7 @@
         "BASH":  "LuckChain",
         "ZCC":  "ZcCoin",
         "DASH":  "Dash",
-        "NXT":  "Nxt"
+        "NXT":  "Nxt",
+        "RDN":  "Raiden Network Token"
     }
 }
