@@ -46,6 +46,8 @@
         "HSR":  "Hshare",
         "WAX":  "WAX",
         "BTM":  "Bytom",
-        "ELF": "aelf"
+        "ELF": "aelf",
+        "NAS":  "Nebulas Token",
+        "DGB": "DigiByte"
     }
 }

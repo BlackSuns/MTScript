@@ -78,6 +78,8 @@
         "OAX":  "OAX",
         "REQ":  "Request Network",
         "ENG":  "Enigma",
-        "ICN":  "Iconomi"
+        "ICN":  "Iconomi",
+        "RCN":  "Ripio Credit Network",
+        "DGB": "DigiByte"
     }
 }

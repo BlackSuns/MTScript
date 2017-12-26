@@ -45,6 +45,7 @@
         "ZEC":  "Zcash",
         "QTUM": "Qtum",
         "DASH": "Dash",
-        "DCT":  "DECENT"
+        "DCT":  "DECENT",
+        "RCN":  "Ripio Credit Network"
     }
 }
