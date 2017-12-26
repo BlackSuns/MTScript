@@ -56,6 +56,8 @@
         "DRGN": "Dragonchain",
         "AION": "Aion",
         "ONION":    "DeepOnion",
-        "DBC":  "DeepBrainChain"
+        "DBC":  "DeepBrainChain",
+        "XLR":  "Solaris",
+        "BNTY": "Bounty0x"
     }
 }
