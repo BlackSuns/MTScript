@@ -26,6 +26,7 @@
         "OPEN.PPC": {"name": "Peercoin", "symbol": "PPC"},
         "OPEN.DCT": {"name": "DECENT", "symbol": "DCT"},
         "OPEN.HEAT": {"name": "HEAT", "symbol": "HEAT"},
+        "OPEN.EXCL": {"name": "ExclusiveCoin", "symbol": "EXCL"},
         "YOYOW": {"name": "YOYOW", "symbol": "YOYOW"},
         "OCT":  {"name": "OracleChain", "symbol": "OCT"},
         "OBITS": {"name": "OBITS", "symbol": "OBITS"},
