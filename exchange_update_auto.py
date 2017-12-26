@@ -8,6 +8,7 @@ from exchanges.coinbene import CoinbeneExchange
 from exchanges.kkex import KkexExchange
 from exchanges.rightbtc import RightbtcExchange
 from exchanges.bjex import BjexExchange
+from exchanges.asdbi import AsdbiExchange
 
 
 if __name__ == '__main__':
@@ -48,5 +49,9 @@ if __name__ == '__main__':
     bj = BjexExchange()
     bj.post_result_batch()
     print_log('bjex done...')
+
+    asdbi = AsdbiExchange()
+    asdbi.post_result_batch()
+    print_log('asdbi done...')
 
     print_log("all exchanges synced...")
