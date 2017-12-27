@@ -3,7 +3,9 @@
           "0x1b22": "WISH",
           "0xf833": "CMS",
           "0xff60": "RNT",
-          "0x286b": "WABI"
+          "0x286b": "WABI",
+          "0XD2D6": "BNTY",
+          "0x3833": "SPHTX"
     },
     "name_symbol": {
           "10MT":   "10M Token",
@@ -59,6 +61,7 @@
           "BNB":    "Binance Coin",
           "BNN":    "Bananas",
           "BNT":    "Bancor",
+          "BNTY":   "Bounty0x",
           "BON":  "Bonpay",
           "BQ":     "bitqy",
           "BQX":    "Ethos",
@@ -249,6 +252,7 @@
           "PFR":    "Payfair",
           "PGL":    "Prospectors Gold",
           "PIX":    "Lampix",
+          "PKT":    "Playkey",
           "PLBT":   "Polybius",
           "PLC":    "PlusCoin",
           "PLR":    "Pillar",
@@ -300,6 +304,7 @@
           "SNT":    "Status",
           "SONM":   "SONM",
           "SPANK":  "SpankChain",
+          "SPHTX":  "SophiaTX",
           "SPNK":   "spnk",
           "SSS":    "Sharechain",
           "STAR":   "Starbase",
