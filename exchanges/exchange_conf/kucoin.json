@@ -58,6 +58,7 @@
         "ONION":    "DeepOnion",
         "DBC":  "DeepBrainChain",
         "XLR":  "Solaris",
-        "BNTY": "Bounty0x"
+        "BNTY": "Bounty0x",
+        "TFL":  "TrueFlip"
     }
 }
