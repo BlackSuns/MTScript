@@ -49,5 +49,6 @@
         "ELF": "aelf",
         "NAS":  "Nebulas Token",
         "DGB": "DigiByte",
+        "BIFI": "Bitcoin File"
     }
 }
