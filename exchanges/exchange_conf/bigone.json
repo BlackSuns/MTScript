@@ -53,6 +53,8 @@
         "POWR": "Power Ledger",
         "CVC":  "Civic",
         "VEN":  "VeChain",
-        "BCDN": "BlockCDN"
+        "BCDN": "BlockCDN",
+        "BTG":  "Bitcoin Gold",
+        "BCD":  "Bitcoin Diamond"
     }
 }
