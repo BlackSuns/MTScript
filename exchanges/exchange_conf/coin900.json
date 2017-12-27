@@ -18,6 +18,7 @@
         "SNT":  "Status",
         "LTC":  "Litecoin",
         "EOS":  "EOS",
-        "ZIBER": "ZIBER"
+        "ZIBER": "ZIBER",
+        "PAY":  "TenX"
     }
 }

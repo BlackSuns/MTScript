@@ -19,6 +19,7 @@
         "BCX":  "BitcoinX",
         "BTH":  "Bitcoin Hot",
         "LBTC": "Lightning Bitcoin",
-        "LCH": "Litecoin Cash"
+        "LCH": "Litecoin Cash",
+        "CHAT": "Chatcoin"
     }
 }
