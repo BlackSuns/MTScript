@@ -35,6 +35,7 @@
         "ZCC":  "ZcCoin",
         "DASH":  "Dash",
         "NXT":  "Nxt",
-        "RDN":  "Raiden Network Token"
+        "RDN":  "Raiden Network Token",
+        "KMC":  "Koumei Cottage"
     }
 }

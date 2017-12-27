@@ -52,6 +52,7 @@
         "GNT":  "Golem",
         "POWR": "Power Ledger",
         "CVC":  "Civic",
-        "VEN":  "VeChain"
+        "VEN":  "VeChain",
+        "BCDN": "BlockCDN"
     }
 }

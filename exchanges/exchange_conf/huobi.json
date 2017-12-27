@@ -48,6 +48,6 @@
         "BTM":  "Bytom",
         "ELF": "aelf",
         "NAS":  "Nebulas Token",
-        "DGB": "DigiByte"
+        "DGB": "DigiByte",
     }
 }
