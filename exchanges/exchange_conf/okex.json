@@ -80,6 +80,7 @@
         "ENG":  "Enigma",
         "ICN":  "Iconomi",
         "RCN":  "Ripio Credit Network",
-        "DGB": "DigiByte"
+        "DGB": "DigiByte",
+        "SWFTC":    "SwftCoin"
     }
 }

@@ -38,6 +38,7 @@
         "EOS":  "EOS",
         "MDA":  "Moeda Loyalty Points",
         "DCT":  "DECENT",
-        "LCH":  "Litecoin Cash"
+        "LCH":  "Litecoin Cash",
+        "BCO":  "BitcoinOre"
     }
 }
