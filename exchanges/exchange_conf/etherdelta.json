@@ -5,7 +5,8 @@
           "0xff60": "RNT",
           "0x286b": "WABI",
           "0XD2D6": "BNTY",
-          "0x3833": "SPHTX"
+          "0x3833": "SPHTX",
+          "0X5D65": "NAS"
     },
     "name_symbol": {
           "10MT":   "10M Token",
@@ -234,6 +235,7 @@
           "MTX":    "Matryx",
           "MVC":    "Maverick Chain",
           "MYB":    "MyBit Token",
+          "NAS":    "Nebulas",
           "NET":    "Nimiq",
           "NEOG":   "NEO GOLD",
           "NEWB":   "Newbium",

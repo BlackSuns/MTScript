@@ -39,6 +39,7 @@
         "MDA":  "Moeda Loyalty Points",
         "DCT":  "DECENT",
         "LCH":  "Litecoin Cash",
-        "BCO":  "BitcoinOre"
+        "BCO":  "BitcoinOre",
+        "DBC":  "DeepBrainChain"
     }
 }

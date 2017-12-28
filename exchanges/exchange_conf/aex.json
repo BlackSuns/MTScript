@@ -49,6 +49,7 @@
         "BNT":  "Bancor",
         "KNC":  "Kyber Network",
         "DAT":  "Datum",
-        "BITE": "BitEthereum"
+        "BITE": "BitEthereum",
+        "GOD":  "Bitcoin God"
     }
 }
