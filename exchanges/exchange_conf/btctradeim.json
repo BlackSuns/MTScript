@@ -17,6 +17,7 @@
         "EOS":  "EOS",
         "BTW":  "BitcoinWorld",
         "SBTC": "Super Bitcoin",
-        "ACT":  "Achain"
+        "ACT":  "Achain",
+        "FBTC": "FastBTC"
     }
 }
