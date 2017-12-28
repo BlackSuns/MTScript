@@ -22,6 +22,9 @@
         "LCH": "Litecoin Cash",
         "CHAT": "Chatcoin",
         "BCO":  "BitcoinOre",
-        "HLC":  "Halal Chain"
+        "HLC":  "Halal Chain",
+        "BTP":  "Bitcoin Pay",
+        "BITE": "BitEthereum",
+        "BCW":  "Bitcoin Wonder"
     }
 }

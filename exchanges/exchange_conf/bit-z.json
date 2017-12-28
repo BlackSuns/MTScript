@@ -54,6 +54,7 @@
         "GXS":  "GXShares",
         "NULS": "Nuls",
         "SSS":  "Sharechain",
-        "ARN":  "Aeron"
+        "ARN":  "Aeron",
+        "POKER":    "Pokercoin"
     }
 }

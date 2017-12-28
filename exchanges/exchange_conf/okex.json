@@ -81,6 +81,9 @@
         "ICN":  "Iconomi",
         "RCN":  "Ripio Credit Network",
         "DGB": "DigiByte",
-        "SWFTC":    "SwftCoin"
+        "SWFTC":    "SwftCoin",
+        "RDN":  "Raiden Network Token",
+        "XLM":  "Stellar",
+        "XMR":  "Monero"
     }
 }
