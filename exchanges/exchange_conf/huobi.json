@@ -51,6 +51,7 @@
         "DGB": "DigiByte",
         "BIFI": "Bitcoin File",
         "NEO":  "NEO",
-        "GAS":  "GAS"
+        "GAS":  "GAS",
+        "ICX":  "ICON"
     }
 }
