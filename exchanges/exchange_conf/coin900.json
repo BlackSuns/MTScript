@@ -19,6 +19,7 @@
         "LTC":  "Litecoin",
         "EOS":  "EOS",
         "ZIBER": "ZIBER",
-        "PAY":  "TenX"
+        "PAY":  "TenX",
+        "KNC":  "Kyber Network"
     }
 }
