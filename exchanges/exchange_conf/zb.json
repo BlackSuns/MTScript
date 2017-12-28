@@ -21,6 +21,7 @@
         "LBTC": "Lightning Bitcoin",
         "LCH": "Litecoin Cash",
         "CHAT": "Chatcoin",
-        "BCO":  "BitcoinOre"
+        "BCO":  "BitcoinOre",
+        "HLC":  "Halal Chain"
     }
 }
