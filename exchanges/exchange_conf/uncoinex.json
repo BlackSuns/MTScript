@@ -39,6 +39,10 @@
         "LDC":  "LaiDe Coin",
         "ETH":  "Ethereum",
         "MAC":  "MAC",
-        "SMC":  "SimonsChain"
+        "SMC":  "SimonsChain",
+        "RDN":  "Raiden Network Token",
+        "LTE":  "ElectrumLtc",
+        "OEC":  "OpenCoin",
+        "JRC":  "Finchain"
     }
 }
