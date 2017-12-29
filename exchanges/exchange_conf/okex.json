@@ -84,6 +84,7 @@
         "SWFTC":    "SwftCoin",
         "RDN":  "Raiden Network Token",
         "XLM":  "Stellar",
-        "XMR":  "Monero"
+        "XMR":  "Monero",
+        "SBTC": "Super Bitcoin"
     }
 }
