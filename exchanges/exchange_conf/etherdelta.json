@@ -7,7 +7,8 @@
           "0XD2D6": "BNTY",
           "0x3833": "SPHTX",
           "0X5D65": "NAS",
-          "0x4524": "BKX"
+          "0x4524": "BKX",
+          "0X5D65": "NAS",
     },
     "name_symbol": {
           "10MT":   "10M Token",
@@ -164,6 +165,7 @@
           "FAP":    "FAPcoin",
           "FBL":    "Faceblock",
           "FC":     "Facecoin",
+          "FDX":    "fidentiaX",
           "FLIK":   "FLiK",
           "FLIP":   "Flip",
           "FLIXX":  "Flixxo",
@@ -238,7 +240,7 @@
           "MTX":    "Matryx",
           "MVC":    "Maverick Chain",
           "MYB":    "MyBit Token",
-          "NAS":    "Nebulas",
+          "NAS":    "Nebulas Token",
           "NET":    "Nimiq",
           "NEOG":   "NEO GOLD",
           "NEWB":   "Newbium",

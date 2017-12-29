@@ -10,6 +10,7 @@
         "ETH":  "Ethereum",
         "BCC":  "Bitcoin Cash",
         "ZGC":  "ZenGold",
-        "DLT":  "Agrello"
+        "DLT":  "Agrello",
+        "XRB":  "RaiBlocks"
     }
 }
