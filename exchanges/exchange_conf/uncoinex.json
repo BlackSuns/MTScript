@@ -38,6 +38,7 @@
         "GEC":  "Ge-Chain",
         "LDC":  "LaiDe Coin",
         "ETH":  "Ethereum",
-        "MAC":  "MAC"
+        "MAC":  "MAC",
+        "SMC":  "SimonsChain"
     }
 }
