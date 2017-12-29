@@ -18,6 +18,7 @@
         "BTW":  "BitcoinWorld",
         "SBTC": "Super Bitcoin",
         "ACT":  "Achain",
-        "FBTC": "FastBTC"
+        "FBTC": "FastBTC",
+        "HLC":  "Halal Chain"
     }
 }

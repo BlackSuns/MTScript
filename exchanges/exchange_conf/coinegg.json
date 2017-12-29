@@ -63,6 +63,7 @@
         "BMB":  "BMBChain",
         "TV":   "Ti-Value",
         "ACT":  "Achain",
-        "HLD":  "Hyperlending"
+        "HLD":  "Hyperlending",
+        "HLC":  "Halal Chain"
     }
 }
