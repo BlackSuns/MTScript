@@ -62,6 +62,7 @@
         "IPT":  "IPTChain",
         "BMB":  "BMBChain",
         "TV":   "Ti-Value",
-        "ACT":  "Achain"
+        "ACT":  "Achain",
+        "HLD":  "Hyperlending"
     }
 }
