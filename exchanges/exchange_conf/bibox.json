@@ -19,6 +19,7 @@
         "ELF": "aelf",
         "MKR": "Maker",
         "DAI":  "DAI",
-        "ITC":  "IoT Chain"
+        "ITC":  "IoT Chain",
+        "MOT":  "OlympusLabs"
     }
 }
