@@ -23,6 +23,7 @@
         "ETF":  "Ethereum Fog",
         "MGE":  "Merge",
         "CCC":  "CapricornCoin",
-        "BCC":  "Bitcoin Cash"
+        "BCC":  "Bitcoin Cash",
+        "DC":   "DC"
     }
 }
