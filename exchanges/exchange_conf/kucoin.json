@@ -63,6 +63,8 @@
         "BNTY": "Bounty0x",
         "TFL":  "TrueFlip",
         "UTK":  "UTRUST",
-        "UKG":  "Unikoin Gold"
+        "UKG":  "Unikoin Gold",
+        "SUB":  "Substratum",
+        "REQ":  "Request Network"
     }
 }
