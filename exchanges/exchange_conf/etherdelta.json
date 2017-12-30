@@ -7,7 +7,8 @@
           "0XD2D6": "BNTY",
           "0x3833": "SPHTX",
           "0X5D65": "NAS",
-          "0x4524": "BKX"
+          "0x4524": "BKX",
+          "0X70A7": "UTK"
     },
     "name_symbol": {
           "10MT":   "10M Token",
@@ -339,6 +340,7 @@
           "UAHPAY": "UAHPay",
           "UFR":    "Upfiring",
           "UKG":  "Unikoin Gold",
+          "UTK":    "UTRUST",
           "VEE":    "BLOCKv",
           "VEN":    "VeChain",
           "VERI":   "Veritaseum",
