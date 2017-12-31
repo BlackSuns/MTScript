@@ -55,6 +55,7 @@
         "NULS": "Nuls",
         "SSS":  "Sharechain",
         "ARN":  "Aeron",
-        "POKER":    "Pokercoin"
+        "POKER":    "Pokercoin",
+        "DASH": "Dash"
     }
 }
