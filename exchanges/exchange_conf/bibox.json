@@ -20,6 +20,7 @@
         "MKR": "Maker",
         "DAI":  "DAI",
         "ITC":  "IoT Chain",
-        "MOT":  "OlympusLabs"
+        "MOT":  "OlympusLabs",
+        "CAT":  "BitClave"
     }
 }
