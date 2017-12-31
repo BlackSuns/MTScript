@@ -78,7 +78,7 @@ class BaseExchange(object):
         if url.startswith("https://api.etherdelta.com"):
             headers['cookie'] = '__cfduid=d42b240e518dad58587086f22eab9d7f11505272987; _ga=GA1.2.40686394.1505272998; _TRAEFIK_BACKEND=http://10.0.0.13:8001' 
 
-        if url.startswith("https://www.bite.ceo"):
+        if url.startswith("https://www.bite.ceo") or url.startswith("https://www.cryptopia.co.nz"):
             r = requests.get(url, headers=headers, timeout=30, verify=False)
         else:
             r = requests.get(url, headers=headers, timeout=30)
@@ -98,13 +98,7 @@ class BaseExchange(object):
 
         # print(r.text)
 
-        if r.status_code == 200 and r.json()['code'] == 0\
-           and r.json()['data']:
-            # self.print_log(
-            #     'post success: {symbol}/{anchor} on {market}'.format(
-            #         symbol=params['symbol'],
-            #         anchor=params['anchor'],
-            #         market=self.exchange))
+        if r.status_code == 200:
             return r.json()
         else:
             # print(params)
