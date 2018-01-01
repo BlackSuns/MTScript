@@ -45,6 +45,7 @@
         "mtl_btc",
         "storj_btc",
         "ast_btc",
+        "gnx_btc",
 
         "bch_eth",
         "qtum_eth",
@@ -90,6 +91,7 @@
         "qash_eth",
         "gnt_eth",
         "dgd_eth",
+        "gnx_eth",
 
         "btc_usdt",
         "eth_usdt",
@@ -171,6 +173,7 @@
         "DGD":  "DigixDAO",
         "MTL":  "Metal",
         "STORJ":    "Storj",
-        "AST":  "AirSwap"
+        "AST":  "AirSwap",
+        "GNX":  "Genaro Network"
     }
 }
