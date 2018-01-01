@@ -21,6 +21,7 @@
         "DAI":  "DAI",
         "ITC":  "IoT Chain",
         "MOT":  "OlympusLabs",
-        "CAT":  "BitClave"
+        "CAT":  "BitClave",
+        "GNX":  "Genaro Network"
     }
 }
