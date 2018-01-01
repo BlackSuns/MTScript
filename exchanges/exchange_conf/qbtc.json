@@ -1,0 +1,26 @@
+{
+    "name_symbol": {
+        "HSR":  "Hshare",
+        "BTH":  "Bitcoin Hot",
+        "GXS":  "GXShares",
+        "LTC":  "Litecoin",
+        "ETH":  "Ethereum",
+        "TV":  "Ti-Value",
+        "MONA":  "MonaCoin",
+        "VTC":  "Vertcoin",
+        "BCH":  "Bitcoin Cash",
+        "BDS":  "Borderless",
+        "CMC":  "Cloud Chain",
+        "ETC":  "Ethereum Classic",
+        "BTX":  "BitcoinTX",
+        "BCW":  "Bitcoin Wonder",
+        "GYC":  "Gycoin",
+        "STF":  "STF",
+        "ETP":  "Metaverse ETP",
+        "TMC":  "tmcoin",
+        "DOGE":  "Dogecoin",
+        "SC":  "Siacoin",
+        "HCC":  "Health Care Chain",
+        "YHC":  "YingHe Chain"
+    }
+}
