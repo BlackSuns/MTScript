@@ -85,6 +85,7 @@
         "RDN":  "Raiden Network Token",
         "XLM":  "Stellar",
         "XMR":  "Monero",
-        "SBTC": "Super Bitcoin"
+        "SBTC": "Super Bitcoin",
+        "KCASH":    "Kcash"
     }
 }
