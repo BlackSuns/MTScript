@@ -51,6 +51,7 @@
         "DAT":  "Datum",
         "BITE": "BitEthereum",
         "GOD":  "Bitcoin God",
-        "IGNIS":    "Ignis"
+        "IGNIS":    "Ignis",
+        "UBTC": "United Bitcoin"
     }
 }
