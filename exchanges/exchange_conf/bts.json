@@ -20,7 +20,7 @@
         "OPEN.GRC": {"name": "GridCoin", "symbol": "GRC"},
         "OPEN.MAID": {"name": "MaidSafeCoin", "symbol": "MAID"},
         "OPEN.ARDR": {"name": "Ardor", "symbol": "ARDR"},
-        "OPEN.ETP": {"name": "Metaverse ETP", "symbol": "ARDR"},
+        "OPEN.ETP": {"name": "Metaverse ETP", "symbol": "ETP"},
         "OPEN.GAME": {"name": "GameCredits", "symbol": "GAME"},
         "OPEN.WAVES": {"name": "Waves", "symbol": "WAVES"},
         "OPEN.PPC": {"name": "Peercoin", "symbol": "PPC"},
