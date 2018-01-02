@@ -8,7 +8,8 @@
           "0x3833": "SPHTX",
           "0X5D65": "NAS",
           "0x4524": "BKX",
-          "0X70A7": "UTK"
+          "0X70A7": "UTK",
+          "0XD0A4": "STORM"
     },
     "name_symbol": {
           "10MT":   "10M Token",
@@ -217,6 +218,7 @@
           "KIN":    "Kin",
           "KING":   "king",
           "KNC":    "Kyber Network",
+          "KRT":    "KredX",
           "LA":     "LAToken",
           "LDM":    "Ludum",
           "LEND":   "ETHLend",
@@ -323,6 +325,7 @@
           "STAR":   "Starbase",
           "STH":    "SmartyEther",
           "STORJ":  "Storj",
+          "STORM":  "storm",
           "STU":    "bitJob",
           "STX":    "Stox",
           "SUB":    "Substratum",
