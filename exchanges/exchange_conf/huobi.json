@@ -53,6 +53,7 @@
         "NEO":  "NEO",
         "GAS":  "GAS",
         "ICX":  "ICON",
-        "GNX":  "Genaro Network"
+        "GNX":  "Genaro Network",
+        "MDS":  "MediShares"
     }
 }
