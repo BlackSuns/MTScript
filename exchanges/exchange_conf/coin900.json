@@ -20,6 +20,8 @@
         "EOS":  "EOS",
         "ZIBER": "ZIBER",
         "PAY":  "TenX",
-        "KNC":  "Kyber Network"
+        "KNC":  "Kyber Network",
+        "ETC":  "Ethereum Classic",
+        "CDT":  "CoinDash"
     }
 }
