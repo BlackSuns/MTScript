@@ -55,6 +55,7 @@
         "VEN":  "VeChain",
         "BCDN": "BlockCDN",
         "BTG":  "Bitcoin Gold",
-        "BCD":  "Bitcoin Diamond"
+        "BCD":  "Bitcoin Diamond",
+        "TCT":  "TokenClub"
     }
 }
