@@ -52,6 +52,7 @@
         "BIFI": "Bitcoin File",
         "NEO":  "NEO",
         "GAS":  "GAS",
-        "ICX":  "ICON"
+        "ICX":  "ICON",
+        "GNX":  "Genaro Network"
     }
 }
