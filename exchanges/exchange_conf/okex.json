@@ -86,6 +86,7 @@
         "XLM":  "Stellar",
         "XMR":  "Monero",
         "SBTC": "Super Bitcoin",
-        "KCASH":    "Kcash"
+        "KCASH":    "Kcash",
+        "GTC":  "Game.com"
     }
 }
