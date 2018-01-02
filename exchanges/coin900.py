@@ -26,7 +26,7 @@ class Coin900Exchange(BaseExchange):
         return_data = []
         anchors = ('btc', 'eth', 'cxc', 'usdt')
 
-        for k in result:
+        for k in result['data']:
             for anchor in anchors:
                 if k['code'].endswith(anchor):
                     symbol = k['code'][:-len(anchor)]
