@@ -22,6 +22,8 @@
         "PAY":  "TenX",
         "KNC":  "Kyber Network",
         "ETC":  "Ethereum Classic",
-        "CDT":  "CoinDash"
+        "CDT":  "CoinDash",
+        "MANA": "Decentraland",
+        "ENG":  "Enigma"
     }
 }

@@ -88,6 +88,11 @@
         "SBTC": "Super Bitcoin",
         "KCASH":    "Kcash",
         "GTC":  "Game.com",
-        "MDT":  "MeasurableDataToken"
+        "MDT":  "MeasurableDataToken",
+        "WRC":  "Worldcore",
+        "UGC":  "UnitedGameChain",
+        "NAS":  "Nebulas Token",
+        "RNT":  "OneRoot",
+        "UKG":  "Unikoin Gold"
     }
 }

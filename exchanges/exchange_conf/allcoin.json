@@ -56,6 +56,7 @@
         "DBC":  "DeepBrainChain",
         "BTF":  "Bitcoin Faith",
         "ELF":  "aelf",
-        "HLC":  "Halal Chain"
+        "HLC":  "Halal Chain",
+        "CFUN": "CFun"
     }
 }
