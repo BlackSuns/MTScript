@@ -19,6 +19,8 @@
         "SBTC": "Super Bitcoin",
         "ACT":  "Achain",
         "FBTC": "FastBTC",
-        "HLC":  "Halal Chain"
+        "HLC":  "Halal Chain",
+        "QBTC": "QuantumBitcoin",
+        "UBTC": "United Bitcoin"
     }
 }
