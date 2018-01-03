@@ -25,6 +25,9 @@
         "HLC":  "Halal Chain",
         "BTP":  "Bitcoin Pay",
         "BITE": "BitEthereum",
-        "BCW":  "Bitcoin Wonder"
+        "BCW":  "Bitcoin Wonder",
+        "INK":  "ink",
+        "TV":   "Ti-Value",
+        "CHAT": "Chatcoin"
     }
 }

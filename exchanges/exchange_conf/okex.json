@@ -87,6 +87,7 @@
         "XMR":  "Monero",
         "SBTC": "Super Bitcoin",
         "KCASH":    "Kcash",
-        "GTC":  "Game.com"
+        "GTC":  "Game.com",
+        "MDT":  "MeasurableDataToken"
     }
 }
