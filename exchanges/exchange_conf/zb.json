@@ -30,6 +30,7 @@
         "TV":   "Ti-Value",
         "CHAT": "Chatcoin",
         "BCW":  "Bitcoin Wonder",
-        "BTP":  "Bitcoin Pay"
+        "BTP":  "Bitcoin Pay",
+        "BITCNY":   "bitCNY"
     }
 }
