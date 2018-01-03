@@ -65,6 +65,7 @@
         "UTK":  "UTRUST",
         "UKG":  "Unikoin Gold",
         "SUB":  "Substratum",
-        "REQ":  "Request Network"
+        "REQ":  "Request Network",
+        "SNOV": "Snovio"
     }
 }
