@@ -15,6 +15,7 @@
         "OMG":  "OmiseGO",
         "DOGE": "Dogecoin",
         "HLD": "Hyperlending",
-        "EOS":  "EOS"
+        "EOS":  "EOS",
+        "GTC": "Game.com"
     }
 }
