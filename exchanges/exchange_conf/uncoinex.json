@@ -43,6 +43,7 @@
         "RDN":  "Raiden Network Token",
         "LTE":  "ElectrumLtc",
         "OEC":  "OpenCoin",
-        "JRC":  "Finchain"
+        "JRC":  "Finchain",
+        "WIC":  "Wi Coin"
     }
 }

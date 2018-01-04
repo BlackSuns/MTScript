@@ -94,6 +94,8 @@
         "NAS":  "Nebulas Token",
         "RNT":  "OneRoot",
         "UKG":  "Unikoin Gold",
-        "UGC":  "ugChain"
+        "UGC":  "ugChain",
+        "DPY":  "Delphy",
+        "READ": "READ"
     }
 }

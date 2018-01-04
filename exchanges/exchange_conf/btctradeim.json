@@ -21,6 +21,7 @@
         "FBTC": "FastBTC",
         "HLC":  "Halal Chain",
         "QBTC": "QuantumBitcoin",
-        "UBTC": "United Bitcoin"
+        "UBTC": "United Bitcoin",
+        "XRP":  "Ripple"
     }
 }
