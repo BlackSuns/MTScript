@@ -58,6 +58,7 @@
         "ELF":  "aelf",
         "HLC":  "Halal Chain",
         "CFUN": "CFun",
-        "UGC":  "ugChain"
+        "UGC":  "ugChain",
+        "AWR":  "AWARE"
     }
 }
