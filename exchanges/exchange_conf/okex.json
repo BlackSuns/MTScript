@@ -93,6 +93,7 @@
         "UGC":  "UnitedGameChain",
         "NAS":  "Nebulas Token",
         "RNT":  "OneRoot",
-        "UKG":  "Unikoin Gold"
+        "UKG":  "Unikoin Gold",
+        "UGC":  "ugChain"
     }
 }
