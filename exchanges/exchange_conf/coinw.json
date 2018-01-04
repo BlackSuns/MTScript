@@ -14,5 +14,7 @@
     "6": ["STX", "Stox"],
     "8": ["CDT", "CoinDash"],
     "19": ["RNT", "Oneroot"],
-    "20":   ["DEW", "DEW"]
+    "20":   ["DEW", "DEW"],
+    "21":   ["MAG", "Maggie"],
+    "22":   ["DOC", "Dogecoin"]
 }

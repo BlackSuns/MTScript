@@ -46,6 +46,12 @@
         "QTUM": "Qtum",
         "DASH": "Dash",
         "DCT":  "DECENT",
-        "RCN":  "Ripio Credit Network"
+        "RCN":  "Ripio Credit Network",
+        "EOS":  "EOS",
+        "DCT":  "DECENT",
+        "BAT":  "Basic Attention Token",
+        "OMG":  "OmiseGO",
+        "SNT":  "Status",
+        "BCD":  "Bitcoin Diamond"
     }
 }
