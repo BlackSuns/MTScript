@@ -57,6 +57,7 @@
         "ARN":  "Aeron",
         "POKER":    "Pokercoin",
         "DASH": "Dash",
-        "XUC":  "Exchange Union"
+        "XUC":  "Exchange Union",
+        "XRB":  "RaiBlocks"
     }
 }
