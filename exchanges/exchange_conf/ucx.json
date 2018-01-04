@@ -9,6 +9,7 @@
         "LLT":  "LLToken",
         "BTS":  "BitShares",
         "LCC":  "LCC",
-        "UTK":  "UToken"
+        "UTK":  "UToken",
+        "DOGE": "Dogecoin"
     }
 }
