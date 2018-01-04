@@ -97,6 +97,7 @@
         "XRP":  "Ripple",
         "ZEC":  "Zcash",
         "ZSC":  "Zeusshield",
-        "ZRX":  "0x"
+        "ZRX":  "0x",
+        "DBC":  "DeepBrainChain"
     }
 }
