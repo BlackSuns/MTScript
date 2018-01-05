@@ -96,6 +96,7 @@
         "UKG":  "Unikoin Gold",
         "UGC":  "ugChain",
         "DPY":  "Delphy",
-        "READ": "READ"
+        "READ": "READ",
+        "SSC":  "SelfSell"
     }
 }
