@@ -65,6 +65,7 @@
         "ACT":  "Achain",
         "HLD":  "Hyperlending",
         "HLC":  "Halal Chain",
-        "TV":   "Ti-Value"
+        "TV":   "Ti-Value",
+        "WIC":  "WaykiChain"
     }
 }

@@ -97,6 +97,8 @@
         "UGC":  "ugChain",
         "DPY":  "Delphy",
         "READ": "READ",
-        "SSC":  "SelfSell"
+        "SSC":  "SelfSell",
+        "SMT":  "SmartMesh",
+        "AAC":  "Acute Angle Coin"
     }
 }
