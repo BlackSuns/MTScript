@@ -98,6 +98,7 @@
         "ZEC":  "Zcash",
         "ZSC":  "Zeusshield",
         "ZRX":  "0x",
-        "DBC":  "DeepBrainChain"
+        "DBC":  "DeepBrainChain",
+        "MDT":  "MeasurableDataToken"
     }
 }
