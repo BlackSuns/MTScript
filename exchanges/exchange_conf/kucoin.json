@@ -67,6 +67,7 @@
         "SUB":  "Substratum",
         "REQ":  "Request Network",
         "SNOV": "Snovio",
-        "NULS": "Nuls"
+        "NULS": "Nuls",
+        "XRB":  "RaiBlocks"
     }
 }

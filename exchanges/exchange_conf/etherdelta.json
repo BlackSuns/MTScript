@@ -9,7 +9,8 @@
           "0X5D65": "NAS",
           "0x4524": "BKX",
           "0X70A7": "UTK",
-          "0XD0A4": "STORM"
+          "0XD0A4": "STORM",
+          "0X81C9": "DAT"
     },
     "name_symbol": {
           "10MT":   "10M Token",
@@ -110,6 +111,7 @@
           "CTX":    "CarTaxi Token",
           "CVC":    "Civic",
           "DALC":   "Dalecoin",
+          "DAT":    "Datum",
           "DATA":   "Streamr DATAcoin",
           "DAY":    "Chronologic",
           "DBET":   "DecentBet",

@@ -44,6 +44,7 @@
         "LTE":  "ElectrumLtc",
         "OEC":  "OpenCoin",
         "JRC":  "Finchain",
-        "WIC":  "Wi Coin"
+        "WIC":  "Wi Coin",
+        "ALD":  "ALD"
     }
 }
