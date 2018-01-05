@@ -66,6 +66,7 @@
         "UKG":  "Unikoin Gold",
         "SUB":  "Substratum",
         "REQ":  "Request Network",
-        "SNOV": "Snovio"
+        "SNOV": "Snovio",
+        "NULS": "Nuls"
     }
 }
