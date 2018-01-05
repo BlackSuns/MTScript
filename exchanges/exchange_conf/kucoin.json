@@ -68,6 +68,7 @@
         "REQ":  "Request Network",
         "SNOV": "Snovio",
         "NULS": "Nuls",
-        "XRB":  "RaiBlocks"
+        "XRB":  "RaiBlocks",
+        "POE":  "Po.et"
     }
 }
