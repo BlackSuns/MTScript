@@ -10,6 +10,7 @@
         "BTS":  "BitShares",
         "LCC":  "LCC",
         "UTK":  "UToken",
-        "DOGE": "Dogecoin"
+        "DOGE": "Dogecoin",
+        "IFC":  "Infinitecoin"
     }
 }
