@@ -26,6 +26,7 @@
         "STX":  "Stox",
         "VET":  "VeChain",
         "MCO":  "Monaco",
-        "SPHTX":  "SophiaTX"
+        "SPHTX":  "SophiaTX",
+        "DENT": "Dent"
     }
 }
