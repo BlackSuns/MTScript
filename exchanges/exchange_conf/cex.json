@@ -47,6 +47,7 @@
         "ast_btc",
         "gnx_btc",
         "pro_btc",
+        "wicc_btc",
 
         "bch_eth",
         "qtum_eth",
@@ -94,6 +95,7 @@
         "dgd_eth",
         "gnx_eth",
         "pro_eth",
+        "wicc_eth",
 
         "btc_usdt",
         "eth_usdt",
@@ -178,6 +180,6 @@
         "AST":  "AirSwap",
         "GNX":  "Genaro Network",
         "PRO":  "Propy",
-        "WICC": "WaykiChain"
+        "WIC": "WaykiChain"
     }
 }
