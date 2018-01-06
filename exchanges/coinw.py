@@ -30,6 +30,7 @@ class CoinwExchange(BaseExchange):
         pairs = self.get_available_pairs()
 
         for k in pairs.keys():
+            print('dealing {}'.format(k))
             try:
                 url = '{}{}&symbol={}'.format(self.base_url, self.ticker_url, k)
                 result = self.get_json_request(url)
