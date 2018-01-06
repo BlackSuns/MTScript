@@ -59,6 +59,7 @@
         "HLC":  "Halal Chain",
         "CFUN": "CFun",
         "UGC":  "ugChain",
-        "AWR":  "AWARE"
+        "AWR":  "AWARE",
+        "BEC":  "Bitcoin Eco"
     }
 }
