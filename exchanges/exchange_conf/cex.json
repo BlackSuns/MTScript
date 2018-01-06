@@ -48,6 +48,7 @@
         "gnx_btc",
         "pro_btc",
         "wicc_btc",
+        "req_btc",
 
         "bch_eth",
         "qtum_eth",
@@ -96,6 +97,7 @@
         "gnx_eth",
         "pro_eth",
         "wicc_eth",
+        "req_eth",
 
         "btc_usdt",
         "eth_usdt",
@@ -180,6 +182,7 @@
         "AST":  "AirSwap",
         "GNX":  "Genaro Network",
         "PRO":  "Propy",
-        "WIC": "WaykiChain"
+        "WIC": "WaykiChain",
+        "REQ":  "Request Network"
     }
 }
