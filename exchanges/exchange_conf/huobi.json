@@ -57,6 +57,7 @@
         "MDS":  "MediShares",
         "PROPY":  "Propy",
         "WICC": "WaykiChain",
-        "REQ":  "Request Network"
+        "REQ":  "Request Network",
+        "POWR": "Power Ledger"
     }
 }
