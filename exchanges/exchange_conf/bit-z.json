@@ -59,6 +59,7 @@
         "DASH": "Dash",
         "XUC":  "Exchange Union",
         "XRB":  "RaiBlocks",
-        "AIDOC":    "AIdoctor"
+        "AIDOC":    "AIdoctor",
+        "ETP":  "Metaverse ETP"
     }
 }
