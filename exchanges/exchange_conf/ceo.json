@@ -17,6 +17,12 @@
         "UBTC": "United Bitcoin",
         "LEEK": "LeekICO",
         "BYC":  "BiYuanCoin",
-        "VTC":  "Vtcoin"
+        "VTC":  "Vtcoin",
+        "RCT":  "RealChain",
+        "AE":   "",
+        "EOS":  "EOS",
+        "TKC":  "FIGTOO",
+        "FTB":  "Feitebi",
+        "IFC":  "Infinitecoin"
     }
 }
