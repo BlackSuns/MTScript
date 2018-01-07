@@ -58,6 +58,7 @@
         "POKER":    "Pokercoin",
         "DASH": "Dash",
         "XUC":  "Exchange Union",
-        "XRB":  "RaiBlocks"
+        "XRB":  "RaiBlocks",
+        "AIDOC":    "AIdoctor"
     }
 }

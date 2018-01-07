@@ -31,6 +31,8 @@
         "CHAT": "Chatcoin",
         "BCW":  "Bitcoin Wonder",
         "BTP":  "Bitcoin Pay",
-        "BITCNY":   "bitCNY"
+        "BITCNY":   "bitCNY",
+        "1ST":  "FirstBlood",
+        "BAT":  "Basic Attention Token"
     }
 }

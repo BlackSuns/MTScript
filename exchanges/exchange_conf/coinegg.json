@@ -66,6 +66,7 @@
         "HLD":  "Hyperlending",
         "HLC":  "Halal Chain",
         "TV":   "Ti-Value",
-        "WIC":  "WaykiChain"
+        "WIC":  "WaykiChain",
+        "SAFE": "SAFE"
     }
 }
