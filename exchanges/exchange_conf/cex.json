@@ -77,6 +77,7 @@
         "gnx_eth",
         "wicc_eth",
         "req_eth",
+        "bcd_eth",
 
         "btc_usdt",
         "eth_usdt",
@@ -95,7 +96,8 @@
         "mds_usdt",
         "xuc_usdt",
         "amb_usdt",
-        "stx_usdt"
+        "stx_usdt",
+        "bcd_usdt"
     ],
     "name_symbol": {
         "BCH":  "Bitcoin Cash",
