@@ -1,0 +1,22 @@
+{
+    "name_symbol": {
+        "BTC":  "Bitcoin",
+        "ETH":  "Ethereum",
+        "COB":  "Cobinhood",
+        "CMT":  "CyberMiles",
+        "REP":  "Augur",
+        "BAT":  "Basic Attention Token",
+        "EOS":  "EOS",
+        "ETHOS":    "Ethos",
+        "GNT":  "Golem",
+        "NGC":  "NAGA",
+        "OMG":  "OmiseGO",
+        "QTM":  "Qtum",
+        "SAN":  "Santiment Network Token",
+        "SPHTX":    "SophiaTX",
+        "SNT":  "Status",
+        "PAY":  "TenX",
+        "INS":  "INS Ecosystem",
+        "XRB":  "RaiBlocks"
+    }
+}

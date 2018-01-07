@@ -9,10 +9,15 @@ from exchanges.kkex import KkexExchange
 from exchanges.rightbtc import RightbtcExchange
 from exchanges.bjex import BjexExchange
 from exchanges.asdbi import AsdbiExchange
+from exchanges.cobinhood import CobinhoodExchange
 
 
 if __name__ == '__main__':
     print_log("start sync exchanges...")
+
+    ch = CobinhoodExchange()
+    ch.post_result_batch()
+    print_log("Cobinhood Done...")
 
     lc = LivecoinExchange()
     lc.post_result_batch()
