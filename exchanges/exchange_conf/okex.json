@@ -100,6 +100,10 @@
         "SSC":  "SelfSell",
         "SMT":  "SmartMesh",
         "AAC":  "Acute Angle Coin",
-        "FAIR": "Fair.Game"
+        "FAIR": "Fair.Game",
+        "CAG":  "Change",
+        "DNA":  "EncrypGen",
+        "LEND": "ETHLend",
+        "RCT":  "RealChain"
     }
 }
