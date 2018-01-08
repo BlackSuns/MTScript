@@ -104,6 +104,7 @@
         "CAG":  "Change",
         "DNA":  "EncrypGen",
         "LEND": "ETHLend",
-        "RCT":  "RealChain"
+        "RCT":  "RealChain",
+        "UBTC": "United Bitcoin"
     }
 }
