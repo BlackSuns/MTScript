@@ -33,6 +33,7 @@
         "BTP":  "Bitcoin Pay",
         "BITCNY":   "bitCNY",
         "1ST":  "FirstBlood",
-        "BAT":  "Basic Attention Token"
+        "BAT":  "Basic Attention Token",
+        "SAFE": "SAFE"
     }
 }
