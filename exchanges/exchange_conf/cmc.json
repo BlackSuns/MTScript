@@ -1,0 +1,6 @@
+{
+    "supply": {
+        "Bibox Token/BIX":  {"available": 131520349, "total": 271520349, "max": 271520349, "force": false},
+        "Energo/TSL":   {"available": 510000000, "total": 1000000000, "max": 1000000000, "force": false}
+    }
+}

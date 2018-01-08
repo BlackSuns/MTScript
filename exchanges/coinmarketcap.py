@@ -1,19 +1,31 @@
+import json
+import os
+
 from .base import BaseExchange
 
 
 class CmcExchange(BaseExchange):
     def __init__(self):
         super().__init__()
-        self.exchange = 'CoinMarketCap'
+        self.exchange = 'cmc'
         self.exchange_id = 1303
         self.base_url = 'https://api.coinmarketcap.com/v1'
 
         self.ticker_url = '/ticker/?convert=CNY&limit=3000'
 
-        self.alias = 'CoinMarketCap'
+        self.alias = 'cmc'
         self.with_name = True
+        self.exchange_conf = os.path.abspath(os.path.dirname(__file__)) +\
+            '/exchange_conf/{}.json'.format(self.exchange)
+
+    def get_mytoken_list(self):
+        with open(self.exchange_conf, 'r') as f:
+            data = json.load(f)
+
+        self.my_data = data['supply']
 
     def get_remote_data(self):
+        self.get_mytoken_list()
         url = '{}{}'.format(
             self.base_url, self.ticker_url)
         return self.ticker_callback(self.get_json_request(url))
@@ -51,7 +63,7 @@ class CmcExchange(BaseExchange):
 
             if anchor and symbol:
                 pair = '{}/{}'.format(symbol.upper(), anchor.upper())
-                return_data.append({
+                rd = {
                     'name': name,
                     'pair': pair,
                     'price': price,
@@ -63,7 +75,23 @@ class CmcExchange(BaseExchange):
                     'available_supply': available_supply,
                     'total_supply': total_supply,
                     'max_supply': max_supply
-                })
+                }
+
+                mt_key = '{}/{}'.format(name, symbol)
+                if mt_key in self.my_data.keys():
+                    if self.my_data[mt_key]['force']:
+                        rd['available_supply'] = self.my_data[mt_key].get('available', 0)
+                        rd["total_supply"] = self.my_data[mt_key].get('total', 0)
+                        rd["max_supply"] = self.my_data[mt_key].get('max', 0)
+                    else:
+                        if rd['available_supply'] == 0:
+                            rd['available_supply'] = self.my_data[mt_key].get('available', 0)
+                        if rd['total_supply'] == 0:
+                            rd['total_supply'] = self.my_data[mt_key].get('total', 0)
+                        if rd['max_supply'] == 0:
+                            rd['max_supply'] = self.my_data[mt_key].get('max', 0)
+
+                return_data.append(rd)
 
         # print(return_data)
         return return_data
