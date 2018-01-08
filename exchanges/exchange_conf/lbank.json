@@ -41,6 +41,7 @@
         "LCH":  "Litecoin Cash",
         "BCO":  "BitcoinOre",
         "DBC":  "DeepBrainChain",
-        "AWR":  "AWARE"
+        "AWR":  "AWARE",
+        "SEER": "Seer"
     }
 }
