@@ -60,6 +60,9 @@
         "PIX":  "Lampix",
         "PST":  "Primas",
         "GCS":  "GCS",
-        "ATN":  "AI Technology Network"
+        "ATN":  "AI Technology Network",
+        "MTN":  "Motion",
+        "PRS":  "PressOne",
+        "SHOW": "Showcoin"
     }
 }
