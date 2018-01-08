@@ -18,5 +18,8 @@
     "21":   ["MAG", "Maggie"],
     "23":   ["STORJ", "Storj"],
     "24":   ["SNT", "Status"],
-    "25":   ["DOGE", "Dogecoin"]
+    "25":   ["DOGE", "Dogecoin"],
+    "28":   ["WICC", "WaykiChain"],
+    "29":   ["EOS", "EOS"],
+    "30":   ["SDA", "SixDomainChain"]
 }
