@@ -99,6 +99,7 @@
         "READ": "READ",
         "SSC":  "SelfSell",
         "SMT":  "SmartMesh",
-        "AAC":  "Acute Angle Coin"
+        "AAC":  "Acute Angle Coin",
+        "FAIR": "FairCoin"
     }
 }
