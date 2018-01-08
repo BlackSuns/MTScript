@@ -58,6 +58,7 @@
         "PROPY":  "Propy",
         "WICC": "WaykiChain",
         "REQ":  "Request Network",
-        "POWR": "Power Ledger"
+        "POWR": "Power Ledger",
+        "SWFTC":  "SwftCoin"
     }
 }
