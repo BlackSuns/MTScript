@@ -23,7 +23,13 @@ class EtherdeltaExchange(BaseExchange):
         with open(self.exchange_conf, 'r') as f:
             data = json.load(f)
 
-        return list(data['name_symbol'].keys())
+        return data['name_symbol']
+
+    def get_whitelist(self):
+        with open(self.exchange_conf, 'r') as f:
+            data = json.load(f)
+
+        return data['sc_whitelist'] if 'sc_whitelist' in data.keys() else []
 
     def chunks(self, l, n):
         """Yield successive n-sized chunks from l.
@@ -33,8 +39,32 @@ class EtherdeltaExchange(BaseExchange):
 
     def get_remote_data(self):
         return_data = []
+        whitelist = self.get_whitelist()
+        available_pairs = self.get_available_symbol()
         symbol_count = 50
-        parts = self.chunks(self.get_available_symbol(), symbol_count)
+        parts = self.chunks(list(available_pairs.keys()), symbol_count)
+
+        # start dealing addr pair
+        l = list(whitelist.keys())
+        fsyms = ','.join(l)
+        url = '{}{}'.format(
+                    self.base_url, self.ticker_url)
+        url = '{}?fsyms={}&tsyms=ETH&e=EtherDelta'.format(url, fsyms)
+        r = self.get_json_request(url)
+        for d in r['RAW'].keys():
+            symbol = whitelist[d]
+            anchor = 'ETH'
+            pair = '{}/{}'.format(symbol.upper(), anchor.upper())
+            return_data.append({
+                'pair': pair,
+                'price': r['RAW'][d]['ETH']['PRICE'],
+                'volume_anchor': r['RAW'][d]['ETH']['VOLUME24HOURTO'],
+                'volume': r['RAW'][d]['ETH']['VOLUME24HOUR']
+            })
+
+        print('ADDR PAIR DONE...')
+
+        # start dealing symbol pair
         for p in parts:
             error_count = len(p)
             while True:
