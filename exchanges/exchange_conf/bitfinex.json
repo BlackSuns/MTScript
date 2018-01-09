@@ -29,6 +29,12 @@
           "YYW":  "YOYOW",
           "XMR":  "Monero",
           "XRP":  "Ripple",
-          "ZEC":  "Zcash"
+          "ZEC":  "Zcash",
+          "BAT":  "Basic Attention Token",
+          "FUN":  "FunFair",
+          "MAN":  "MAN",
+          "ZRX":  "0x",
+          "SPK":  "Spank",
+          "TNB":  "Time New Bank"
     }
 }
