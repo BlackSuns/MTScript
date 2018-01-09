@@ -106,8 +106,8 @@ class EtherdeltaExchange(BaseExchange):
                 return_data.append({
                     'pair': pair,
                     'price': result[i]['ETH']['PRICE'],
-                    'volume_anchor': result[i]['ETH']['VOLUME24HOURTO'],
-                    'volume': result[i]['ETH']['VOLUME24HOUR'],
+                    'volume_anchor': result[i]['ETH']['TOTALVOLUME24HTO'],
+                    'volume': result[i]['ETH']['TOTALVOLUME24H'],
                 })
 
         # print(return_data)
