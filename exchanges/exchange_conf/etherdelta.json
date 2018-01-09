@@ -4,15 +4,15 @@
           "0xf833": "CMS",
           "0xff60": "RNT",
           "0x286b": "WABI",
-          "0XD2D6": "BNTY",
+          "0Xd2d6": "BNTY",
           "0x3833": "SPHTX",
-          "0X5D65": "NAS",
+          "0X5d65": "NAS",
           "0x4524": "BKX",
-          "0X70A7": "UTK",
-          "0XD0A4": "STORM",
-          "0X81C9": "DAT",
-          "0X1D46": "CAN",
-          "0XC27A":  "TAU"
+          "0X70a7": "UTK",
+          "0Xd0a4": "STORM",
+          "0X81c9": "DAT",
+          "0X1d46": "CAN",
+          "0xc27a":  "TAU"
     },
     "name_symbol": {
           "10MT":   "10M Token",
