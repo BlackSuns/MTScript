@@ -43,7 +43,8 @@
         "IPFS": {"name": "IPFS", "symbol": "IPFS"},
         "STATER": {"name": "STATER", "symbol": "STATER"},
         "BZBJB": {"name": "BZBJB", "symbol": "BZBJB"},
-        "HERO": {"name": "Sovereign Hero", "symbol": "HERO"}
+        "HERO": {"name": "Sovereign Hero", "symbol": "HERO"},
+        "CVCOIN": {"name": "CVCoin", "symbol": "CVCOIN"}
     },
     "anchors": {
         "USD": {"name": "bitUSD", "symbol": "bitUSD"},
