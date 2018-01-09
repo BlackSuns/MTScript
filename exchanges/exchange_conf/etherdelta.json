@@ -12,7 +12,8 @@
           "0Xd0a4": "STORM",
           "0X81c9": "DAT",
           "0X1d46": "CAN",
-          "0xc27a":  "TAU"
+          "0xc27a":  "TAU",
+          "0x39bb": "WAX"
     },
     "name_symbol": {
           "10MT":   "10M Token",
@@ -364,6 +365,7 @@
           "VSM":    "VOISE",
           "WABI":   "Wabi",
           "WAND":   "WandX",
+          "WAX":    "WAX",
           "WIC":    "Wi Coin",
           "WILD":   "Wild Crypto",
           "WINGS":  "Wings",

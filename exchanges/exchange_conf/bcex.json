@@ -57,6 +57,7 @@
         "PCASH":  "PlayCash",
         "CNET": "CNET",
         "BCK":  "BTC king",
-        "WIC":  "WaykiChain"
+        "WIC":  "WaykiChain",
+        "AIDOC":    "AIdoctor"
     }
 }

@@ -60,6 +60,8 @@
         "REQ":  "Request Network",
         "POWR": "Power Ledger",
         "SWFTC":  "SwftCoin",
-        "RPX":  "Red Pulse"
+        "RPX":  "Red Pulse",
+        "TOPC": "TopChain",
+        "ACT":  "Achain"
     }
 }
