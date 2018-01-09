@@ -66,6 +66,7 @@ class EtherdeltaExchange(BaseExchange):
 
         # start dealing symbol pair
         for p in parts:
+            # print(p)
             error_count = len(p)
             while True:
                 url = '{}{}'.format(
