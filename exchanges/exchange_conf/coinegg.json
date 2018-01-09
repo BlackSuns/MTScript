@@ -67,6 +67,7 @@
         "HLC":  "Halal Chain",
         "TV":   "Ti-Value",
         "WIC":  "WaykiChain",
-        "SAFE": "SAFE"
+        "SAFE": "SAFE",
+        "UBTC": "United Bitcoin"
     }
 }
