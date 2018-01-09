@@ -6,6 +6,7 @@
         "BCH":  "Bitcoin Cash",
         "BTG":  "Bitcoin Gold",
         "LBTC":  "Lightning Bitcoin",
-        "SBTC":  "Super Bitcoin"
+        "SBTC":  "Super Bitcoin",
+        "ELF":  "aelf"
     }
 }
