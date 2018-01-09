@@ -34,6 +34,8 @@
         "BITCNY":   "bitCNY",
         "1ST":  "FirstBlood",
         "BAT":  "Basic Attention Token",
-        "SAFE": "SAFE"
+        "SAFE": "SAFE",
+        "ENT":  "ENTCash",
+        "TOPC": "TopChain"
     }
 }
