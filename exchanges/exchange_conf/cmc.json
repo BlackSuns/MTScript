@@ -4,6 +4,6 @@
         "Energo/TSL":   {"available": 510000000, "total": 1000000000, "max": 1000000000, "force": false},
         "TopChain/TOPC":   {"available": 1050000000, "total": 2100000000, "max": 2100000000, "force": false},
         "Showcoin/SHOW":   {"available": 5000000000, "total": 10000000000, "max": 10000000000, "force": false},
-        "SpankChain/SPANK":   {"available": 327000000, "total": 1000000000, "max": 1000000000, "force": false}
+        "SpankChain/SPANK":   {"available": 327000000, "total": 1000000000, "max": 1000000000, "force": true}
     }
 }
