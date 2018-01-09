@@ -105,6 +105,7 @@
         "DNA":  "EncrypGen",
         "LEND": "ETHLend",
         "RCT":  "RealChain",
-        "UBTC": "United Bitcoin"
+        "UBTC": "United Bitcoin",
+        "RCT":  "RealChain"
     }
 }
