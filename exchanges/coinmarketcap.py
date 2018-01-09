@@ -66,12 +66,12 @@ class CmcExchange(BaseExchange):
                 rd = {
                     'name': name,
                     'pair': pair,
-                    # 'price': price,
+                    'price': price,
                     'volume_anchor': volume_anchor,
                     'volume': volume_anchor / price if price else 0,
-                    # 'rank': rank,
-                    # 'percent_change_24h': percent_change_24h,
-                    # 'market_cap_usd': market_cap_usd,
+                    'rank': rank,
+                    'percent_change_24h': percent_change_24h,
+                    'market_cap_usd': market_cap_usd,
                     'available_supply': available_supply,
                     'total_supply': total_supply,
                     'max_supply': max_supply
