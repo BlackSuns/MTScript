@@ -59,6 +59,7 @@
         "WICC": "WaykiChain",
         "REQ":  "Request Network",
         "POWR": "Power Ledger",
-        "SWFTC":  "SwftCoin"
+        "SWFTC":  "SwftCoin",
+        "RPX":  "Red Pulse"
     }
 }
